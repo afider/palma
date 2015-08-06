@@ -1,0 +1,165 @@
+html
+	@include rem-baseline
+
+body
+	background: #fff
+	color: $text_color
+	+rem(font-size, 14px)
+	line-height: 1.4
+	font-family: $font_main
+
+
+html, body 
+	height: 100%
+
+p
+	margin: 0 0 $content_bot_space 0
+
+ul
+	margin: 0 0 $content_bot_space -20px
+
+ol
+	margin: 0 0 $content_bot_space -20px
+
+ul li,
+ol li
+	margin-bottom: 8px
+
+.lst-bullet
+	margin: 0 0 10px 0
+	padding: 0
+
+	& li 
+		display: block
+		padding: 0 0 10px 25px
+		background: url("#{$img_path}list-bullet.png") 10px 0 no-repeat
+		list-style-type: none
+
+
+/*  Headers
+/*  -------------------------------------------- */
+
+#{headings(1, 6)}
+	margin: 35px 0 20px 0
+	padding: 0
+	line-height: 1.2
+	font-weight: normal
+
+#{headings(1, 1)}
+	font-size: 30px
+	margin-bottom: 30px
+	margin-top: 0
+
+
+#{headings(2, 2)}
+	font-size: 20px
+	margin-bottom: 35px
+
+#{headings(3, 6)}
+	font-size: 17px
+
+
+/* Headers
+/* ---------------------------------------END--- */
+
+
+/* font
+/* --------------------------------------------- */
+
++font-face( $family: "Roboto Light", $file_name_r: "roboto-light", $file_name_i: "roboto-lightitalic", $file_name_b: "roboto-medium", $file_name_bi: "roboto-mediumitalic")
+
++font-face( $family: "Roboto", $file_name_r: "roboto-regular", $file_name_i: "roboto-italic", $file_name_b: "roboto-bold", $file_name_bi: "roboto-bolditalic")
+
++font-face( $family: "Roboto Black", $file_name_r: "roboto-black")
+
++font-face( $family: "Roboto Medium", $file_name_r: "roboto-medium", $file_name_i: "roboto-mediumitalic")
+
++font-face( $family: "Roboto Thin", $file_name_r: "roboto-thin", $file_name_i: "roboto-thinitalic")
++font-face( $family: "Roboto", $file_name_r: "roboto-regular")
+
++font-face( $family: "Rubl", $file_name_r: "alsrubl-arial-regular", $file_name_i: "alsrubl-arial-italic", $file_name_b: "alsrubl-arial-bold", $file_name_bi: "alsrubl-arial-bolditalic")
+
+
+%font-medium
+	font-family: 'Roboto Medium', $font_main
+.font-medium
+	@extend %font-medium
+
+%font-regular
+	font-family: 'Roboto', $font_main
+.font-regular
+	@extend %font-regular
+
+%font-thin
+	font-family: 'Roboto Thin', $font_main
+.font-thin
+	@extend %font-thin
+
+%font-black
+	font-family: 'Roboto black', $font_main
+.font-black
+	@extend %font-black
+
+%font-rub
+	font-family: 'Roboto', $font_main
+.font-rub
+	@extend %font-rub
+
+
+%font-rubl
+	font-family: 'Rubl', 'Roboto black', $font_main
+.font-rubl
+	@extend %font-rubl
+
+
+/* font
+/* ---------------------------------------END--- */
+
+
+/* Links
+/* --------------------------------------------- */
+
+a, .u
+	text-decoration: none
+	border-bottom-width: 1px
+	border-bottom-style: solid
+
+	+link-color ($color: $link_color, $color_hover: $link_color_hover, $color_visited: $link_color_visited, $animation-time: $link_animation-time)
+
+	&:focus
+		outline: thin dotted
+
+
+.dashed,
+.dotted
+	cursor: pointer
+
+
+.dashed
+	border-bottom-style: dashed
+
+.dotted
+	border-bottom-style: dotted
+
+/* Links
+/* -------------------------------------END----- */
+
+::-moz-selection
+	background: $selection_bg
+	text-shadow: none
+
+::selection
+	background: $selection_bg
+	text-shadow: none
+
+hr
+	display: block
+	margin: 1em 0
+	padding: 0
+	height: 1px
+	border: 0
+	border-top: 1px solid #ccc
+
+textarea
+	resize: vertical
+

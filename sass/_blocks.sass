@@ -1,0 +1,257 @@
+%bszbb
+	@include box-sizing(border-box)
+
+/* clearfix
+/* --------------------------------------------- */
+
+
+%clear
+	&:before,
+	&:after
+		display: table
+		content: ''
+		clear: both
+	&:after
+		clear: both
+
+.clearfix-block
+	clear: both
+	overflow: hidden
+	margin: 0
+	padding: 0
+	font-size: 0
+	line-height: 0
+
+.clearfix 
+	&:before,
+	&:after
+		display: table
+		content: ''
+		clear: both
+	&:after
+		clear: both
+
+
+/* clearfix
+/* ---------------------------------------END--- */
+
+
+/* centered
+/* --------------------------------------------- */
+
+.centered
+	margin: auto
+	min-width: $page_w
+	max-width: $page_w_max
+	padding-left: 40px
+	padding-right: 40px
+	+box-sizing(border-box)
+
+/* centered
+/* ---------------------------------------END--- */
+
+
+/* page
+/* --------------------------------------------- */
+
+.page
+	$footer_h: 143px
+
+	position: relative
+	min-height: 100%
+	width: 100%
+	min-width: $page_w
+
+	&__header
+		//background: #adf785
+		border-bottom: 1px solid #e0e0e0
+
+	&__header-in
+		position: relative
+		height: 70px
+
+	&__body
+		padding-bottom: $footer_h
+
+	&__mainbar
+		float: left
+		width: 100%
+
+	&__content
+		overflow: hidden
+		margin: 0 230px
+		min-height: 20px
+		background: #f6f866
+
+	&__sidebar
+		float: left
+		width: 220px
+
+		&_lt_left
+			margin-left: -100%
+			background: #bfdcf3
+
+		&_lt_right
+			margin-left: -220px
+			background: #ffaa30
+
+	&__footer
+		@extend %bszbb
+		padding-top: 13px
+		position: relative
+		//background: #f1acf2
+		margin-top: -$footer_h
+		height: $footer_h
+		min-width: $page_w
+		border-top: 1px solid $dark-el-color__sep
+
+	
+/* page
+/* ---------------------------------------END--- */
+
+
+/* logo
+/* --------------------------------------------- */
+
+.logo
+	display: block
+	position: absolute
+	width: 75px
+	height: 43px
+	border-bottom: none
+	top: 20px
+	left: 40px
+
+	&__img
+		display: block
+
+	
+/* logo
+/* ---------------------------------------END--- */
+
+
+/* table
+/* --------------------------------------------- */
+
+.table 
+	margin-bottom: 20px
+	width: 100%
+	border: 2px solid #e9ecee
+
+	&__h td,
+	& th 
+		font-size: 13px
+		font-weight: bold
+		color: #888
+		background: #e9ecee
+
+	& th,
+	& td
+		padding: 10px 14px
+		border-bottom: 1px solid #e9ecee
+
+	&__line
+		background: #f6f6f6
+
+	
+/* table
+/* ---------------------------------------END--- */
+
+
+
+/* svg-icons
+/* --------------------------------------------- */
+
+#svg-icons
+	position: absolute
+	top: 0
+	left: 0
+	height: 0
+	width: 0
+	z-index: 0
+	
+
+/* svg-icons
+/* ---------------------------------------END--- */
+
+
+/* footer-nav
+/* --------------------------------------------- */
+
+.footer-nav
+	@extend %clear
+	@extend %font-black
+	+rem(font-size, 12px)
+	margin-left: -13px
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		float: left
+
+	&__a
+		display: block
+		text-transform: uppercase
+		padding: 13px
+
+/* footer-nav
+/* ---------------------------------------END--- */
+
+
+/* columns
+/* --------------------------------------------- */
+
+.columns
+	display: table
+	width: 100%
+
+	&__i
+		display: table-cell
+		vertical-align: top
+		
+
+/* columns
+/* ---------------------------------------END--- */
+
+
+/* main-nav
+/* --------------------------------------------- */
+
+.main-nav
+	@extend %clear
+	@extend %font-black
+	+rem(font-size, 12px)
+	margin-left: -13px
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		float: left
+
+	&__a
+		display: block
+		text-transform: uppercase
+		padding: 13px
+
+/* main-nav
+/* ---------------------------------------END--- */
+
+
+/* user-icon
+/* --------------------------------------------- */
+
+.user-icon
+	color: yellow
+
+
+/* user-icon
+/* ---------------------------------------END--- */
+
+
+	
