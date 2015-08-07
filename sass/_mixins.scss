@@ -18,15 +18,15 @@
 
 				#{$children} {
 					color: $color;
-					border-color: lighten($color, $lighteen_per);
-					border-color: rgba($color, $lighteen_rgba);
+					//border-color: lighten($color, $lighteen_per);
+					//border-color: rgba($color, $lighteen_rgba);
 					}
 				
 			} @else {
 				
 				color: $color;
-				border-color: lighten($color, $lighteen_per);
-				border-color: rgba($color, $lighteen_rgba);	
+				//border-color: lighten($color, $lighteen_per);
+				//border-color: rgba($color, $lighteen_rgba);	
 			}
 		}
 		
@@ -57,15 +57,15 @@
 
 					#{$children} {
 						color: $color;
-						border-color: lighten($color, $lighteen_per);
-						border-color: rgba($color, $lighteen_rgba);
+						//border-color: lighten($color, $lighteen_per);
+						//border-color: rgba($color, $lighteen_rgba);
 					}
 
 				} @else {
 
 					color: $color;
-					border-color: lighten($color, $lighteen_per);
-					border-color: rgba($color, $lighteen_rgba);
+					//border-color: lighten($color, $lighteen_per);
+					//border-color: rgba($color, $lighteen_rgba);
 				}
 			}
 			@else if $color == null and $color_visited == none  {
@@ -74,15 +74,15 @@
 
 					#{$children} {
 						color: $link_color;
-						border-color: lighten($link_color, $lighteen_per);
-						border-color: rgba($link_color, $lighteen_rgba);
+						//border-color: lighten($link_color, $lighteen_per);
+						//border-color: rgba($link_color, $lighteen_rgba);
 					}
 
 				} @else {
 
 					color: $link_color;
-					border-color: lighten($link_color, $lighteen_per);
-					border-color: rgba($link_color, $lighteen_rgba);
+					//border-color: lighten($link_color, $lighteen_per);
+					//border-color: rgba($link_color, $lighteen_rgba);
 				}
 			}
 			@else if ($color != null and $color_visited != none and $color_visited != null) or
@@ -94,15 +94,15 @@
 
 					#{$children} {
 						color: $link_color_visited;
-						border-color: lighten($link_color_visited, $lighteen_per);
-						border-color: rgba($link_color_visited, $lighteen_rgba);
+						//border-color: lighten($link_color_visited, $lighteen_per);
+						//border-color: rgba($link_color_visited, $lighteen_rgba);
 					}
 
 				} @else {
 
 					color: $link_color_visited;
-					border-color: lighten($link_color_visited, $lighteen_per);
-					border-color: rgba($link_color_visited, $lighteen_rgba);
+					//border-color: lighten($link_color_visited, $lighteen_per);
+					//border-color: rgba($link_color_visited, $lighteen_rgba);
 				}
 			}
 		}
@@ -130,15 +130,15 @@
 
 					#{$children} {
 						color: $link_color_hover;
-						border-color: lighten($link_color_hover, $lighteen_per);
-						border-color: rgba($link_color_hover, $lighteen_rgba);
+						//border-color: lighten($link_color_hover, $lighteen_per);
+						//border-color: rgba($link_color_hover, $lighteen_rgba);
 					}
 
 				} @else {
 
 					color: $link_color_hover;
-					border-color: lighten($link_color_hover, $lighteen_per);
-					border-color: rgba($link_color_hover, $lighteen_rgba);
+					//border-color: lighten($link_color_hover, $lighteen_per);
+					//border-color: rgba($link_color_hover, $lighteen_rgba);
 				}
 			}
 			@else if ($color_hover != null and $color_visited != none) or 
@@ -148,15 +148,15 @@
 
 					#{$children} {
 						color: $color_hover;
-						border-color: lighten($color_hover, $lighteen_per);
-						border-color: rgba($color_hover, $lighteen_rgba);
+						//border-color: lighten($color_hover, $lighteen_per);
+						//border-color: rgba($color_hover, $lighteen_rgba);
 					}
 
 				} @else {
 
 					color: $color_hover;
-					border-color: lighten($color_hover, $lighteen_per);
-					border-color: rgba($color_hover, $lighteen_rgba);
+					//border-color: lighten($color_hover, $lighteen_per);
+					//border-color: rgba($color_hover, $lighteen_rgba);
 				}
 			}
 			@else if ($color == null and $color_hover == null and $color_visited == none) or
@@ -167,15 +167,15 @@
 
 					#{$children} {
 						color: $link_color_hover;
-						border-color: lighten($link_color_hover, $lighteen_per);
-						border-color: rgba($link_color_hover, $lighteen_rgba);
+						//border-color: lighten($link_color_hover, $lighteen_per);
+						//border-color: rgba($link_color_hover, $lighteen_rgba);
 					}
 
 				} @else {
 
 					color: $link_color_hover;
-					border-color: lighten($link_color_hover, $lighteen_per);
-					border-color: rgba($link_color_hover, $lighteen_rgba);
+					//border-color: lighten($link_color_hover, $lighteen_per);
+					//border-color: rgba($link_color_hover, $lighteen_rgba);
 				}
 			}
 		}

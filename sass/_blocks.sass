@@ -43,8 +43,8 @@
 	margin: auto
 	min-width: $page_w
 	max-width: $page_w_max
-	padding-left: 40px
-	padding-right: 40px
+	//padding-left: 40px
+	//padding-right: 40px
 	+box-sizing(border-box)
 
 /* centered
@@ -65,10 +65,12 @@
 	&__header
 		//background: #adf785
 		border-bottom: 1px solid #e0e0e0
+		@include box-shadow(0 1px 0 #f2f2f2)
 
 	&__header-in
 		position: relative
 		height: 70px
+		@extend %clear
 
 	&__body
 		padding-bottom: $footer_h
@@ -114,19 +116,104 @@
 /* --------------------------------------------- */
 
 .logo
+	position: relative
+	top: 28px
 	display: block
-	position: absolute
-	width: 75px
-	height: 43px
+	width: 154px
+	height: 22px
 	border-bottom: none
-	top: 20px
-	left: 40px
+	float: left
+	margin-right: 39px
+
 
 	&__img
 		display: block
 
 	
 /* logo
+/* ---------------------------------------END--- */
+
+
+/* search-panel
+/* --------------------------------------------- */
+
+.search-panel
+	background: $dark-el-color__bg
+	padding: 23px 0 16px 0
+	margin-bottom: 28px
+
+/* search-panel
+/* ---------------------------------------END--- */
+
+
+/* nav
+/* --------------------------------------------- */
+
+.nav
+	position: absolute
+	top: 72px
+	left: 0
+	right: 0
+	background: #fff
+	padding: 36px 100px
+	+box-shadow(0px 2px 4px rgba(#000, .2))
+
+
+/* nav
+/* ---------------------------------------END--- */
+
+
+/* nav-ctrl
+/* --------------------------------------------- */
+
+.nav-ctrl
+	float: left
+	margin-right: 40px
+	width: 70px
+	height: 70px
+	border-right: 1px solid #fbfbfb
+	//background: #E6DEDE
+	cursor: pointer
+	position: relative
+
+	&__body
+		position: absolute
+		width: 20px
+		height: 14px
+		top: 50%
+		margin-top: -7px
+		left: 50%
+		margin-left: -10px
+		//background: red
+
+	&__i
+		width: 20px
+		height: 2px
+		background: #60676d
+		position: absolute
+		left: 0
+		+transition-duration(.5s)
+		+transform-origin(left, center)
+
+		&_tp_top
+			top: 0
+			.is-active &
+				top: -1px
+				+rotate(45deg)
+
+		&_tp_middle
+			top: 6px
+			.is-active &
+				left: -15px
+				+opacity(0)
+
+		&_tp_bottom
+			bottom: 0
+			.is-active &
+				bottom: -1px
+				+rotate(-45deg)
+
+/* nav-ctrl
 /* ---------------------------------------END--- */
 
 
@@ -211,7 +298,7 @@
 	&__i
 		display: table-cell
 		vertical-align: top
-		
+
 
 /* columns
 /* ---------------------------------------END--- */
@@ -225,6 +312,7 @@
 	@extend %font-black
 	+rem(font-size, 12px)
 	margin-left: -13px
+	float: left
 
 	&__lst
 		margin: 0
@@ -234,23 +322,43 @@
 	&__i
 		float: left
 
+
+
 	&__a
+		position: relative
 		display: block
 		text-transform: uppercase
-		padding: 13px
+		padding: 0 13px
+		height: 70px
+		line-height: 70px
+		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
+
+		.is-active &
+			color: $link_color_hover
+
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				height: 5px
+				background: $link_color_hover
 
 /* main-nav
 /* ---------------------------------------END--- */
 
 
-/* user-icon
+/* icon
 /* --------------------------------------------- */
 
-.user-icon
-	color: yellow
+.icon
+	width: 16px
+	height: 16px
+	display: inline-block
 
-
-/* user-icon
+/* icon
 /* ---------------------------------------END--- */
 
 
