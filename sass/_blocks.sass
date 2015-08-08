@@ -128,10 +128,17 @@
 	border-bottom: none
 	float: left
 	margin-right: 39px
+	margin-left: 40px
+	+max-screen($mq_logo)
+		width: 100px !important
+		margin-right: 20px
+		margin-left: 10px
 
-
-	&__img
+	&__icon
 		display: block
+		+max-screen($mq_logo)
+			width: 100px !important
+			height: auto
 
 	
 /* logo
@@ -190,13 +197,14 @@
 
 .nav-ctrl
 	float: left
-	margin-right: 40px
 	width: 70px
 	height: 70px
 	border-right: 1px solid #fbfbfb
 	//background: #E6DEDE
 	cursor: pointer
 	position: relative
+	+max-screen($mq_logo)
+		width: 45px
 
 	&:before
 		content: ''
@@ -526,15 +534,15 @@
 		list-style-type: none
 		
 	&__i
-		margin: 0 0 26px 0
-		padding: 0 20px
+		margin: 0 0 26px 20px
+		padding: 0
 		@extend %bszbb
 		display: inline-block
 		vertical-align: top
-		width: (100%/4) - 1%
+		width: (100%/4) - 4%
 
 		+max-screen($mq_nav-teasers-width)
-			width: (100%/3) - 1%
+			width: (100%/3) - 5%
 
 		+max-screen($mq_nav-teasers-width2)
 			width: 100% !important
@@ -552,9 +560,16 @@
 	vertical-align: middle
 	white-space: nowrap
 	+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
+	+max-screen($mq_user-auth)
+		text-align: center
+		margin-left: 10px
 
 	&__icon
 		margin-left: 40px
+		+max-screen($mq_user-auth)
+			margin-left: 0
+			margin-bottom: 3px
+
 		
 	&__h
 		+rem(font-size, 12px)
@@ -562,6 +577,10 @@
 		display: inline-block
 		vertical-align: middle
 		margin-left: 24px
+		+max-screen($mq_user-auth)
+			display: block
+			margin-left: 0
+			text-align: center
 
 /* enter
 /* ---------------------------------------END--- */
@@ -575,6 +594,7 @@
 	vertical-align: middle
 	+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
 
+
 	&__h
 		+rem(font-size, 12px)
 		text-transform: uppercase
@@ -582,6 +602,10 @@
 		vertical-align: middle
 		@extend %font-black
 		margin-left: 25px
+		+max-screen($mq_user-auth)
+			margin-left: 10px
+		+max-screen($mq_logo)
+			display: none
 
 /* user
 /* ---------------------------------------END--- */
@@ -594,6 +618,8 @@
 	display: inline-block
 	vertical-align: middle
 	margin-left: 40px
+	+max-screen($mq_user-auth)
+		margin-left: 10px
 
 	&__icon
 		width: 32px
@@ -614,6 +640,7 @@
 
 	&__icon
 		vertical-align: middle
+		color: #d9dbdc
 		
 	&__h
 		color: #D7D9DA
@@ -621,6 +648,12 @@
 		display: inline-block
 		vertical-align: middle
 		margin-left: 10px
+		+max-screen($mq_user-auth)
+			display: block
+			margin-left: 0
+			text-align: center
+			padding-top: 4px
+		
 
 /* all-favorites
 /* ---------------------------------------END--- */
