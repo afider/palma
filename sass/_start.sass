@@ -6,8 +6,8 @@ body
 	color: $text_color
 	+rem(font-size, 14px)
 	line-height: 1.4
-	//font-family: $font_main
-	font-family: 'Roboto'
+	font-family: $font_main
+
 
 
 html, body 
@@ -78,8 +78,6 @@ ol li
 +font-face( $family: "Roboto Thin", $file_name_r: "roboto-thin", $file_name_i: "roboto-thinitalic")
 +font-face( $family: "Roboto", $file_name_r: "roboto-regular")
 
-+font-face( $family: "Rubl", $file_name_r: "alsrubl-arial-regular", $file_name_i: "alsrubl-arial-italic", $file_name_b: "alsrubl-arial-bold", $file_name_bi: "alsrubl-arial-bolditalic")
-
 
 %font-medium
 	font-family: 'Roboto Medium', $font_main
@@ -100,17 +98,6 @@ ol li
 	font-family: 'Roboto black', $font_main
 .font-black
 	@extend %font-black
-
-%font-rub
-	font-family: 'Roboto', $font_main
-.font-rub
-	@extend %font-rub
-
-
-%font-rubl
-	font-family: 'Rubl', 'Roboto black', $font_main
-.font-rubl
-	@extend %font-rubl
 
 
 /* font

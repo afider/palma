@@ -5,12 +5,13 @@
 <!--<![endif]-->
 
 	<head> 
-		<meta charset="utf-8"> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
 		<title>Site name</title>
 		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="css/common.css">
+		<script src="js/jquery-1.8.3.min.js"></script>
 		<!--[if lt IE 9]> <script src="js/html5.js"></script><![endif]-->
-		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/common.js"></script>
 		<script src="js/svg.js"></script>
 	</head>
@@ -21,109 +22,635 @@
 
 		<div class="page">
 
-			<header class="page__header">
-				<div class="page__header-in centered">
+			<div class="page__in">		
+	
+				<header class="page__header">
 
-					<div class="columns">
-						<div class="columns__i">
+					<div class="nav">
+						<div class="nav__body">
 							
-							<div class="nav-ctrl">
-								<div class="nav-ctrl__body">
-									<div class="nav-ctrl__i nav-ctrl__i_tp_top"></div>
-									<div class="nav-ctrl__i nav-ctrl__i_tp_middle"></div>
-									<div class="nav-ctrl__i nav-ctrl__i_tp_bottom"></div>
-								</div>
-							</div><!-- nav__ctrl -->
-							<div class="nav">
-								<p>Декретное время однократно. Надир вращает межпланетный популяционный индекс. Магнитное поле однородно выслеживает лимб, это довольно часто наблюдается у сверхновых звезд второго типа. Гелиоцентрическое расстояние, несмотря на внешние воздействия, постоянно. Зенитное часовое число, это удалось установить по характеру спектра, колеблет центральный экватор, а время ожидания ответа составило бы 80 миллиардов лет.</p>
-								
-								<p>Газопылевое облако ищет популяционный индекс. Противостояние, сублимиpуя с повеpхности ядpа кометы, стабильно. Возмущающий фактор, следуя пионерской работе Эдвина Хаббла, иллюстрирует эксцентриситет. Газопылевое облако, на первый взгляд, иллюстрирует астероид. Спектральный класс выслеживает далекий зенит. Весеннее равноденствие непрерывно.</p>
-								
-								<p>Гелиоцентрическое расстояние, на первый взгляд, отражает астероидный Ганимед. Газопылевое облако, и это следует подчеркнуть, непрерывно. Поперечник разрушаем. Терминатор на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), отражает экваториальный параллакс.</p>
-								
-								<p>Пpотопланетное облако случайно. Пpотопланетное облако колеблет центральный Южный Треугольник. Земная группа формировалась ближе к Солнцу, однако соединение выслеживает большой круг небесной сферы. Космический мусор решает перигелий.</p>
-								
-								<p>Математический горизонт, на первый взгляд, точно меняет болид . Тропический год оценивает близкий нулевой меридиан. По космогонической гипотезе Джеймса Джинса, фаза оценивает случайный ионный хвост. Маятник Фуко ничтожно вызывает зенит. Различное расположение, как бы это ни казалось парадоксальным, оценивает Юпитер. Соединение колеблет математический горизонт, выслеживая яркие, броские образования.</p>
-								
-							</div><!-- nav -->
+							<div class="nav-teasers">
+								<ul class="nav-teasers__lst">
+									<li class="nav-teasers__i">
 
-							<a href="#" class="logo">
-								<img src="img/logo.png" height="22" width="154" alt="Site name">
-							</a>
-							
-							<div class="main-nav">
-								<ul class="main-nav__lst">
-									<li class="main-nav__i is-active"><a href="#12" class="main-nav__a">Транспорт</a></li>
-									<li class="main-nav__i"><a href="#13" class="main-nav__a">Недвижимость</a></li>
-									<li class="main-nav__i"><a href="#14" class="main-nav__a">Работа</a></li>
-									<li class="main-nav__i"><a href="#15" class="main-nav__a">Услуги</a></li>
-									<li class="main-nav__i"><a href="#16" class="main-nav__a">бизнес</a></li>
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Транспорт</a>
+											<ul class="category-nav__lst">
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Автомобили</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Мотоциклы и мототехника</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Спецтехника и грузовики</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Водный транспорт</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Угон</a>
+												</li>
+											</ul>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Недвижимость</a>
+											<ul class="category-nav__lst">
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Квартиры</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Комнаты</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Гаражи и машиноместа</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Дома и коттеджи</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Дачи</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Земельные участки</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Коммерческая недвижимость</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Недвижимость за рубежом</a>
+												</li>
+											</ul>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Работа</a>
+											<ul class="category-nav__lst">
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Вакансии</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Резюме</a>
+												</li>
+											</ul>
+										</div><!-- category-nav -->
+										
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Услуги</a>
+											<ul class="category-nav__lst">
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Предложение услуг</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Требуются услуги</a>
+												</li>
+											</ul>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Одежда и обувь</a>
+											<ul class="category-nav__lst">
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Женская одежда и обувь</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Мужская одежда и обувь</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Аксессуары</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Часы и украшения</a>
+												</li>
+											</ul>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Спорт</a>
+											<ul class="category-nav__lst">
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Инструменты</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Камины и печи</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Сантехника</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Материалы</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Двери</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Отопление</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Напольные покрытия</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Сауны и бани</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Потолки</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Окна</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Электрика</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Лестницы</a>
+												</li>
+											</ul>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Хобби и отдых</a>
+											<ul class="category-nav__lst">
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Книги и журналы </a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Коллекционирование </a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Музыкальные инструменты</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Охота и рыбалка</a>
+												</li>
+											</ul>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Спорт</a>
+											<ul class="category-nav__lst">
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Экипировка</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Аксессуары</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Инвентарь</a>
+												</li>
+												<li class="category-nav__i">
+													<a href="#" class="category-nav__a">Тренажеры</a>
+												</li>
+											</ul>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Разные вещи и товары</a>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Животные</a>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Бизнес</a>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Бытовая техника и электроника</a>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Товары для детей</a>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Мебель, интерьер, обиход</a>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">Бюро находок</a>
+										</div><!-- category-nav -->
+
+									</li>
+									<li class="nav-teasers__i">
+
+										<div class="category-nav">
+											<a href="#" class="category-nav__h">В дар</a>
+										</div><!-- category-nav -->
+
+									</li>
 								</ul>
-							</div>
-						</div><!-- columns__i -->
-						<div class="columns__i">
+							</div><!-- nav-teasers -->
 
-							<svg class="icon">
-								<use xlink:href="#icon_user"></use>
-							</svg>
+						</div><!-- nav__body -->
+						
+					</div><!-- nav -->
 
-							Вход 
+					<div class="page__header-in centered">
+	
+						<div class="columns">
+							<div class="columns__i">
+								
+								<div class="nav-ctrl">
+									<div class="nav-ctrl__body">
+										<div class="nav-ctrl__i nav-ctrl__i_tp_top"></div>
+										<div class="nav-ctrl__i nav-ctrl__i_tp_middle"></div>
+										<div class="nav-ctrl__i nav-ctrl__i_tp_bottom"></div>
+									</div>
+								</div><!-- nav__ctrl -->
+	
+								<a href="#" class="logo">
+									<img src="img/logo.png" height="22" width="154" alt="Site name">
+								</a>
+								
+								<div class="main-nav">
+									<ul class="main-nav__lst">
+										<li class="main-nav__i is-active"><a href="#12" class="main-nav__a">Транспорт</a></li>
+										<li class="main-nav__i"><a href="#13" class="main-nav__a">Недвижимость</a></li>
+										<li class="main-nav__i"><a href="#14" class="main-nav__a">Работа</a></li>
+										<li class="main-nav__i"><a href="#15" class="main-nav__a">Услуги</a></li>
+										<li class="main-nav__i"><a href="#16" class="main-nav__a">бизнес</a></li>
+									</ul>
+								</div>
+							</div><!-- columns__i -->
+							<div class="columns__i">
 
-							регистрация
-						</div><!-- columns__i -->
-					</div><!-- columns -->
+								<div class="enter">
+									<svg class="enter__icon icon">
+										<use xlink:href="#icon_user"></use>
+									</svg>
+									<div class="enter__h">Вход</div>
+								</div>
+	
+								<div class="user">Регистрация</div>
+								
+							</div><!-- columns__i -->
+						</div><!-- columns -->
+	
+					</div><!-- centered -->
+				</header><!-- page__header -->
+	
+				<div class="search-panel">
+					<div class="search-panel__body centered">
+	
+						<p>Декретное время однократно. Надир вращает межпланетный популяционный индекс. Магнитное поле однородно выслеживает лимб, это довольно часто наблюдается у сверхновых звезд второго типа. Гелиоцентрическое расстояние, несмотря на внешние воздействия, постоянно. Зенитное часовое число, это удалось установить по характеру спектра, колеблет центральный экватор, а время ожидания ответа составило бы 80 миллиардов лет.</p>
+	
+						
+					</div><!-- search-panel__body centered -->
+				</div><!-- search-panel -->
+			
+				<div class="page__body centered clearfix">
+					
+					<div class="page__mainbar">
+						<h1>«Астероидный восход : <i>гипотеза</i> и теории»</h1>
+						
+						<p>Угловое <a href="#253454363" class="lcolor">расстояние точно дает метеорит</a>, об интересе Галла к астрономии и затмениям &#8381; Цицерон говорит <b>также в трактате</b> "О старости" (De senectute). В связи с этим нужно подчеркнуть, &#8381; что<i>xxx<span>&#8381;</span></i> «эклиптика вращает первоначальный» <i>«эклиптика вращает первоначальный»</i> <i><b>«эклиптика вращает первоначальный»</b></i> часовой угол, тем не<i> менее</i>, уже 4,5 млрд лет расстояние нашей планеты от <a href="#1" class="lcolor">Солнца</a> практически не меняется.</p>
+						
+						<p class="font-rub">Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где атомное время вращает центральный экватор. Элонгация &#8381; перечеркивает астероидный Юпитер. Аргумент перигелия выслеживает <i>«параллакс»</i>. Высота притягивает реликтовый ледник, данное соглашение было заключено на 2-й <span class="font-rubl">Р</span><span>&#8381;</span> международной конференции "Земля из космоса - наиболее эффективные решения".</p>
+						
+						<p class="font-black">Black Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где атомное время вращает центральный экватор. Элонгация &#8381; перечеркивает астероидный Юпитер. Аргумент перигелия выслеживает <i>«параллакс»</i>. Высота притягивает реликтовый ледник, данное соглашение было заключено на 2-й <span class="font-rubl">Р</span><span>&#8381;</span> международной <i><span>&#8381;</span> <span>&#8381;</span> </i>конференции "Земля из космоса - наиболее эффективные решения".</p>
+						
+						<p class="font-regular">Regular Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где атомное время вращает центральный экватор. Элонгация &#8381; перечеркивает астероидный <b>Юпитер. Аргумент <span>&#8381;</span> <span>&#8381;</span> xxx <i><span>&#8381;</span> <span>&#8381;</span></i></b> <span>&#8381;</span> <span>&#8381;</span> <span>&#8381;</span> <i><span>&#8381;</span> <span>&#8381;</span></i> <span>&#8381;</span>  перигелия выслеживает <i>«параллакс»</i>. Высота притягивает реликтовый ледник, данное соглашение было заключено на 2-й <span class="font-rubl">Р</span><span>&#8381;</span> международной <i><span>&#8381;</span> <span>&#8381;</span> </i>конференции "Земля из космоса - наиболее эффективные решения".</p>
+						
+						
+						<p class="font-medium">Medium <span>&#8381;</span> <i><span>&#8381;</span></i> Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где атомное время вращает центральный экватор. Элонгация &#8381; перечеркивает астероидный Юпитер. </p>
+						
+						<p class="font-thin">Thin <span>&#8381;</span> <i><span>&#8381;</span></i> Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где атомное время вращает центральный экватор. Элонгация &#8381; перечеркивает астероидный Юпитер. </p>
+						
+						
+						<p>Реликтовый ледник, сублимиpуя с <a href="#2">повеpхности<span>&#8381;</span> ядpа кометы</a>, вращает часовой угол. Прямое восхождение представляет собой возмущающий &#8381; фактор, &#8381; тем не менее, уже 4,5 млрд лет расстояние нашей планеты от Солнца практически не меняется.</p>
+	
+	
+					</div><!-- page__mainbar -->
+					
+					<!-- <aside class="page__sidebar page__sidebar_lt_left">
+					
+						<p>Апогей теоретически возможен. Различное расположение существенно решает непреложный Млечный Путь. В отличие от давно известных астрономам планет земной группы, приливное трение дает близкий дип-скай объект - это солнечное затмение предсказал ионянам Фалес Милетский.</p>
+					
+					</aside>page__sidebar_lt_left -->
+					
+					<!-- <aside class="page__sidebar page__sidebar_lt_right">
+					
+						<p>Ось, и это следует подчеркнуть, ищет далекий популяционный индекс. Природа гамма-всплексов, это удалось установить по характеру спектра, перечеркивает маятник Фуко – у таких объектов рукава столь фрагментарны и обрывочны, что их уже нельзя назвать спиральными. Ось прекрасно дает первоначальный радиант, но кольца видны только при 40–50.</p>
+					
+					</aside>page__sidebar_lt_right -->
+	
+					
+				</div><!-- page__body -->
+	
+				<div class="bordered-panel">
+						
+					<div class="bordered-panel__body centered">
 
-				</div><!-- centered -->
-			</header><!-- page__header -->
 
-			<div class="search-panel">
-				<div class="search-panel__body centered">
+						<div class="nav-teasers">
+							<ul class="nav-teasers__lst">
+								<li class="nav-teasers__i">
 
-					<p>Декретное время однократно. Надир вращает межпланетный популяционный индекс. Магнитное поле однородно выслеживает лимб, это довольно часто наблюдается у сверхновых звезд второго типа. Гелиоцентрическое расстояние, несмотря на внешние воздействия, постоянно. Зенитное часовое число, это удалось установить по характеру спектра, колеблет центральный экватор, а время ожидания ответа составило бы 80 миллиардов лет.</p>
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Транспорт</a>
+										<ul class="category-nav__lst">
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Автомобили</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Мотоциклы и мототехника</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Спецтехника и грузовики</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Водный транспорт</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Угон</a>
+											</li>
+										</ul>
+									</div><!-- category-nav -->
 
-					
-				</div><!-- search-panel__body centered -->
-			</div><!-- search-panel -->
-		
-			<div class="page__body centered clearfix">
-				
-				<div class="page__mainbar">
-					<h1>«Астероидный восход : <i>гипотеза</i> и теории»</h1>
-					
-					<p>Угловое <a href="#253454363" class="lcolor">расстояние точно дает метеорит</a>, об интересе Галла к астрономии и затмениям &#8381; Цицерон говорит <b>также в трактате</b> "О старости" (De senectute). В связи с этим нужно подчеркнуть, &#8381; что<i>xxx<span>&#8381;</span></i> «эклиптика вращает первоначальный» <i>«эклиптика вращает первоначальный»</i> <i><b>«эклиптика вращает первоначальный»</b></i> часовой угол, тем не<i> менее</i>, уже 4,5 млрд лет расстояние нашей планеты от <a href="#1" class="lcolor">Солнца</a> практически не меняется.</p>
-					
-					<p class="font-rub">Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где атомное время вращает центральный экватор. Элонгация &#8381; перечеркивает астероидный Юпитер. Аргумент перигелия выслеживает <i>«параллакс»</i>. Высота притягивает реликтовый ледник, данное соглашение было заключено на 2-й <span class="font-rubl">Р</span><span>&#8381;</span> международной конференции "Земля из космоса - наиболее эффективные решения".</p>
-					
-					<p class="font-black">Black Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где атомное время вращает центральный экватор. Элонгация &#8381; перечеркивает астероидный Юпитер. Аргумент перигелия выслеживает <i>«параллакс»</i>. Высота притягивает реликтовый ледник, данное соглашение было заключено на 2-й <span class="font-rubl">Р</span><span>&#8381;</span> международной <i><span>&#8381;</span> <span>&#8381;</span> </i>конференции "Земля из космоса - наиболее эффективные решения".</p>
-					
-					<p class="font-regular">Regular Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где атомное время вращает центральный экватор. Элонгация &#8381; перечеркивает астероидный <b>Юпитер. Аргумент <span>&#8381;</span> <span>&#8381;</span> xxx <i><span>&#8381;</span> <span>&#8381;</span></i></b> <span>&#8381;</span> <span>&#8381;</span> <span>&#8381;</span> <i><span>&#8381;</span> <span>&#8381;</span></i> <span>&#8381;</span>  перигелия выслеживает <i>«параллакс»</i>. Высота притягивает реликтовый ледник, данное соглашение было заключено на 2-й <span class="font-rubl">Р</span><span>&#8381;</span> международной <i><span>&#8381;</span> <span>&#8381;</span> </i>конференции "Земля из космоса - наиболее эффективные решения".</p>
-					
-					
-					<p class="font-medium">Medium <span>&#8381;</span> <i><span>&#8381;</span></i> Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где атомное время вращает центральный экватор. Элонгация &#8381; перечеркивает астероидный Юпитер. </p>
-					
-					<p class="font-thin">Thin <span>&#8381;</span> <i><span>&#8381;</span></i> Это можно записать следующим образом: V = 29.8 * sqrt(2/r – 1/a) км/сек, где атомное время вращает центральный экватор. Элонгация &#8381; перечеркивает астероидный Юпитер. </p>
-					
-					
-					<p>Реликтовый ледник, сублимиpуя с <a href="#2">повеpхности<span>&#8381;</span> ядpа кометы</a>, вращает часовой угол. Прямое восхождение представляет собой возмущающий &#8381; фактор, &#8381; тем не менее, уже 4,5 млрд лет расстояние нашей планеты от Солнца практически не меняется.</p>
+								</li>
+								<li class="nav-teasers__i">
 
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Недвижимость</a>
+										<ul class="category-nav__lst">
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Квартиры</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Комнаты</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Гаражи и машиноместа</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Дома и коттеджи</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Дачи</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Земельные участки</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Коммерческая недвижимость</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Недвижимость за рубежом</a>
+											</li>
+										</ul>
+									</div><!-- category-nav -->
 
-				</div><!-- page__mainbar -->
-				
-				<!-- <aside class="page__sidebar page__sidebar_lt_left">
-				
-					<p>Апогей теоретически возможен. Различное расположение существенно решает непреложный Млечный Путь. В отличие от давно известных астрономам планет земной группы, приливное трение дает близкий дип-скай объект - это солнечное затмение предсказал ионянам Фалес Милетский.</p>
-				
-				</aside>page__sidebar_lt_left -->
-				
-				<!-- <aside class="page__sidebar page__sidebar_lt_right">
-				
-					<p>Ось, и это следует подчеркнуть, ищет далекий популяционный индекс. Природа гамма-всплексов, это удалось установить по характеру спектра, перечеркивает маятник Фуко – у таких объектов рукава столь фрагментарны и обрывочны, что их уже нельзя назвать спиральными. Ось прекрасно дает первоначальный радиант, но кольца видны только при 40–50.</p>
-				
-				</aside>page__sidebar_lt_right -->
-				
-			</div><!-- page__body -->
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Работа</a>
+										<ul class="category-nav__lst">
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Вакансии</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Резюме</a>
+											</li>
+										</ul>
+									</div><!-- category-nav -->
+									
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Услуги</a>
+										<ul class="category-nav__lst">
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Предложение услуг</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Требуются услуги</a>
+											</li>
+										</ul>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Одежда и обувь</a>
+										<ul class="category-nav__lst">
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Женская одежда и обувь</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Мужская одежда и обувь</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Аксессуары</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Часы и украшения</a>
+											</li>
+										</ul>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Спорт</a>
+										<ul class="category-nav__lst">
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Инструменты</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Камины и печи</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Сантехника</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Материалы</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Двери</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Отопление</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Напольные покрытия</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Сауны и бани</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Потолки</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Окна</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Электрика</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Лестницы</a>
+											</li>
+										</ul>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Хобби и отдых</a>
+										<ul class="category-nav__lst">
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Книги и журналы </a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Коллекционирование </a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Музыкальные инструменты</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Охота и рыбалка</a>
+											</li>
+										</ul>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Спорт</a>
+										<ul class="category-nav__lst">
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Экипировка</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Аксессуары</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Инвентарь</a>
+											</li>
+											<li class="category-nav__i">
+												<a href="#" class="category-nav__a">Тренажеры</a>
+											</li>
+										</ul>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Разные вещи и товары</a>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Животные</a>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Бизнес</a>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Бытовая техника и электроника</a>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Товары для детей</a>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Мебель, интерьер, обиход</a>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">Бюро находок</a>
+									</div><!-- category-nav -->
+
+								</li>
+								<li class="nav-teasers__i">
+
+									<div class="category-nav">
+										<a href="#" class="category-nav__h">В дар</a>
+									</div><!-- category-nav -->
+
+								</li>
+							</ul>
+						</div><!-- nav-teasers -->
+						
+					</div><!-- bordered-panel__body -->
+	
+				</div><!-- bordered-panel -->
+
+			</div><!-- page__in -->
 			
 		</div><!-- page -->
+
+
 		
 		<footer class="page__footer">
 			<div class="centered">
@@ -131,7 +658,7 @@
 				<div class="footer-nav">
 					<ul class="footer-nav__lst">
 						<li class="footer-nav__i"><a href="#" class="footer-nav__a">Подать объявление</a></li>
-						<li class="footer-nav__i"><a href="#" class="footer-nav__a">Объявления</a></li>
+						<li class="footer-nav__i is-active"><a href="#" class="footer-nav__a">Объявления</a></li>
 						<li class="footer-nav__i"><a href="#" class="footer-nav__a">Безопасность</a></li>
 						<li class="footer-nav__i"><a href="#" class="footer-nav__a">Карта категорий</a></li>
 						<li class="footer-nav__i"><a href="#" class="footer-nav__a">О компании</a></li>
@@ -140,8 +667,8 @@
 					</ul>
 				</div><!-- footer-nav -->
 
-				© 2015  Доска объявлений «Пальма»
-				Использование сайта, в том числе подача объявлений, означает согласие с пользовательским соглашением. Оплачивая услуги на сайте, Вы принимаете оферту.
+				<div class="copyright">© 2015  Доска объявлений «Пальма»</div>
+				<div class="rights">Использование сайта, в том числе подача объявлений, означает согласие с пользовательским соглашением. Оплачивая услуги на сайте, Вы принимаете оферту.</div>
 
 			</div><!-- centered -->
 		</footer><!-- page__footer -->

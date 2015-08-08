@@ -41,8 +41,8 @@
 
 .centered
 	margin: auto
-	min-width: $page_w
-	max-width: $page_w_max
+	min-width: $min-width
+	max-width: $page_w_max_sm
 	//padding-left: 40px
 	//padding-right: 40px
 	+box-sizing(border-box)
@@ -60,19 +60,23 @@
 	position: relative
 	min-height: 100%
 	width: 100%
-	min-width: $page_w
+	min-width: $min-width
 
 	&__header
 		//background: #adf785
 		border-bottom: 1px solid #e0e0e0
 		@include box-shadow(0 1px 0 #f2f2f2)
+		
 
 	&__header-in
 		position: relative
 		height: 70px
 		@extend %clear
+		max-width: $page_w_max
 
 	&__body
+
+	&__in
 		padding-bottom: $footer_h
 
 	&__mainbar
@@ -104,7 +108,7 @@
 		//background: #f1acf2
 		margin-top: -$footer_h
 		height: $footer_h
-		min-width: $page_w
+		min-width: $min-width
 		border-top: 1px solid $dark-el-color__sep
 
 	
@@ -155,8 +159,19 @@
 	left: 0
 	right: 0
 	background: #fff
-	padding: 36px 100px
+	padding: 34px
+	+transition-duration(.5s)
 	+box-shadow(0px 2px 4px rgba(#000, .2))
+	visibility: hidden
+	+opacity(0)
+
+	&.is-active
+		+opacity(1)
+		visibility: visible
+
+	&__body
+		max-width: $page_w_max_sm
+		margin: auto
 
 
 /* nav
@@ -176,6 +191,27 @@
 	cursor: pointer
 	position: relative
 
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		bottom: -2px
+		right: 0
+		width: 9999px
+		height: 2px
+		background: #fff
+		+transition-duration(.5s)
+		visibility: hidden
+		+opacity(0)
+
+	&.is-active
+		&:before
+			+opacity(1)
+			visibility: visible
+
+
+	&.is-active
+
 	&__body
 		position: absolute
 		width: 20px
@@ -185,7 +221,9 @@
 		left: 50%
 		margin-left: -10px
 		//background: red
-
+	
+	&:hover &__i
+		background: $link_color_hover
 	&__i
 		width: 20px
 		height: 2px
@@ -194,6 +232,7 @@
 		left: 0
 		+transition-duration(.5s)
 		+transform-origin(left, center)
+
 
 		&_tp_top
 			top: 0
@@ -270,6 +309,7 @@
 	@extend %font-black
 	+rem(font-size, 12px)
 	margin-left: -13px
+	padding: 10px 0
 
 	&__lst
 		margin: 0
@@ -278,11 +318,18 @@
 		
 	&__i
 		float: left
+		margin: 0
+		padding: 0
+		
 
 	&__a
 		display: block
 		text-transform: uppercase
-		padding: 13px
+		padding: 3px 13px
+		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
+
+		.is-active &
+			color: $link_color_hover
 
 /* footer-nav
 /* ---------------------------------------END--- */
@@ -361,5 +408,103 @@
 /* icon
 /* ---------------------------------------END--- */
 
+
+/* bordered-panel
+/* --------------------------------------------- */
+
+.bordered-panel
+	padding-top: 13px
+	border-top: 1px solid $dark-el-color__sep
+
+/* bordered-panel
+/* ---------------------------------------END--- */
+
+
+/* copyright
+/* --------------------------------------------- */
+
+.copyright
+	margin-bottom: 12px
+
+/* copyright
+/* ---------------------------------------END--- */
+
+
+/* rights
+/* --------------------------------------------- */
+
+.rights
+	color: #979797
+	+rem(font-size, 11px)
+
+/* rights
+/* ---------------------------------------END--- */
+
+
+/* category-nav
+/* --------------------------------------------- */
+
+.category-nav
+	&__h
+		+rem(font-size, 16px)
+		@extend %font-regular
+		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
+		font-weight: bold
+		padding-bottom: 3px
+		display: inline-block
+		
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		+rem(font-size, 12px)
+		
+		
+	&__i
+		margin: 0
+		padding: 0
+
+	&__a
+		+link-color ($color_visited: none)
+		padding: 3px 0
+		display: inline-block
+		
+
+/* category-nav
+/* ---------------------------------------END--- */
+
+
+/* nav-teasers
+/* --------------------------------------------- */
+
+.nav-teasers
+
+	margin-bottom: 13px
+	
+	&__lst
+		margin: 0 0 0 -20px
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		margin: 0 0 26px 0
+		padding: 0 20px
+		@extend %bszbb
+		display: inline-block
+		vertical-align: top
+		width: (100%/4) - 1%
+
+/* nav-teasers
+/* ---------------------------------------END--- */
+
+
+/* enter
+/* --------------------------------------------- */
+
+.enter
+	
+
+/* enter
+/* ---------------------------------------END--- */
 
 	
