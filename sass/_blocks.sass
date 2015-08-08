@@ -43,8 +43,8 @@
 	margin: auto
 	min-width: $min-width
 	max-width: $page_w_max_sm
-	//padding-left: 40px
-	//padding-right: 40px
+	padding-left: 10px
+	padding-right: 10px
 	+box-sizing(border-box)
 
 /* centered
@@ -161,17 +161,24 @@
 	background: #fff
 	padding: 34px
 	+transition-duration(.5s)
-	+box-shadow(0px 2px 4px rgba(#000, .2))
+	+box-shadow(0px 15px 15px rgba(#000, .2))
 	visibility: hidden
 	+opacity(0)
 
-	&.is-active
+	&.is-open
 		+opacity(1)
 		visibility: visible
 
 	&__body
 		max-width: $page_w_max_sm
 		margin: auto
+
+	&__main-nav
+		display: none
+		margin-top: -20px
+		margin-bottom: 20px
+		+max-screen($mq_main-nav-width)
+			display: block
 
 
 /* nav
@@ -204,13 +211,13 @@
 		visibility: hidden
 		+opacity(0)
 
-	&.is-active
+	&.is-open
 		&:before
 			+opacity(1)
 			visibility: visible
 
 
-	&.is-active
+	&.is-open
 
 	&__body
 		position: absolute
@@ -236,19 +243,19 @@
 
 		&_tp_top
 			top: 0
-			.is-active &
+			.is-open &
 				top: -1px
 				+rotate(45deg)
 
 		&_tp_middle
 			top: 6px
-			.is-active &
+			.is-open &
 				left: -15px
 				+opacity(0)
 
 		&_tp_bottom
 			bottom: 0
-			.is-active &
+			.is-open &
 				bottom: -1px
 				+rotate(-45deg)
 
@@ -346,8 +353,20 @@
 		display: table-cell
 		vertical-align: top
 
+		&_valign_middle
+			vertical-align: middle
 
 /* columns
+/* ---------------------------------------END--- */
+
+
+/* txt-to-right
+/* --------------------------------------------- */
+
+.txt-to-right
+	text-align: right
+
+/* txt-to-right
 /* ---------------------------------------END--- */
 
 
@@ -359,7 +378,13 @@
 	@extend %font-black
 	+rem(font-size, 12px)
 	margin-left: -13px
-	float: left
+	
+	&_lt_left
+		float: left
+
+	&_tp_desctop
+		+max-screen($mq_main-nav-width)
+			display: none
 
 	&__lst
 		margin: 0
@@ -368,8 +393,9 @@
 		
 	&__i
 		float: left
-
-
+		margin: 0
+		padding: 0
+		
 
 	&__a
 		position: relative
@@ -393,6 +419,12 @@
 				height: 5px
 				background: $link_color_hover
 
+	&_tp_mobile &__a
+		padding: 13px
+		height: auto
+		line-height: 1
+			
+
 /* main-nav
 /* ---------------------------------------END--- */
 
@@ -404,6 +436,7 @@
 	width: 16px
 	height: 16px
 	display: inline-block
+	vertical-align: middle
 
 /* icon
 /* ---------------------------------------END--- */
@@ -458,11 +491,17 @@
 		padding: 0
 		list-style-type: none
 		+rem(font-size, 12px)
+		display: block
 		
 		
 	&__i
 		margin: 0
 		padding: 0
+		display: block
+
+		+max-screen($mq_nav-teasers-width2)
+			display: inline-block
+			margin-right: 20px
 
 	&__a
 		+link-color ($color_visited: none)
@@ -494,6 +533,13 @@
 		vertical-align: top
 		width: (100%/4) - 1%
 
+		+max-screen($mq_nav-teasers-width)
+			width: (100%/3) - 1%
+
+		+max-screen($mq_nav-teasers-width2)
+			width: 100% !important
+
+
 /* nav-teasers
 /* ---------------------------------------END--- */
 
@@ -502,9 +548,79 @@
 /* --------------------------------------------- */
 
 .enter
-	
+	display: inline-block
+	vertical-align: middle
+	white-space: nowrap
+	+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
+
+	&__icon
+		margin-left: 40px
+		
+	&__h
+		+rem(font-size, 12px)
+		text-transform: uppercase
+		display: inline-block
+		vertical-align: middle
+		margin-left: 24px
 
 /* enter
 /* ---------------------------------------END--- */
 
+
+/* user
+/* --------------------------------------------- */
+
+.user
+	display: inline-block
+	vertical-align: middle
+	+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
+
+	&__h
+		+rem(font-size, 12px)
+		text-transform: uppercase
+		display: inline-block
+		vertical-align: middle
+		@extend %font-black
+		margin-left: 25px
+
+/* user
+/* ---------------------------------------END--- */
+
 	
+/* add-button
+/* --------------------------------------------- */
+
+.add-button
+	display: inline-block
+	vertical-align: middle
+	margin-left: 40px
+
+	&__icon
+		width: 32px
+		height: 32px
+		display: block
+
+/* add-button
+/* ---------------------------------------END--- */
+
+
+/* all-favorites
+/* --------------------------------------------- */
+
+.all-favorites
+	display: inline-block
+	vertical-align: middle
+	white-space: nowrap
+
+	&__icon
+		vertical-align: middle
+		
+	&__h
+		color: #D7D9DA
+		+rem(font-size, 12px)
+		display: inline-block
+		vertical-align: middle
+		margin-left: 10px
+
+/* all-favorites
+/* ---------------------------------------END--- */

@@ -12,8 +12,8 @@
 		$(".nav-ctrl").on('click', function(event) {
 			event.preventDefault();
 			
-			$(this).toggleClass('is-active');
-			$(".nav").toggleClass('is-active');
+			$(this).toggleClass('is-open');
+			$(".nav").toggleClass('is-open');
 		});
 
 	} // animatePopupNav ()
