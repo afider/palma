@@ -9,7 +9,6 @@ body
 	font-family: $font_main
 
 
-
 html, body 
 	height: 100%
 
@@ -45,16 +44,19 @@ ol li
 	padding: 0
 	line-height: 1.2
 	font-weight: normal
+	
 
 #{headings(1, 1)}
-	font-size: 30px
+	+rem(font-size, 30px)
 	margin-bottom: 30px
 	margin-top: 0
 
 
 #{headings(2, 2)}
-	font-size: 20px
+	+rem(font-size, 21px)
 	margin-bottom: 35px
+	@extend %font-medium
+
 
 #{headings(3, 6)}
 	font-size: 17px

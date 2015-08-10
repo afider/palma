@@ -45,7 +45,7 @@
 	max-width: $page_w_max_sm
 	padding-left: 10px
 	padding-right: 10px
-	+box-sizing(border-box)
+	@extend %bszbb
 
 /* centered
 /* ---------------------------------------END--- */
@@ -54,13 +54,14 @@
 /* page
 /* --------------------------------------------- */
 
+
 .page
 	$footer_h: 143px
 
 	position: relative
 	min-height: 100%
 	width: 100%
-	min-width: $min-width
+	min-width: $page_w
 
 	&__header
 		//background: #adf785
@@ -80,27 +81,7 @@
 		padding-bottom: $footer_h
 
 	&__mainbar
-		float: left
-		width: 100%
-
-	&__content
-		overflow: hidden
-		margin: 0 230px
-		min-height: 20px
-		background: #f6f866
-
-	&__sidebar
-		float: left
-		width: 220px
-
-		&_lt_left
-			margin-left: -100%
-			background: #bfdcf3
-
-		&_lt_right
-			margin-left: -220px
-			background: #ffaa30
-
+		
 	&__footer
 		@extend %bszbb
 		padding-top: 13px
@@ -128,17 +109,12 @@
 	border-bottom: none
 	float: left
 	margin-right: 39px
-	margin-left: 40px
-	+max-screen($mq_logo)
-		width: 100px !important
-		margin-right: 20px
-		margin-left: 10px
+	margin-left: 30px
+
 
 	&__icon
 		display: block
-		+max-screen($mq_logo)
-			width: 100px !important
-			height: auto
+
 
 	
 /* logo
@@ -171,21 +147,21 @@
 	+box-shadow(0px 15px 15px rgba(#000, .2))
 	visibility: hidden
 	+opacity(0)
+	z-index: 100
 
 	&.is-open
 		+opacity(1)
 		visibility: visible
 
 	&__body
-		max-width: $page_w_max_sm
 		margin: auto
+		max-width: $page_w_max_sm - 20
 
 	&__main-nav
 		display: none
 		margin-top: -20px
 		margin-bottom: 20px
-		+max-screen($mq_main-nav-width)
-			display: block
+
 
 
 /* nav
@@ -203,8 +179,7 @@
 	//background: #E6DEDE
 	cursor: pointer
 	position: relative
-	+max-screen($mq_logo)
-		width: 45px
+
 
 	&:before
 		content: ''
@@ -357,12 +332,24 @@
 	display: table
 	width: 100%
 
+	&_space-bot_normal
+		margin-bottom: $content_bot_space
+
+	&_number_2 &__i
+		width: (100% / 2)
+	&_number_3 &__i
+		width: (100% / 3)
+	&_number_4 &__i
+		width: (100% / 4)
+
 	&__i
 		display: table-cell
 		vertical-align: top
 
 		&_valign_middle
 			vertical-align: middle
+
+
 
 /* columns
 /* ---------------------------------------END--- */
@@ -389,10 +376,6 @@
 	
 	&_lt_left
 		float: left
-
-	&_tp_desctop
-		+max-screen($mq_main-nav-width)
-			display: none
 
 	&__lst
 		margin: 0
@@ -426,12 +409,7 @@
 				right: 0
 				height: 5px
 				background: $link_color_hover
-
-	&_tp_mobile &__a
-		padding: 13px
-		height: auto
-		line-height: 1
-			
+		
 
 /* main-nav
 /* ---------------------------------------END--- */
@@ -507,10 +485,6 @@
 		padding: 0
 		display: block
 
-		+max-screen($mq_nav-teasers-width2)
-			display: inline-block
-			margin-right: 20px
-
 	&__a
 		+link-color ($color_visited: none)
 		padding: 3px 0
@@ -528,6 +502,7 @@
 
 	margin-bottom: 13px
 	
+	
 	&__lst
 		margin: 0 0 0 -20px
 		padding: 0
@@ -540,12 +515,6 @@
 		display: inline-block
 		vertical-align: top
 		width: (100%/4) - 4%
-
-		+max-screen($mq_nav-teasers-width)
-			width: (100%/3) - 5%
-
-		+max-screen($mq_nav-teasers-width2)
-			width: 100% !important
 
 
 /* nav-teasers
@@ -560,15 +529,9 @@
 	vertical-align: middle
 	white-space: nowrap
 	+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
-	+max-screen($mq_user-auth)
-		text-align: center
-		margin-left: 10px
 
 	&__icon
 		margin-left: 40px
-		+max-screen($mq_user-auth)
-			margin-left: 0
-			margin-bottom: 3px
 
 		
 	&__h
@@ -577,10 +540,6 @@
 		display: inline-block
 		vertical-align: middle
 		margin-left: 24px
-		+max-screen($mq_user-auth)
-			display: block
-			margin-left: 0
-			text-align: center
 
 /* enter
 /* ---------------------------------------END--- */
@@ -602,10 +561,7 @@
 		vertical-align: middle
 		@extend %font-black
 		margin-left: 25px
-		+max-screen($mq_user-auth)
-			margin-left: 10px
-		+max-screen($mq_logo)
-			display: none
+
 
 /* user
 /* ---------------------------------------END--- */
@@ -618,8 +574,6 @@
 	display: inline-block
 	vertical-align: middle
 	margin-left: 40px
-	+max-screen($mq_user-auth)
-		margin-left: 10px
 
 	&__icon
 		width: 32px
@@ -648,11 +602,6 @@
 		display: inline-block
 		vertical-align: middle
 		margin-left: 10px
-		+max-screen($mq_user-auth)
-			display: block
-			margin-left: 0
-			text-align: center
-			padding-top: 3px
 		
 
 /* all-favorites
@@ -664,6 +613,7 @@
 
 .teasers
 	
+
 	&__lst
 		margin: 0 0 0 -20px
 		padding: 0
@@ -675,6 +625,7 @@
 		padding: 0
 		width: 280px
 		float: left
+		display: block
 
 	&__img-a
 		display: block
@@ -745,10 +696,12 @@
 		margin: 0
 
 	&_lt_list &__i
-		width: 100%
+		width: auto
+		float: none
 		padding: 4px
 		border-bottom: 1px solid $dark-el-color__sep
 		margin: 0
+
 
 	&_lt_list &__i_stl_important
 		border: 3px solid $important_color
@@ -757,14 +710,17 @@
 		&:first-child
 			border-top: 3px solid $important_color
 
+
 	&_lt_list &__img-a
 		display: table-cell
 		vertical-align: top
 		width: 1px
 
+
 	&_lt_list &__img
 		width: 190px
 		height: auto
+
 
 	&_lt_list &__h
 		height: 72px
@@ -775,20 +731,23 @@
 	&_lt_list &__price
 		margin-bottom: 5px
 
+
 	&_lt_list &__legend
 		display: table-cell
 		vertical-align: top
 		border: none
 		padding-bottom: 0
 
+
 	&_lt_list &__photo-inf
 		left: 11px
 		bottom: 9px
 
+
 	&_lt_list &__i_stl_important &__legend
 		+box-shadow(none)
 
-		
+
 
 /* teasers
 /* ---------------------------------------END--- */
@@ -842,9 +801,228 @@
 			+opacity(.4)
 
 			background: #000
-
-
 		
 
 /* photo-inf
 /* ---------------------------------------END--- */
+
+
+/* section-h
+/* --------------------------------------------- */
+
+.section-h
+	margin: 0 0 7px 0
+	padding: 0
+	
+	&__legend
+		display: inline-block
+		@extend %font-thin
+		color: $text-light_color
+
+/* section-h
+/* ---------------------------------------END--- */
+
+
+
+/* nav-quantity
+/* --------------------------------------------- */
+
+.nav-quantity
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		margin: 0
+		padding: 0
+		
+	&__a
+		display: block
+		+link-color ($color: $link_color, $color_hover: $link_color_hover, $color_visited: none)
+		line-height: $menu-line-height
+		padding: 4px 0
+
+	&__legend
+		display: inline-block
+		color: $text-light_color 
+		+rem(font-size, 12px)
+
+/* nav-quantity
+/* ---------------------------------------END--- */
+
+
+/* separator
+/* --------------------------------------------- */
+
+.separator
+	border-bottom: 1px solid $dark-el-color__sep
+
+/* separator
+/* ---------------------------------------END--- */
+
+
+/* quantity-columns
+/* --------------------------------------------- */
+
+.quantity-columns
+	padding-bottom: 12px
+	margin-bottom: 18px
+	border-bottom: 1px solid $dark-el-color__sep
+
+	&__i
+		padding-right: 20px
+
+/* quantity-columns
+/* ---------------------------------------END--- */
+
+
+/* breadcrumbs
+/* --------------------------------------------- */
+
+.breadcrumbs
+	margin-bottom: 14px
+	+rem(font-size, 11px)
+	
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		margin: 0
+		padding: 0
+		display: inline-block
+		text-transform: uppercase
+		
+	&__a
+		display: block
+		padding: 0 13px
+		position: relative
+		+link-color ($color: $link_color, $color_hover: $link_color_hover, $color_visited: none)
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -1px
+			right: -2px
+			width: 2px
+			height: 2px
+			border-radius: 1px
+			background: #939393
+
+	&__i:first-child &__a
+		padding-left: 0
+
+	&__i:last-child &__a
+		padding-right: 0
+		color: $text-light_color
+
+		&:before
+			display: none
+
+
+
+/* breadcrumbs
+/* ---------------------------------------END--- */
+
+
+/* tab-nav
+/* --------------------------------------------- */
+
+.tab-nav
+
+	display: inline-block
+	
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		@extend %clear
+		
+	&__i
+		margin: 0
+		padding: 0
+		float: left
+		+rem(font-size, 13px)
+
+		&:first-child
+			border-radius: 3px 0 0 3px
+
+		&:last-child
+			border-radius: 0 3px 3px 0
+		
+
+	&__i_tp_icon &__a
+		padding: 0
+		width: 30px
+		min-width: auto
+		text-align: center
+		+link-color ($color: $dark-el-color__fill, $color_hover: $link_color_hover, $color_visited: none)
+
+
+	&__a
+		display: block
+		+link-color ($color: $text-light2_color, $color_hover: $link_color_hover, $color_visited: none)
+		border: 1px solid $dark-el-color__form-el
+		height: 29px
+		line-height: 27px
+		border-left: none
+		min-width: 57px
+		@extend %bszbb
+		padding: 0 15px
+
+		.is-active > &
+			color: #fff !important
+			background: $dark-el-color__fill
+			border-color: #b2b8be
+			+box-shadow(inset 0 4px 7px rgba(#000, .2))
+			cursor: default
+
+
+	&__i:first-child &__a
+		border-left: 1px solid $dark-el-color__form-el
+		border-radius: 3px 0 0 3px
+
+	&__i:last-child &__a
+		border-radius: 0 3px 3px 0
+
+	&__icon
+		width: 14px
+		height: 13px
+		margin-left: 2px
+		display: inline-block
+		position: relative
+		top: 2px
+		
+
+
+/* tab-nav
+/* ---------------------------------------END--- */
+
+/* teasers-filter
+/* --------------------------------------------- */
+
+.teasers-filter
+	width: 880px
+
+/* teasers-filter
+/* ---------------------------------------END--- */
+
+
+/* page-nav
+/* --------------------------------------------- */
+
+.page-nav
+	
+
+/* page-nav
+/* ---------------------------------------END--- */
+
+
+
+
