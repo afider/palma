@@ -665,12 +665,12 @@ textarea {
 
 /* clearfix */
 /* --------------------------------------------- */
-.page__header-in:before, .footer-nav:before, .main-nav:before, .teasers__lst:before, .tab-nav__lst:before, .page__header-in:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after {
+.page__header-in:before, .footer-nav:before, .main-nav:before, .teasers__lst:before, .tab-nav__lst:before, .page-nav__lst:before, .page__header-in:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after {
   display: table;
   content: "";
   clear: both;
 }
-.page__header-in:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after {
+.page__header-in:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after {
   clear: both;
 }
 
@@ -727,6 +727,9 @@ textarea {
 }
 .page__in {
   padding-bottom: 143px;
+}
+.page__mainbar {
+  padding-bottom: 15px;
 }
 .page__footer {
   padding-top: 13px;
@@ -1246,6 +1249,12 @@ textarea {
 /* ---------------------------------------END--- */
 /* teasers */
 /* --------------------------------------------- */
+.teasers {
+  margin-bottom: 5px;
+}
+.teasers_lt_list {
+  margin-bottom: 21px;
+}
 .teasers__lst {
   margin: 0 0 0 -20px;
   padding: 0;
@@ -1640,6 +1649,54 @@ textarea {
 /* ---------------------------------------END--- */
 /* page-nav */
 /* --------------------------------------------- */
+.page-nav {
+  margin-bottom: 25px;
+}
+.page-nav__lst {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.page-nav__i {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+.page-nav__i_stt_disabled .page-nav__a {
+  color: #e9ebed !important;
+}
+.page-nav__a {
+  display: block;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  min-width: 38px;
+  border: 1px solid #e9ebed;
+  border-left: none;
+  color: #60676D;
+}
+.page-nav__a:visited {
+  color: #60676D;
+}
+.page-nav__a:hover {
+  color: #FBB568;
+}
+.is-active > .page-nav__a {
+  color: #fff !important;
+  background: #fbb568;
+  border-color: #fbb568;
+}
+.page-nav__i:first-child .page-nav__a {
+  border-left: 1px solid #e9ebed;
+}
+.page-nav__icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+}
+
 /* page-nav */
 /* ---------------------------------------END--- */
 

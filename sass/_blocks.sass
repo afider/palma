@@ -81,6 +81,7 @@
 		padding-bottom: $footer_h
 
 	&__mainbar
+		padding-bottom: 15px
 		
 	&__footer
 		@extend %bszbb
@@ -501,6 +502,7 @@
 .nav-teasers
 
 	margin-bottom: 13px
+
 	
 	
 	&__lst
@@ -612,7 +614,10 @@
 /* --------------------------------------------- */
 
 .teasers
-	
+	margin-bottom: 5px
+
+	&_lt_list
+		margin-bottom: 21px
 
 	&__lst
 		margin: 0 0 0 -20px
@@ -1018,7 +1023,49 @@
 /* --------------------------------------------- */
 
 .page-nav
+	margin-bottom: $content_bot_space-more
 	
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		@extend %clear
+		
+	&__i
+		margin: 0
+		padding: 0
+		float: left
+
+	&__i_stt_disabled &__a
+		color: $dark-el-color__light !important
+		
+		
+	&__a
+		display: block
+		height: 38px
+		line-height: 38px
+		text-align: center
+		min-width: 38px
+		border: 1px solid $dark-el-color__light
+		border-left: none
+		+link-color ($color: $text-light2_color, $color_hover: $link_color_hover, $color_visited: none)
+
+		.is-active > &
+			color: #fff !important
+			background: $active-color
+			border-color: $active-color
+
+	&__i:first-child &__a
+		border-left: 1px solid $dark-el-color__light
+
+	&__icon
+		width: 16px
+		height: 16px
+		display: inline-block
+		position: relative
+		top: 3px
+
+
 
 /* page-nav
 /* ---------------------------------------END--- */
