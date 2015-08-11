@@ -11,8 +11,12 @@
 		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="css/common.css">
 		<script src="js/jquery-1.8.3.min.js"></script>
-		<!--[if lt IE 9]> <script src="js/html5.js"></script><![endif]-->
+		<!--[if IE 9]>
+			<script src="js/jquery.placeholder.js"></script>
+			<script src="js/common-ie.js"></script>
+		<![endif]-->
 		<script src="js/common.js"></script>
+		<script src="js/jquery.customselect.js"></script>
 		<script src="js/svg.js"></script>
 	</head>
 
@@ -358,7 +362,7 @@
 				<div class="page__body centered clearfix">
 					
 					<div class="page__mainbar">
-						<h1 class="section-h">Транспорт <div class="section-h__legend">91643</div></h1>
+						<h1 class="section-h">Транспорт <span class="section-h__legend">91643</span></h1>
 
 						<div class="columns columns_number_4 quantity-columns">
 							<div class="columns__i quantity-columns__i">
@@ -494,416 +498,7 @@
 							</div>
 						</div><!-- columns -->
 
-						<div class="teasers">
-							<ul class="teasers__lst">
-								<li class="teasers__i teasers__i_stl_important">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-1.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">24</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser1" class="teasers__h" title="Mazda RX9, 2004, в отличном состоянии, все документы и еще какие-то пару слов, делающие заголовок слишком длинным, чтобы влезть в заранее определенную высоту">Mazda RX9, 2004, в отличном состоянии, все документы и еще какие-то Пару слов, Делающие заголовок слишком длинным, чтобы влезть в заранее определенную высоту</a>
-										<div class="teasers__price">6 400 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Ханты-Мансийск</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">Сегодня, 12:25</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-2.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">5</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser2" class="teasers__h" title="ВАЗ 2114 Samara, 2009">ВАЗ 2114 Samara, 2009</a>
-										<div class="teasers__price">1 100 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Санкт-Петербург</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">Вчера, 12:25</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-3.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">12</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser3" class="teasers__h" title="BMW 5 серия, 2013">BMW 5 серия, 2013</a>
-										<div class="teasers__price">2 999 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Ханты-Мансийск</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">Вчера, 05:11</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-4.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">2</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser4" class="teasers__h" title="LADA Kalina, 2011">LADA Kalina, 2011</a>
-										<div class="teasers__price">425 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place" title="Петропавловск-Камчатский">Петропавловск-Камчатский</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">11 сентября, 12:25</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-5.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">7</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser5" class="teasers__h" title="Mitsubishi Outlander, 2011">Mitsubishi Outlander, 2011, пробег 2000</a>
-										<div class="teasers__price">6 400 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Красногвардейское</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">5 августа, 22:41</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-6.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">7</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser6" class="teasers__h" title="Hyundai Getz, 2006">Hyundai Getz, 2006</a>
-										<div class="teasers__price">560 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Москва</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">1 августа, 17:22</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i teasers__i_stl_important">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-1.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">24</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser1" class="teasers__h" title="Mazda RX9, 2004, в отличном состоянии, все документы и еще какие-то пару слов, делающие заголовок слишком длинным, чтобы влезть в заранее определенную высоту">Mazda RX9, 2004, в отличном состоянии, все документы и еще какие-то Пару слов, Делающие заголовок слишком длинным, чтобы влезть в заранее определенную высоту</a>
-										<div class="teasers__price">6 400 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Ханты-Мансийск</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">Сегодня, 12:25</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i teasers__i_stl_important">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-2.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">5</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser2" class="teasers__h" title="ВАЗ 2114 Samara, 2009">ВАЗ 2114 Samara, 2009</a>
-										<div class="teasers__price">1 100 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Санкт-Петербург</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">Вчера, 12:25</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-3.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">12</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser3" class="teasers__h" title="BMW 5 серия, 2013">BMW 5 серия, 2013</a>
-										<div class="teasers__price">2 999 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Ханты-Мансийск</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">Вчера, 05:11</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-4.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">2</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser4" class="teasers__h" title="LADA Kalina, 2011">LADA Kalina, 2011</a>
-										<div class="teasers__price">425 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place" title="Петропавловск-Камчатский">Петропавловск-Камчатский</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">11 сентября, 12:25</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-5.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">7</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser5" class="teasers__h" title="Mitsubishi Outlander, 2011">Mitsubishi Outlander, 2011, пробег 2000</a>
-										<div class="teasers__price">6 400 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Красногвардейское</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">5 августа, 22:41</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-6.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">7</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser6" class="teasers__h" title="Hyundai Getz, 2006">Hyundai Getz, 2006</a>
-										<div class="teasers__price">560 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Москва</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">1 августа, 17:22</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-							</ul>
-						</div><!-- teasers -->
-
-
-						<div class="teasers teasers_lt_list">
-							<ul class="teasers__lst">
-								<li class="teasers__i teasers__i_stl_important">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-1.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">24</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser1" class="teasers__h" title="Mazda RX9, 2004, в отличном состоянии, все документы и еще какие-то пару слов, делающие заголовок слишком длинным, чтобы влезть в заранее определенную высоту">Mazda RX9, 2004, в отличном состоянии, все документы и еще какие-то пару слов, Делающие заголовок слишком длинным, чтобы влезть в Заранее определенную высоту</a>
-										<div class="teasers__price">6 400 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Ханты-Мансийск</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">Сегодня, 12:25</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i teasers__i_stl_important">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-2.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">12</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser1" class="teasers__h" title="Mazda RX9, 2004, в отличном состоянии, все документы и еще какие-то пару слов, делающие заголовок">Mazda RX9, 2004, в отличном состоянии, все документы и еще какие-то пару слов, Делающие заголовок</a>
-										<div class="teasers__price">6 400 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Ханты-Мансийск</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">Сегодня, 12:25</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-3.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">6</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser1" class="teasers__h" title="Mazda RX9, 2004, в отличном состоянии">Mazda RX9, 2004, в отличном состоянии</a>
-										<div class="teasers__price">6 400 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Ханты-Мансийск</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">Сегодня, 12:25</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-								<li class="teasers__i">
-									<a href="#" class="teasers__img-a">
-										<img src="img/content/teaser-4.jpg" height="190" width="280" alt="" class="teasers__img">
-										<div class="teasers__photo-inf photo-inf">
-											<div class="photo-inf__top"></div>
-											<div class="photo-inf__txt">7</div>
-										</div><!-- photo-inf -->
-									</a>
-									<div class="teasers__legend">
-										<a href="#teaser1" class="teasers__h" title="Mazda RX9, 2004, в отличном состоянии">Mazda RX9, 2004, в отличном состоянии</a>
-										<div class="teasers__price">6 400 000 &#8381;</div>
-										
-										<div class="teasers__footer">
-											<div class="teasers__footer-i">
-												<div class="teasers__prop teasers__prop_tp_place">Ханты-Мансийск</div>
-											</div>
-											<div class="teasers__footer-i teasers__footer-i_align_right">
-												<div class="teasers__prop">Сегодня, 12:25</div>
-												<svg class="teasers__favorite icon">
-													<use xlink:href="#icon_star-bg"></use>
-												</svg>
-											</div>
-										</div>
-									</div><!-- teasers__legend -->
-								</li>
-							</ul>
-						</div><!-- teasers -->
+						
 
 						<div class="page-nav">
 							<ul class="page-nav__lst">
@@ -956,6 +551,371 @@
 								</li>
 							</ul>
 						</div><!-- page-nav -->
+
+						<form action="#">
+
+							<h2>Регистрация</h2>
+							
+							<div class="form-line form-success">
+								Поздравляем, все получилось!
+							</div><!-- form-line -->
+						
+							<div class="form-line form-fail">
+								Извините, но вы не заполнили обязательные поля.
+							</div><!-- form-line -->
+							
+
+							<h2>Чекбоксы и радиокнопки</h2>
+							
+							<div class="form-line">
+								<div class="form-label form-label_lt_top">Радиокнопки:</div> 
+								<label for="radio-1" class="cr js-cr">
+									<input type="radio" name="radio" id="radio-1" checked>
+									Частное лицо
+								</label>
+
+								<label for="radio-2" class="cr cr_space_left js-cr">
+									<input type="radio" name="radio" id="radio-2">
+									Компания
+								</label>
+							</div><!-- form-line -->
+
+							<div class="form-line">
+								<div class="form-label form-label_lt_top">Чекбоксы:</div>
+								<label for="cb-1" class="cr js-cr">
+									<input type="checkbox" id="cb-1" checked>
+									<span class="cr__icon">
+										<img src="img/check.png" height="7" width="9" alt="">
+									</span>
+									Первый чекбокс
+								</label>
+								<label for="cb-2" class="cr cr_space_left js-cr">
+									<input type="checkbox" id="cb-2">
+									<span class="cr__icon">
+										<img src="img/check.png" height="7" width="9" alt="">
+									</span>
+									Второй чекбокс
+								</label>
+							</div><!-- form-line -->
+						
+							
+							<h2>Выпадающие списки</h2>
+							
+							<div class="form-line form-label-left-space">
+								<label for="region1" class="form-label form-label_lt_top">Ваш город</label>
+								<select id="region1" name="region1" class="select js-select">
+									<option value="1">Выберите город</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Очень длинный пункт выпадающего списка практически как предложение</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+						
+							</div><!-- form-line -->
+
+							<div class="form-line form-label-left-space">
+								<label for="region2" class="form-label form-label_lt_top">Ширина 100%</label>
+								<select id="region2" name="region2" class="select select_w_fluid js-select">
+									<option value="1">Выберите город</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Красноярск</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+							
+							</div><!-- form-line -->
+
+							<div class="form-line form-label-left-space">
+								<label for="region1111" class="form-label form-label_lt_top">Большая высота</label>
+								<select id="region1111" name="region1111" class="select select_h_big js-select">
+									<option value="1">Выберите город</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Очень длинный пункт выпадающего списка практически как предложение</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+							
+							</div><!-- form-line -->
+							
+
+							<h2>Поля для ввода текста</h2>
+
+							<div class="form-line">
+								<label for="form-position" class="form-label form-label_lt_top">Ширина 100%<span class="required-mark">*</span></label>
+								<input type="text" name="form-position" id="form-position" class="input input_w_fluid">
+							</div><!-- form-line -->
+							
+							<div class="form-line">
+								<label for="text-0" class="form-label form-label_lt_top">Поле для ввода текста</label>
+								<input type="text" name="text-0" id="text-0" class="input">
+							</div><!-- form-line -->
+
+
+							
+							<div class="form-line">
+								<label for="text-1" class="form-label form-label_lt_top">Незаполненное поле</label>
+								<input type="text" name="text-1" id="text-1" class="input input_stt_error">
+							</div><!-- form-line -->
+							
+							<div class="form-line">
+								<label for="text-2" class="form-label form-label_lt_top">Большая высота</label>
+								<input type="text" name="text-2" id="text-2" placeholder="Подсказка в поле" class="input input_h_big">
+							</div><!-- form-line -->			
+							
+							<div class="form-line">
+								<label for="message2" class="form-label form-label_lt_top">Сообщение</label>
+								<textarea name="message2" id="message2" cols="40" rows="5" class="input"></textarea>
+							</div><!-- form-line -->
+
+							<h2>Поля с подсказками слева</h2>
+
+							<div class="form-columns">
+								<div class="form-columns__i form-columns__i_tp_label">
+									
+								</div>
+								<div class="form-columns__i">
+									<label for="fcwl-cb-1" class="cr js-cr">
+										<input type="checkbox" id="fcwl-cb-1" checked>
+										<span class="cr__icon">
+											<img src="img/check.png" height="7" width="9" alt="">
+										</span>
+										Первый чекбокс
+									</label>
+									<label for="fcwl-cb-2" class="cr cr_space_left js-cr">
+										<input type="checkbox" id="fcwl-cb-2">
+										<span class="cr__icon">
+											<img src="img/check.png" height="7" width="9" alt="">
+										</span>
+										Второй чекбокс
+									</label>
+								</div><!-- form-columns__i -->
+							</div><!-- form-columns -->
+
+							<div class="form-columns">
+								<div class="form-columns__i form-columns__i_tp_label">
+									<label for="fcwl-1" class="form-label">Поле для ввода текста</label>
+								</div>
+								<div class="form-columns__i">
+									<input type="text" name="fcwl-1" id="fcwl-1" class="input">
+									<input type="text" name="fcwl-2" id="fcwl-2" class="input input_space_left">
+								</div>
+							</div><!-- form-columns -->
+
+							<div class="form-columns">
+								<div class="form-columns__i form-columns__i_tp_label">
+									<label for="fcwl-3" class="form-label form-label_stl_important">Важная подпись полужирным</label>
+								</div>
+								<div class="form-columns__i">
+									<input type="text" name="fcwl-3" id="fcwl-3" class="input">
+									<label for="fcwl-radio-1" class="cr cr_space_left-sm js-cr">
+										<input type="radio" name="fcwl-radio" id="fcwl-radio-1" checked>
+										Частное лицо
+									</label>
+									<label for="fcwl-radio-2" class="cr cr_space_left js-cr">
+										<input type="radio" name="fcwl-radio" id="fcwl-radio-2" checked>
+										Компания
+									</label>
+								</div><!-- form-columns__i -->
+							</div><!-- form-columns -->
+
+							<div class="separator separator_color_light separator_space_bottom-sm"></div>
+
+							<div class="form-columns">
+								<div class="form-columns__i form-columns__i_valign_top form-columns__i_tp_label">
+									<label for="message3" class="form-label form-label_stl_important">Cообщение</label>
+								</div>
+								<div class="form-columns__i">
+									<textarea name="message3" id="message3" cols="40" rows="10" class="input  input_w_fluid"></textarea>
+								</div><!-- form-columns__i -->
+							</div><!-- form-columns -->
+
+							<div class="form-columns">
+								<div class="form-columns__i form-columns__i_tp_label">
+									<label for="fcwl-4" class="form-label">Цена</label>
+								</div>
+								<div class="form-columns__i">
+									<input type="text" name="fcwl-4" id="fcwl-4" class="input input_w_sm">
+									<span class="space-left-sm">рублей, &#8381;</span>
+									<span class="space-left">Рекомендации по ценам</span>
+								</div><!-- form-columns__i -->
+							</div><!-- form-columns -->
+							
+							<div class="form-line">
+								<span class="required-mark">*</span> — поля, обязательные для заполнения
+							</div><!-- form-line -->
+
+							<h2>Собираем цепочку из полей ввода и выпадающих списков</h2>
+
+
+							<div class="input-train">
+
+								<select id="sel-train-1" name="sel-train-1" class="select select_h_big select_w_category js-select input-train__i">
+									<option value="1">Выберите категорию</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Очень длинный пункт выпадающего списка практически как предложение</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+								
+								<input type="text" name="input-train-1" id="input-train-1" placeholder="Поиск по объявлениям" class="input input_h_big input_w_main-search input-train__i">
+
+								<select id="sel-train-2" name="sel-train-2" class="select select_h_big select_w_city js-select input-train__i">
+									<option value="1">Выберите город</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Красноярск</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+
+							</div><!-- input-train -->
+
+
+
+							<div class="input-train">
+
+								<select id="sel-train-3" name="sel-train-3" class="select select_w_category js-select input-train__i">
+									<option value="1">Выберите категорию</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Красноярск</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+								<select id="sel-train-4" name="sel-train-4" class="select select_w_category js-select input-train__i">
+									<option value="1">Выберите категорию</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Красноярск</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+		
+
+								<select id="sel-train-5" name="sel-train-5" class="select select_w_city js-select input-train__i">
+									<option value="1">Выберите категорию</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Красноярск</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+
+							</div><!-- input-train -->
+
+
+							<div class="input-train">
+
+								<input type="text" name="input-train-3" id="input-train-3" placeholder="Поиск" class="input input-train__i">
+
+								<input type="text" name="input-train-4" id="input-train-4" placeholder="Введите что-нибудь" class="input input-train__i">
+
+								<input type="text" name="input-train-5" id="input-train-5" placeholder="и еще..." class="input input_w_sm input-train__i">
+
+
+							</div><!-- input-train -->
+						
+						
+							<p>
+								<input type="button" value="Disabled" class="button button_stt_disabled" disabled> <br><br>
+								<span class="button">Отправить</span> <br>
+							</p>
+
+							<p><a href="#" class="button">Создать заявление</a> <a href="#" class="button button_color_2">Создать заявление</a> <a href="#" class="button button_stt_disabled">Создать заявление</a></p>
+						
+						</form>
 						
 						<p>Угловое <a href="#253454363" class="lcolor">расстояние точно дает метеорит</a>, об интересе Галла к астрономии и затмениям &#8381; Цицерон говорит <b>также в трактате</b> "О старости" (De senectute). В связи с этим нужно подчеркнуть, &#8381; что<i>xxx<span>&#8381;</span></i> «эклиптика вращает первоначальный» <i>«эклиптика вращает первоначальный»</i> <i><b>«эклиптика вращает первоначальный»</b></i> часовой угол, тем не<i> менее</i>, уже 4,5 млрд лет расстояние нашей планеты от <a href="#1" class="lcolor">Солнца</a> практически не меняется.</p>
 						
@@ -972,7 +932,8 @@
 						
 						
 						<p>Реликтовый ледник, сублимиpуя с <a href="#2">повеpхности<span>&#8381;</span> ядpа кометы</a>, вращает часовой угол. Прямое восхождение представляет собой возмущающий &#8381; фактор, &#8381; тем не менее, уже 4,5 млрд лет расстояние нашей планеты от Солнца практически не меняется.</p>
-	
+
+
 	
 					</div><!-- page__mainbar -->
 					

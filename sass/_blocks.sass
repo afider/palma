@@ -702,13 +702,13 @@
 		left: 15px
 
 
-
-
 	&_lt_list &__lst
 		margin: 0
 
 	&_lt_list &__i
-		width: auto
+		@extend %bszbb
+		display: table
+		width: 100%
 		float: none
 		padding: 4px
 		border-bottom: 1px solid $dark-el-color__sep
@@ -879,6 +879,19 @@
 .separator
 	border-bottom: 1px solid $dark-el-color__sep
 
+	&_color_light
+		border-color: $dark-el-color__light
+
+	&_space_bottom
+		margin-bottom: $content_bot_space
+		
+
+	&_space_bottom-sm
+		margin-bottom: $content_bot_space-sm
+
+	&_space_bottom-more
+		margin-bottom: $content_bot_space-more
+
 /* separator
 /* ---------------------------------------END--- */
 
@@ -971,10 +984,10 @@
 		+rem(font-size, 13px)
 
 		&:first-child
-			border-radius: 3px 0 0 3px
+			border-radius: $border-radius 0 0 $border-radius
 
 		&:last-child
-			border-radius: 0 3px 3px 0
+			border-radius: 0 $border-radius $border-radius 0
 		
 
 	&__i_tp_icon &__a
@@ -1006,10 +1019,10 @@
 
 	&__i:first-child &__a
 		border-left: 1px solid $dark-el-color__form-el
-		border-radius: 3px 0 0 3px
+		border-radius: $border-radius 0 0 $border-radius
 
 	&__i:last-child &__a
-		border-radius: 0 3px 3px 0
+		border-radius: 0 $border-radius $border-radius 0
 
 	&__icon
 		width: 14px
@@ -1058,8 +1071,8 @@
 		
 	&__a
 		display: block
-		height: 38px
-		line-height: 38px
+		height: $input-height
+		line-height: $input-height
 		text-align: center
 		min-width: 38px
 		border: 1px solid $dark-el-color__light
@@ -1086,6 +1099,406 @@
 /* page-nav
 /* ---------------------------------------END--- */
 
+
+/* form-elements
+/* --------------------------------------------- */
+
+
+::-webkit-input-placeholder
+	color: $placeholder_color
+	
+
+::-moz-placeholder
+	color: $placeholder_color
+	
+
+input:-ms-input-placeholder
+	color: $placeholder_color
+	
+
+
+.form-line
+	margin-bottom: $content_bot_space-sm
+	white-space: nowrap
+
+	&_align_center
+		text-align: center
+
+	&_align_right
+		text-align: right
+
+	&_space_bot
+		margin-bottom: 30px
+
+	&_space_more
+		margin-bottom: $content_bot_space-more
+
+.space-left
+	margin-left: 27px
+
+.space-left-sm
+	margin-left: 12px
+
+
+		
+
+
+.form-col
+	display: inline-block
+	vertical-align: top
+
+.input
+	+rem(font-size, 14px)
+	padding: 0 14px
+	width: 350px
+	border: none
+	border: 1px solid $dark-el-color__form-el
+
+	@extend %bszbb
+
+	background: #fff
+	+transition-property(border, box-shadow)
+	+transition-duration(0.2s)
+	+transition-timing-function(linear)
+	border-radius: $border-radius
+	
+	&_space_left
+		margin-left: 12px
+
+	&_w_sm
+		width: 146px
+
+	&_w_main-search
+		width: 470px
+		
+
+	&_w_fluid
+		width: 100% !important
+
+	&:focus
+		border-color: rgba($focus_color, 0.6)
+		outline: 0
+		outline: thin dotted 9
+		+box-shadow(0 0 5px rgba($focus_color, 0.6))
+
+input.input
+	height: $input-height
+	vertical-align: middle
+
+input.input_h_big
+	height: $input-height_big
+
+
+textarea.input
+	height: 180px
+	width: 600px
+	padding: 15px
+	vertical-align: top
+
+input.input_stt_error,
+textarea.input_stt_error
+	border: 1px solid #ff0000
+
+select
+	//width: 198px
+	//padding: 6px 0 5px 0
+	//background: #fafafa
+
+.form-label
+	display: block
+	line-height: $menu-line-height
+
+	&_stl_important
+		@extend %font-regular
+		font-weight: bold
+	
+	&_lt_top
+		margin-bottom: 7px
+
+	&_w_same
+		width: 200px
+
+
+.form-space-label
+	margin-left: 209px
+
+.required-mark
+	color: #ff0000
+	font-size: 17px
+
+.form-legend
+	font-size: 12px
+	display: inline-block
+	vertical-align: middle
+
+.placeholder
+	color: $placeholder_color
+
+.form-success
+	color: #0BAC31
+	//font-size: 12px
+	//+font-size-parent-em (12)
+	font-style: italic
+	white-space: normal
+
+.form-fail
+	color: #F33434
+	//font-size: 12px
+	//+font-size-parent-em (12)
+	font-style: italic
+	white-space: normal
+
+
+/* form-elements
+/* ---------------------------------------END--- */
+
+
+/* form-columns
+/* --------------------------------------------- */
+
+.form-columns
+	display: table
+	width: 100%
+	margin-bottom: $content_bot_space-sm
+
+	&__i
+		display: table-cell
+		vertical-align: middle
+
+		&_tp_label
+			width: 175px
+
+		&_valign_top
+			vertical-align: top
+			padding-top: 10px
+
+
+
+
+/* form-columns
+/* ---------------------------------------END--- */
+
+
+/* cr (custom checkbox/radio)
+/* --------------------------------------------- */
+
+.cr
+	cursor: pointer
+	position: relative
+	@extend %bszbb
+	padding: 1px 0 1px 27px
+	vertical-align: middle
+	overflow: hidden
+	display: inline-block
+	line-height: $menu-line-height
+	+rem(font-size, 14px)
+	color: $text-light_color
+
+	&.on
+		color: $text_color
+
+
+	&_space_left
+		margin-left: 27px
+
+	&_space_left-sm
+		margin-left: 12px
+
+	input
+		position: absolute
+		top: 4px
+		left: 0
+		left: -99999px
+
+	&:before
+		@extend %bszbb
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 18px
+		height: 18px
+		border: 1px solid $dark-el-color__fill
+		background-color: #fff
+
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		+transition-duration(.3s)
+		
+
+	&.is-radio:after
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		top: 7px
+		left: 7px
+		margin-left: -2px
+		margin-top: -2px
+		background: $focus_color
+		@include scale(0)
+		+transition-property(all)
+
+	&.is-radio:before
+		border-radius: 12px
+		+transition-property(all)
+
+	&.is-radio.on:before
+		border-color: $focus_color
+
+	&.is-radio.on:after
+		@include scale(1)
+
+	&.is-checkbox:before
+		border-radius: $border-radius
+
+	&.is-checkbox.on:before
+		border-color: $focus_color
+	
+	&__icon
+		display: block
+		position: absolute
+		width: 9px
+		height: 7px
+		top: 6px
+		left: 5px
+		+transition-property(opacity)
+		+opacity(0)
+		+transition-duration(.2s)
+
+		.on > &
+			+transition-duration(.3s)
+			+opacity(1)
+
+		img
+			display: block
+
+
+/* cr (custom checkbox/radio)
+/* ---------------------------------------END--- */
+
+
+/* select
+/* --------------------------------------------- */
+
+.select
+	border: 1px solid $dark-el-color__form-el
+	cursor: pointer
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	display: inline-block
+	width: 350px
+	@extend %bszbb
+	border-radius: $border-radius
+	background: #fff
+
+	&_w_category
+		width: 240px
+
+	&_w_city
+		width: 270px
+
+	&.is-selected
+		border-color: $focus-color
+
+	&_w_fluid
+		width: 100% !important
+
+	&__select
+		position: relative
+		z-index: 10
+		height: $input-height - 2
+		border: 0
+		+opacity(0)
+		width: 100% !important
+
+	&_h_big &__select
+		height: $input-height_big - 2
+	
+	&.is-selected &__item
+		color: $text_color
+
+	&__item
+		color: $text-light_color
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		display: inline-block
+		+rem(font-size, 14px)
+		width: 100%
+		//border-radius: $border-radius
+
+		span span
+			display: block
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+
+
+
+	&__bg
+		display: block
+		padding: 0 25px 0 14px
+		line-height: $input-height - 1
+		height: $input-height - 2
+
+		
+		@extend %bszbb
+
+	&_h_big &__bg
+		height: $input-height_big - 2
+		line-height: $input-height_big - 1
+
+	&__arrow
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		width: $input-height
+		background: url("../img/arrow-bottom.png") center center no-repeat
+
+	&_h_big &__arrow
+		width: $input-height_big
+		
+	&.is-selected &__arrow	
+		background: url("../img/arrow-bottom_selected.png") center center no-repeat
+
+/* select
+/* ---------------------------------------END--- */
+
+
+/* input-train
+/* --------------------------------------------- */
+
+.input-train
+	@extend %clear
+
+	margin-bottom: $content_bot_space-sm
+	
+	&__i
+		float: left
+		border-left-width: 0
+		border-radius: 0
+
+		&:first-child
+			border-left-style: solid
+			border-left-width: 1px
+			border-radius: $border-radius 0 0 $border-radius
+
+		&:last-child
+			border-radius: 0 $border-radius $border-radius 0
+
+		& + .select
+			margin-left: -1px
+			border-left-style: solid
+			border-left-width: 1px
+
+/* input-train
+/* ---------------------------------------END--- */
 
 
 
