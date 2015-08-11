@@ -683,11 +683,18 @@
 	&__favorite
 		vertical-align: middle
 		color: $favorite_color
-		margin-left: 25px
+		margin-left: 15px
 
 	&__prop
 		vertical-align: middle
 		display: inline-block
+
+		&_tp_place
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+			max-width: 120px
+
 
 	&__photo-inf
 		position: absolute
@@ -710,11 +717,14 @@
 
 	&_lt_list &__i_stl_important
 		border: 3px solid $important_color
-		border-top: none
+		margin-top: -1px
+		margin-left: -3px
 
 		&:first-child
 			border-top: 3px solid $important_color
 
+	&_lt_list &__i_stl_important + &__i_stl_important
+		margin-top: -3px
 
 	&_lt_list &__img-a
 		display: table-cell
@@ -751,6 +761,11 @@
 
 	&_lt_list &__i_stl_important &__legend
 		+box-shadow(none)
+
+
+	&_lt_list &__prop_tp_place
+		overflow: visible
+		max-width: 100%
 
 
 
@@ -1013,7 +1028,8 @@
 /* --------------------------------------------- */
 
 .teasers-filter
-	width: 880px
+	&_lt_tile
+		width: 880px
 
 /* teasers-filter
 /* ---------------------------------------END--- */
