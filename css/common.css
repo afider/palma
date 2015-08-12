@@ -460,11 +460,13 @@ h1, .h1 {
 h2, .h2 {
   font-size: 21px;
   font-size: 2.1rem;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-size: 17px;
+  font-size: 1.7rem;
+  margin-bottom: 25px;
 }
 
 /* Headers */
@@ -569,7 +571,7 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: normal;
   font-style: normal;
 }
-h2, .h2, .font-medium, .teasers__h {
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h {
   font-family: "Roboto Medium", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -583,6 +585,10 @@ h2, .h2, .font-medium, .teasers__h {
 
 .font-black, .footer-nav, .main-nav, .user__h, .button {
   font-family: "Roboto black", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
+}
+
+.font-light, .button_size_sm {
+  font-family: "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
 /* font */
@@ -2166,7 +2172,6 @@ textarea.input_stt_error {
 /* --------------------------------------------- */
 .button {
   position: relative;
-  font-weight: bold;
   display: inline-block;
   overflow: visible;
   border: none;
@@ -2181,7 +2186,7 @@ textarea.input_stt_error {
   text-transform: uppercase;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
-  padding: 0 45px;
+  padding: 0 25px;
   height: 44px;
   line-height: 44px;
   -webkit-touch-callout: none;
@@ -2193,25 +2198,75 @@ textarea.input_stt_error {
   background: #78c58b;
   border-radius: 4px;
 }
+.button:active {
+  -moz-box-shadow: inset 0px 3px 7px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0px 3px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 3px 7px rgba(0, 0, 0, 0.2);
+  line-height: 46px;
+}
 .button_stl_bordered {
   border: 2px solid #78c58b;
-  background: #fff;
+  background: none;
   color: #78c58b !important;
   line-height: 41px;
 }
-.button:active {
-  -moz-box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.2);
-  line-height: 46px;
+.button_stl_bordered.button_size_m {
+  line-height: 35px;
+}
+.button_stl_bordered.button_size_sm {
+  line-height: 27px;
+}
+.button_color_stop {
+  background: #f36c4f;
+}
+.button_stl_bordered.button_color_stop {
+  border-color: #f36c4f;
+  color: #f36c4f !important;
+  background: none;
+}
+.button_stl_bordered.button_color_grayscale {
+  border-color: #d3d8db;
+  background: none;
+}
+.button_color_grayscale {
+  background: #edeff1;
+  color: #8996A0 !important;
 }
 .button_stl_bordered:active {
   line-height: 43px;
+}
+.button_size_m {
+  height: 38px;
+  line-height: 38px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.button_size_m:active {
+  line-height: 40px;
+}
+.button_size_m.button_stl_bordered:active {
+  line-height: 36px !important;
+}
+.button_size_sm {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-width: 1px !important;
+}
+.button_size_sm:active {
+  line-height: 32px;
+}
+.button_size_sm.button_stl_bordered:active {
+  line-height: 31px !important;
 }
 .button_stt_disabled, .button_stt_disabled:active {
   color: #fff !important;
   background: #d3d8db;
   cursor: default;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 /* button */

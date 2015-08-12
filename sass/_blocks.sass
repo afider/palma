@@ -1528,7 +1528,6 @@ select
 
 .button
 	position: relative
-	font-weight: bold
 	display: inline-block
 	overflow: visible
 	border: none
@@ -1541,7 +1540,7 @@ select
 	+rem(font-size, 12px)
 	text-transform: uppercase
 	+rem(letter-spacing, $letter-spacing)
-	padding: 0 45px
+	padding: 0 25px
 	height: $input-height_big
 	line-height: $input-height_big
 	-webkit-touch-callout: none
@@ -1555,19 +1554,70 @@ select
 	@extend %bszbb
 	@extend %font-black
 
+	&:active
+		+box-shadow(inset 0px 3px 7px rgba(#000, .2))
+		line-height: $input-height_big + 2
+
+
 	&_stl_bordered
 		border: 2px solid $main-color
-		background: #fff
+		background: none
 		color: $main-color !important
 		line-height: $input-height_big - 3
 
+	&_stl_bordered.button_size_m
+		line-height: $input-height - 3
 
-	&:active
-		+box-shadow(inset 0px 5px 10px rgba(#000, .2))
-		line-height: $input-height_big + 2
+	&_stl_bordered.button_size_sm
+		line-height: $input-height_sm - 3
 
-	&_stl_bordered:active
-		line-height: $input-height_big - 1
+	&_color_stop
+		background: $stop_color
+
+	&_stl_bordered.button_color_stop
+		border-color: $stop_color
+		color: $stop_color !important
+		background: none
+
+	&_stl_bordered.button_color_grayscale
+		border-color: $dark-el-color__form-el
+		background: none
+
+	&_color_grayscale
+		background: #edeff1
+		color: $text-light_color !important
+
+
+
+	&_stl_bordered
+		&:active
+			line-height: $input-height_big - 1
+
+	&_size_m
+		height: $input-height
+		line-height: $input-height
+		padding-left: 20px
+		padding-right: 20px
+
+		&:active
+			line-height: $input-height + 2
+
+	&_size_m.button_stl_bordered:active
+		line-height: $input-height - 2 !important
+
+	&_size_sm
+		height: $input-height_sm
+		line-height: $input-height_sm
+		padding-left: 20px
+		padding-right: 20px
+		@extend %font-light
+		border-width: 1px !important
+
+		&:active
+			line-height: $input-height_sm + 2
+
+	&_size_sm.button_stl_bordered:active
+		line-height: $input-height_sm + 1 !important
 		
 
 	&_stt_disabled,
@@ -1575,6 +1625,7 @@ select
 		color: #fff !important
 		background: $disabled-color
 		cursor: default
+		+box-shadow(none)
 
 
 

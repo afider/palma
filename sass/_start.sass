@@ -54,12 +54,14 @@ ol li
 
 #{headings(2, 2)}
 	+rem(font-size, 21px)
-	margin-bottom: 15px
+	margin-bottom: 25px
 	@extend %font-medium
 
 
 #{headings(3, 6)}
-	font-size: 17px
+	+rem(font-size, 17px)
+	margin-bottom: 25px
+	@extend %font-medium
 
 
 /* Headers
@@ -100,6 +102,11 @@ ol li
 	font-family: 'Roboto black', $font_main
 .font-black
 	@extend %font-black
+
+%font-light
+	font-family: $font_main
+.font-light
+	@extend %font-light
 
 
 /* font
