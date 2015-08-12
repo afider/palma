@@ -581,7 +581,7 @@ h2, .h2, .font-medium, .teasers__h {
   font-family: "Roboto Thin", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-.font-black, .footer-nav, .main-nav, .user__h {
+.font-black, .footer-nav, .main-nav, .user__h, .button {
   font-family: "Roboto black", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -606,14 +606,14 @@ a, .u {
   transition-timing-function: ease-out;
 }
 a:visited, .u:visited {
-  color: #B40EB4;
+  color: #250e4b;
 }
 a:hover, .u:hover {
   -moz-transition-duration: 0.1s;
   -o-transition-duration: 0.1s;
   -webkit-transition-duration: 0.1s;
   transition-duration: 0.1s;
-  color: #FBB568;
+  color: #6699cc;
 }
 a:focus, .u:focus {
   outline: thin dotted;
@@ -657,7 +657,7 @@ textarea {
   resize: vertical;
 }
 
-.centered, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg {
+.centered, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -851,7 +851,7 @@ textarea {
   margin-left: -10px;
 }
 .nav-ctrl:hover .nav-ctrl__i {
-  background: #FBB568;
+  background: #6699cc;
 }
 .nav-ctrl__i {
   width: 20px;
@@ -956,6 +956,8 @@ textarea {
 .footer-nav__a {
   display: block;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   padding: 3px 13px;
   color: #363636;
 }
@@ -963,10 +965,10 @@ textarea {
   color: #363636;
 }
 .footer-nav__a:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .is-active .footer-nav__a {
-  color: #FBB568;
+  color: #6699cc;
 }
 
 /* footer-nav */
@@ -1031,6 +1033,8 @@ textarea {
   position: relative;
   display: block;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   padding: 0 13px;
   height: 70px;
   line-height: 70px;
@@ -1040,10 +1044,10 @@ textarea {
   color: #363636;
 }
 .main-nav__a:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .is-active .main-nav__a {
-  color: #FBB568;
+  color: #fbb568;
 }
 .is-active .main-nav__a:before {
   content: "";
@@ -1053,7 +1057,7 @@ textarea {
   left: 0;
   right: 0;
   height: 5px;
-  background: #FBB568;
+  background: #fbb568;
 }
 
 /* main-nav */
@@ -1110,7 +1114,7 @@ textarea {
   color: #363636;
 }
 .category-nav__h:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .category-nav__lst {
   margin: 0;
@@ -1133,7 +1137,7 @@ textarea {
   color: #003663;
 }
 .category-nav__a:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 
 /* category-nav */
@@ -1170,18 +1174,20 @@ textarea {
   color: #363636;
 }
 .enter:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .enter__icon {
-  margin-left: 40px;
+  margin-left: 30px;
 }
 .enter__h {
   font-size: 12px;
   font-size: 1.2rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 24px;
+  margin-left: 10px;
 }
 
 /* enter */
@@ -1197,15 +1203,17 @@ textarea {
   color: #363636;
 }
 .user:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .user__h {
   font-size: 12px;
   font-size: 1.2rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 /* user */
@@ -1215,7 +1223,7 @@ textarea {
 .add-button {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 .add-button__icon {
   width: 32px;
@@ -1297,10 +1305,10 @@ textarea {
   color: #363636;
 }
 .teasers__h:visited {
-  color: #B40EB4;
+  color: #744687;
 }
 .teasers__h:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .teasers__price {
   color: #77C58B;
@@ -1488,7 +1496,7 @@ textarea {
   color: #003663;
 }
 .nav-quantity__a:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .nav-quantity__legend {
   display: inline-block;
@@ -1549,6 +1557,8 @@ textarea {
   padding: 0;
   display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
 }
 .breadcrumbs__a {
   display: block;
@@ -1560,7 +1570,7 @@ textarea {
   color: #003663;
 }
 .breadcrumbs__a:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .breadcrumbs__a:before {
   content: "";
@@ -1622,7 +1632,7 @@ textarea {
   color: #c4cacf;
 }
 .tab-nav__i_tp_icon .tab-nav__a:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .tab-nav__a {
   display: block;
@@ -1638,7 +1648,7 @@ textarea {
   color: #60676D;
 }
 .tab-nav__a:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .is-active > .tab-nav__a {
   color: #fff !important;
@@ -1707,7 +1717,7 @@ textarea {
   color: #60676D;
 }
 .page-nav__a:hover {
-  color: #FBB568;
+  color: #6699cc;
 }
 .is-active > .page-nav__a {
   color: #fff !important;
@@ -1821,6 +1831,10 @@ input.input {
 
 input.input_h_big {
   height: 44px;
+}
+
+input.input_h_sm {
+  height: 30px;
 }
 
 textarea.input {
@@ -2147,6 +2161,60 @@ textarea.input_stt_error {
 }
 
 /* input-train */
+/* ---------------------------------------END--- */
+/* button */
+/* --------------------------------------------- */
+.button {
+  position: relative;
+  font-weight: bold;
+  display: inline-block;
+  overflow: visible;
+  border: none;
+  color: #fff !important;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  padding: 0 45px;
+  height: 44px;
+  line-height: 44px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #78c58b;
+  border-radius: 4px;
+}
+.button_stl_bordered {
+  border: 2px solid #78c58b;
+  background: #fff;
+  color: #78c58b !important;
+  line-height: 41px;
+}
+.button:active {
+  -moz-box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.2);
+  line-height: 46px;
+}
+.button_stl_bordered:active {
+  line-height: 43px;
+}
+.button_stt_disabled, .button_stt_disabled:active {
+  color: #fff !important;
+  background: #d3d8db;
+  cursor: default;
+}
+
+/* button */
 /* ---------------------------------------END--- */
 
 

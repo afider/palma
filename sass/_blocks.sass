@@ -316,6 +316,7 @@
 	&__a
 		display: block
 		text-transform: uppercase
+		+rem(letter-spacing, $letter-spacing)
 		padding: 3px 13px
 		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
 
@@ -393,13 +394,14 @@
 		position: relative
 		display: block
 		text-transform: uppercase
+		+rem(letter-spacing, $letter-spacing)
 		padding: 0 13px
 		height: 70px
 		line-height: 70px
 		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
 
 		.is-active &
-			color: $link_color_hover
+			color: $active-color
 
 			&:before
 				content: ''
@@ -409,7 +411,7 @@
 				left: 0
 				right: 0
 				height: 5px
-				background: $link_color_hover
+				background: $active-color
 		
 
 /* main-nav
@@ -533,15 +535,16 @@
 	+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
 
 	&__icon
-		margin-left: 40px
+		margin-left: 30px
 
 		
 	&__h
 		+rem(font-size, 12px)
 		text-transform: uppercase
+		+rem(letter-spacing, $letter-spacing)
 		display: inline-block
 		vertical-align: middle
-		margin-left: 24px
+		margin-left: 10px
 
 /* enter
 /* ---------------------------------------END--- */
@@ -559,10 +562,11 @@
 	&__h
 		+rem(font-size, 12px)
 		text-transform: uppercase
+		+rem(letter-spacing, $letter-spacing)
 		display: inline-block
 		vertical-align: middle
 		@extend %font-black
-		margin-left: 25px
+		margin-left: 20px
 
 
 /* user
@@ -575,7 +579,7 @@
 .add-button
 	display: inline-block
 	vertical-align: middle
-	margin-left: 40px
+	margin-left: 30px
 
 	&__icon
 		width: 32px
@@ -660,7 +664,7 @@
 		+rem(font-size, 20px)
 		line-height: 1.1
 		@extend %font-medium
-		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: $link_color_visited-teasers)
+		+link-color ($color: $text_color, $color_visited: $link_color_visited2)
 
 	&__price
 		color: $price_color
@@ -929,6 +933,7 @@
 		padding: 0
 		display: inline-block
 		text-transform: uppercase
+		+rem(letter-spacing, $letter-spacing)
 		
 	&__a
 		display: block
@@ -1187,6 +1192,9 @@ input.input
 
 input.input_h_big
 	height: $input-height_big
+
+input.input_h_sm
+	height: $input-height_sm
 
 
 textarea.input
@@ -1512,6 +1520,65 @@ select
 			border-left-width: 1px
 
 /* input-train
+/* ---------------------------------------END--- */
+
+
+/* button
+/* --------------------------------------------- */
+
+.button
+	position: relative
+	font-weight: bold
+	display: inline-block
+	overflow: visible
+	border: none
+	color: #fff !important
+	text-align: center
+	text-decoration: none
+	cursor: pointer
+	vertical-align: middle
+	outline: none
+	+rem(font-size, 12px)
+	text-transform: uppercase
+	+rem(letter-spacing, $letter-spacing)
+	padding: 0 45px
+	height: $input-height_big
+	line-height: $input-height_big
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	background: $main-color
+	border-radius: 4px
+	@extend %bszbb
+	@extend %font-black
+
+	&_stl_bordered
+		border: 2px solid $main-color
+		background: #fff
+		color: $main-color !important
+		line-height: $input-height_big - 3
+
+
+	&:active
+		+box-shadow(inset 0px 5px 10px rgba(#000, .2))
+		line-height: $input-height_big + 2
+
+	&_stl_bordered:active
+		line-height: $input-height_big - 1
+		
+
+	&_stt_disabled,
+	&_stt_disabled:active
+		color: #fff !important
+		background: $disabled-color
+		cursor: default
+
+
+
+/* button
 /* ---------------------------------------END--- */
 
 
