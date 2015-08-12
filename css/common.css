@@ -1590,6 +1590,7 @@ textarea {
 /* tab-nav */
 /* --------------------------------------------- */
 .tab-nav {
+  vertical-align: middle;
   display: inline-block;
 }
 .tab-nav__lst {
@@ -1627,7 +1628,7 @@ textarea {
   display: block;
   color: #60676D;
   border: 1px solid #d3d8db;
-  height: 29px;
+  height: 30px;
   line-height: 27px;
   border-left: none;
   min-width: 57px;
@@ -2035,12 +2036,16 @@ textarea.input_stt_error {
   width: 350px;
   border-radius: 3px;
   background: #fff;
+  text-align: left;
 }
 .select_w_category {
   width: 240px;
 }
 .select_w_city {
   width: 270px;
+}
+.select_w_sm {
+  width: 128px;
 }
 .select.is-selected {
   border-color: #78c58b;
@@ -2059,6 +2064,9 @@ textarea.input_stt_error {
 }
 .select_h_big .select__select {
   height: 42px;
+}
+.select_h_sm .select__select {
+  height: 28px;
 }
 .select.is-selected .select__item {
   color: #363636;
@@ -2090,6 +2098,10 @@ textarea.input_stt_error {
   height: 42px;
   line-height: 43px;
 }
+.select_h_sm .select__bg {
+  height: 28px;
+  line-height: 27px;
+}
 .select__arrow {
   position: absolute;
   right: 0;
@@ -2100,6 +2112,9 @@ textarea.input_stt_error {
 }
 .select_h_big .select__arrow {
   width: 44px;
+}
+.select_h_sm .select__arrow {
+  width: 30px;
 }
 .select.is-selected .select__arrow {
   background: url("../img/arrow-bottom_selected.png") center center no-repeat;

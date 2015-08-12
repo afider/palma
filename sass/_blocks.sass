@@ -968,7 +968,7 @@
 /* --------------------------------------------- */
 
 .tab-nav
-
+	vertical-align: middle
 	display: inline-block
 	
 	&__lst
@@ -1002,7 +1002,7 @@
 		display: block
 		+link-color ($color: $text-light2_color, $color_hover: $link_color_hover, $color_visited: none)
 		border: 1px solid $dark-el-color__form-el
-		height: 29px
+		height: 30px
 		line-height: 27px
 		border-left: none
 		min-width: 57px
@@ -1394,12 +1394,16 @@ select
 	@extend %bszbb
 	border-radius: $border-radius
 	background: #fff
+	text-align: left
 
 	&_w_category
 		width: 240px
 
 	&_w_city
 		width: 270px
+
+	&_w_sm
+		width: 128px
 
 	&.is-selected
 		border-color: $focus-color
@@ -1417,6 +1421,9 @@ select
 
 	&_h_big &__select
 		height: $input-height_big - 2
+
+	&_h_sm &__select
+		height: $input-height_sm - 2
 	
 	&.is-selected &__item
 		color: $text_color
@@ -1453,6 +1460,10 @@ select
 		height: $input-height_big - 2
 		line-height: $input-height_big - 1
 
+	&_h_sm &__bg
+		height: $input-height_sm - 2
+		line-height: $input-height_sm - 3
+
 	&__arrow
 		position: absolute
 		right: 0
@@ -1463,6 +1474,9 @@ select
 
 	&_h_big &__arrow
 		width: $input-height_big
+
+	&_h_sm &__arrow
+		width: $input-height_sm
 		
 	&.is-selected &__arrow	
 		background: url("../img/arrow-bottom_selected.png") center center no-repeat

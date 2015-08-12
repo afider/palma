@@ -11,8 +11,12 @@
 		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="css/common.css">
 		<script src="js/jquery-1.8.3.min.js"></script>
-		<!--[if lt IE 9]> <script src="js/html5.js"></script><![endif]-->
+		<!--[if IE 9]>
+			<script src="js/jquery.placeholder.js"></script>
+			<script src="js/common-ie.js"></script>
+		<![endif]-->
 		<script src="js/common.js"></script>
+		<script src="js/jquery.customselect.js"></script>
 		<script src="js/svg.js"></script>
 	</head>
 
@@ -454,7 +458,7 @@
 
 						<div class="teasers-filter columns columns_space-bot_normal">
 							<div class="columns__i">
-								
+		
 								<div class="tab-nav">
 									<ul class="tab-nav__lst">
 										<li class="tab-nav__i is-active">
@@ -471,8 +475,14 @@
 
 							</div>
 							<div class="columns__i txt-to-right">
+
+								<select id="sel-date" name="sel-date" class="select select_stl_no-selected select_w_sm select_h_sm select_w_category js-select">
+									<option value="1">По дате</option>
+									<option value="2">Дешевле</option>
+									<option value="3">Дороже</option>
+								</select>
 								
-								<div class="tab-nav">
+								<div class="tab-nav space-left">
 									<ul class="tab-nav__lst">
 										<li class="tab-nav__i tab-nav__i_tp_icon">
 											<a href="#" class="tab-nav__a">

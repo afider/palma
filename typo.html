@@ -600,6 +600,14 @@
 						
 							
 							<h2>Выпадающие списки</h2>
+
+							<p>
+								По-умолчанию, если в выпадающем списке ничего не выбрано, т.е. выбрана первая <b>option</b>, то список стиллизуется в серых тонах, если выбран какой-либо из пунктов кроме первого, список стиллизуется зеленой рамкой и изменением цвета текста выбранного пункта. 
+							</p>
+
+							<p>
+								Чтобы список не стиллизовался при выборе какого-либо пункта (как на страницах представления каталога в списке сортировке по дате и т.д.), блоку <b>select</b> нужно добавить модификатор <b>select_stl_no-selected</b>.
+							</p>
 							
 							<div class="form-line form-label-left-space">
 								<label for="region1" class="form-label form-label_lt_top">Ваш город</label>
@@ -626,7 +634,7 @@
 							</div><!-- form-line -->
 
 							<div class="form-line form-label-left-space">
-								<label for="region2" class="form-label form-label_lt_top">Ширина 100%</label>
+								<label for="region2" class="form-label form-label_lt_top">Ширина 100% (<b>select_w_fluid</b>)</label>
 								<select id="region2" name="region2" class="select select_w_fluid js-select">
 									<option value="1">Выберите город</option>
 									<option value="2">Москва</option>
@@ -646,12 +654,35 @@
 									<option value="16">Воронеж</option>
 									<option value="16">Петропавловск-Камчатский</option>
 								</select>
+							</div><!-- form-line -->
+
+							<div class="form-line form-label-left-space">
+								<label for="region1111" class="form-label form-label_lt_top">Большая высота (<b>select_h_big</b>) и список не стиллизуется (<b>select_stl_no-selected</b>) при выборе пункта</label>
+								<select id="region1111" name="region1111" class="select select_h_big select_stl_no-selected js-select">
+									<option value="1">Выберите город</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Очень длинный пункт выпадающего списка практически как предложение</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
 							
 							</div><!-- form-line -->
 
 							<div class="form-line form-label-left-space">
-								<label for="region1111" class="form-label form-label_lt_top">Большая высота</label>
-								<select id="region1111" name="region1111" class="select select_h_big js-select">
+								<label for="region112" class="form-label form-label_lt_top">Маленькая высота (<b>select_h_sm</b>)</label>
+								<select id="region1111" name="region112" class="select select_h_sm js-select">
 									<option value="1">Выберите город</option>
 									<option value="2">Москва</option>
 									<option value="3">Санкт-Петербург</option>

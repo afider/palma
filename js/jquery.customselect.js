@@ -31,9 +31,12 @@
 				span.find('span span').text(val);
 				var selOption = $('option:selected', this).index();
 				
-				if (selOption == 0) {
-					selectWrap.removeClass(selected);
-				} else { selectWrap.addClass(selected); }
+				if (!selectWrap.hasClass('select_stl_no-selected')) {
+					if (selOption === 0) { selectWrap.removeClass(selected); } 
+					else { selectWrap.addClass(selected); }
+				}
+
+				
 
 			};
 			// Update the fake select when the real selectвЂ™s value changes
