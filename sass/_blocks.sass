@@ -82,6 +82,12 @@
 
 	&__mainbar
 		padding-bottom: 15px
+		img
+			max-width: 100%
+			height: auto
+
+	&__space
+		padding-right: 100px
 		
 	&__footer
 		@extend %bszbb
@@ -317,11 +323,11 @@
 		display: block
 		text-transform: uppercase
 		+rem(letter-spacing, $letter-spacing)
-		padding: 3px 13px
+		padding: 3px 12px
 		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
 
 		.is-active &
-			color: $link_color_hover
+			color: $active-color
 
 /* footer-nav
 /* ---------------------------------------END--- */
@@ -395,7 +401,7 @@
 		display: block
 		text-transform: uppercase
 		+rem(letter-spacing, $letter-spacing)
-		padding: 0 13px
+		padding: 0 12px
 		height: 70px
 		line-height: 70px
 		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
@@ -724,11 +730,13 @@
 		margin-top: -1px
 		margin-left: -3px
 
+
 		&:first-child
 			border-top: 3px solid $important_color
 
 	&_lt_list &__i_stl_important + &__i_stl_important
 		margin-top: -3px
+
 
 	&_lt_list &__img-a
 		display: table-cell
@@ -835,7 +843,7 @@
 /* --------------------------------------------- */
 
 .section-h
-	margin: 0 0 7px 0
+	margin: 0 0 12px 0
 	padding: 0
 	
 	&__legend
@@ -1208,9 +1216,18 @@ textarea.input_stt_error
 	border: 1px solid #ff0000
 
 select
-	//width: 198px
-	//padding: 6px 0 5px 0
-	//background: #fafafa
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	padding: 3px 8px
+	.ie9 &
+		padding: 0
+
+	option
+		padding: 3px 14px
+		display: block
+		.ie9 &
+			padding: 0
 
 .form-label
 	display: block
@@ -1427,6 +1444,11 @@ select
 		+opacity(0)
 		width: 100% !important
 
+
+
+
+
+
 	&_h_big &__select
 		height: $input-height_big - 2
 
@@ -1488,6 +1510,9 @@ select
 		
 	&.is-selected &__arrow	
 		background: url("../img/arrow-bottom_selected.png") center center no-repeat
+
+	&__group
+		background: $dark-el-color__fill
 
 /* select
 /* ---------------------------------------END--- */
@@ -1553,11 +1578,16 @@ select
 	border-radius: 4px
 	@extend %bszbb
 	@extend %font-black
+	+transition-duration(.9s)
+	+transition-property(background, color, border-color)
 
 	&:active
 		+box-shadow(inset 0px 3px 7px rgba(#000, .2))
 		line-height: $input-height_big + 2
 
+	&:hover
+		background: $active-color
+		+transition-duration(.2s)
 
 	&_stl_bordered
 		border: 2px solid $main-color
@@ -1565,11 +1595,17 @@ select
 		color: $main-color !important
 		line-height: $input-height_big - 3
 
+		&.button:hover
+			border-color: $active-color
+			color: $active-color !important
+			background: none
+			+transition-duration(.2s)
+
 	&_stl_bordered.button_size_m
 		line-height: $input-height - 3
 
 	&_stl_bordered.button_size_sm
-		line-height: $input-height_sm - 3
+		line-height: $input-height_sm - 2
 
 	&_color_stop
 		background: $stop_color
@@ -1586,8 +1622,6 @@ select
 	&_color_grayscale
 		background: #edeff1
 		color: $text-light_color !important
-
-
 
 	&_stl_bordered
 		&:active
@@ -1611,7 +1645,9 @@ select
 		padding-left: 20px
 		padding-right: 20px
 		@extend %font-light
+		font-weight: bold
 		border-width: 1px !important
+		+rem(font-size, 11px)
 
 		&:active
 			line-height: $input-height_sm + 2
@@ -1623,9 +1659,13 @@ select
 	&_stt_disabled,
 	&_stt_disabled:active
 		color: #fff !important
-		background: $disabled-color
+		background: $disabled-color !important
 		cursor: default
 		+box-shadow(none)
+
+
+	&_w_fluid
+		width: 100%
 
 
 
@@ -1633,4 +1673,205 @@ select
 /* ---------------------------------------END--- */
 
 
+/* main-search
+/* --------------------------------------------- */
 
+.main-search
+	margin-bottom: 10px
+
+	&__category
+		width: 240px
+
+	&__input
+		width: 453px
+
+	&__place
+		width: 235px
+
+	&__button
+		padding: 0
+		width: 52px
+
+/* main-search
+/* ---------------------------------------END--- */
+
+
+/* detail
+/* --------------------------------------------- */
+
+.detail
+	margin-bottom: $content_bot_space-sm
+	&__photos
+		width: 431px
+
+	&__legend
+		padding-left: 20px
+
+	&__price
+		+rem(font-size, 20px)
+		line-height: 1
+		color: $price-color
+		@extend %font-medium
+		border-bottom: 1px solid $dark-el-color__sep
+		padding-bottom: 12px
+		padding-top: 14px
+		margin-bottom: 16px
+
+	&__sub-h
+		font-weight: bold
+		@extend %font-regular
+		margin-bottom: 7px
+
+	&__description
+		border-bottom: 1px solid $dark-el-color__sep
+		margin-bottom: $content_bot_space-more
+
+/* detail
+/* ---------------------------------------END--- */
+
+
+/* properties
+/* --------------------------------------------- */
+
+.properties
+	display: block
+	@extend %clear
+
+	&__h,
+	&__value
+		margin-bottom: 8px
+	
+	&__h
+		float: left
+		padding-right: 30px
+		clear:left
+		width: 120px
+		color: $text-light_color
+
+
+	&__value
+
+		
+
+/* properties
+/* ---------------------------------------END--- */
+
+
+/* act-buttons
+/* --------------------------------------------- */
+
+.act-buttons
+	display: table
+	width: 100%
+
+	&__i
+		display: table-cell
+		vertical-align: top
+
+
+		&_tp_phone
+			padding-right: 10px
+		&_tp_mess
+			padding-left: 10px
+
+	&__icon
+		position: relative
+		top: -1px
+
+			
+
+/* act-buttons
+/* ---------------------------------------END--- */
+
+
+/* detail-inf
+/* --------------------------------------------- */
+
+.detail-inf
+	display: table
+	margin-bottom: $content_bot_space
+	color: $text-light_color
+	+rem(font-size, 12px)
+
+	&__i
+		display: table-cell
+		vertical-align: middle
+		padding-right: 40px
+		white-space: nowrap
+
+
+
+/* detail-inf
+/* ---------------------------------------END--- */
+
+
+/* views
+/* --------------------------------------------- */
+
+.views
+	display: inline-block
+	color: $text-light_color
+	white-space: nowrap
+
+	&__icon
+		color: $dark-el-color__fill
+		position: relative
+		top: -1px
+		margin-right: 7px
+
+	&__h
+		color: $text_color
+		display: inline-block
+
+
+
+/* views
+/* ---------------------------------------END--- */
+
+
+/* add-to-favorites
+/* --------------------------------------------- */
+
+.add-to-favorites
+	display: inline-block
+	color: $text-light_color
+	white-space: nowrap
+
+	&__icon
+		color: $dark-el-color__fill
+		position: relative
+		top: -2px
+		margin-right: 7px
+
+	&__h
+		display: inline-block
+		+link-color ($color_visited: none)
+
+
+
+/* add-to-favorites
+/* ---------------------------------------END--- */
+
+
+/* complain
+/* --------------------------------------------- */
+
+.complain
+	display: inline-block
+	color: $text-light_color
+	white-space: nowrap
+
+	&__icon
+		color: $dark-el-color__fill
+		position: relative
+		top: -2px
+		margin-right: 7px
+
+	&__h
+		display: inline-block
+		+link-color ($color_visited: none)
+
+
+
+/* complain
+/* ---------------------------------------END--- */
