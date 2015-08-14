@@ -61,7 +61,7 @@
 			// }
 
 
-			var span = $('<span class="' + config.customSelectClass + '" aria-hidden="true"><span class="select__bg"><span>' + $('option:selected', this).text() + '</span></span><span class="select__arrow"></span></span>');
+			var span = $('<span class="' + config.customSelectClass + '" aria-hidden="true"><span class="select__bg"><span>' + $('option:selected', this).text() + '</span></span><span class="select__arrow"><svg class="select__icon"><use xlink:href="#icon_bottom-arrow"></use></svg></span></span>');
 			select.after(span);
 			// Change class names to enable styling of hover/focus states
 			select.bind({

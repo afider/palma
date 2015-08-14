@@ -6,8 +6,46 @@
  		animatePopupNav (); //-- анимация всплывающего меню
  		customizeRadioCheckbox (); // кастомизация системных радиокнопок и чекбоксов
  		initCustomSelect (); //-- кастомизация дефолтного выпадающего списка
+ 		initInputFilled (); //-- добавление класса, для полей ввода текста, в которых есть текст
 		
 	});
+
+
+	function initInputFilled () {
+
+		var input = $('.input');
+		var stateClass = "is-filled";
+
+		input.each( function(){
+
+			var __this = $(this);
+
+			if( __this.val() !== '') __this.addClass(stateClass);
+		});
+
+		input.blur(function() {
+
+			var __this = $(this);
+
+			if ( __this.val() === '' ) __this.removeClass(stateClass);
+		});
+
+		input.mouseover(function() {
+
+			var __this = $(this);
+
+			if ( __this.val() !== '' ) __this.addClass(stateClass);
+		});
+
+		input.keyup(function() {
+
+			var __this = $(this);
+			console.log('up');
+
+			if( __this.val() !== '' ) __this.addClass(stateClass);
+			else __this.removeClass(stateClass);
+		});
+	} // initInputFilled ()
 
 
 	function initCustomSelect () {
