@@ -265,3 +265,21 @@
 		} // if
 
 	} // font-face
+
+
+	@mixin svg-dim ($w, $h, $wNew:null, $hNew:null) {
+		
+		@if ($wNew != null) {
+			$hNew: $h*$wNew/$w;
+			width: $wNew;
+			height: $hNew;
+		}
+
+		@else if ($hNew != null) {
+			$wNew: $w*$hNew/$h;
+			width: $wNew;
+			height: $hNew;
+		}
+
+
+	} // vert-gradient_light

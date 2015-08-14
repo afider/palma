@@ -596,6 +596,19 @@
 /* ---------------------------------------END--- */
 
 
+
+
+%star-favorites-no
+	stroke: $dark-el-color__fill
+	fill: none
+
+%star-favorites-yes
+	fill: $star-color
+	stroke: $star-color
+	
+
+
+
 /* all-favorites
 /* --------------------------------------------- */
 
@@ -606,17 +619,30 @@
 
 	&__icon
 		vertical-align: middle
-		color: #d9dbdc
-		
+		@extend %star-favorites-no
+
+		&_stt_added
+			@extend %star-favorites-yes
+	
 	&__h
 		color: #D7D9DA
 		+rem(font-size, 12px)
 		display: inline-block
 		vertical-align: middle
 		margin-left: 10px
-		
 
 /* all-favorites
+/* ---------------------------------------END--- */
+
+
+/* icon-star
+/* --------------------------------------------- */
+
+.icon-star
+	stroke-miterlimit: 10
+	stroke-width: 0.8
+
+/* icon-star
 /* ---------------------------------------END--- */
 
 
@@ -648,6 +674,7 @@
 
 	&__img
 		display: block
+
 
 	&__legend
 		padding: 0 10px 15px 10px
@@ -694,6 +721,10 @@
 		vertical-align: middle
 		color: $favorite_color
 		margin-left: 15px
+		@extend %star-favorites-no
+
+		&_stt_added
+			@extend %star-favorites-yes
 
 	&__prop
 		vertical-align: middle
@@ -741,13 +772,12 @@
 	&_lt_list &__img-a
 		display: table-cell
 		vertical-align: top
-		width: 1px
+		width: 190px
 
 
 	&_lt_list &__img
 		width: 190px
 		height: auto
-
 
 	&_lt_list &__h
 		height: 72px
@@ -1385,10 +1415,10 @@ select
 	&__icon
 		display: block
 		position: absolute
-		width: 9px
-		height: 7px
+		+svg-dim($w:9px, $h:7px, $wNew:9px, $hNew: none)
 		top: 6px
 		left: 5px
+		color: $focus_color
 		+transition-property(opacity)
 		+opacity(0)
 		+transition-duration(.2s)
@@ -1777,6 +1807,8 @@ select
 	&__icon
 		position: relative
 		top: -1px
+		margin-right: 5px
+
 
 			
 
@@ -1842,6 +1874,7 @@ select
 		position: relative
 		top: -2px
 		margin-right: 7px
+		@extend %star-favorites-no
 
 	&__h
 		display: inline-block

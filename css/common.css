@@ -1246,6 +1246,16 @@ textarea {
 
 /* add-button */
 /* ---------------------------------------END--- */
+.all-favorites__icon, .teasers__favorite, .add-to-favorites__icon {
+  stroke: #c4cacf;
+  fill: none;
+}
+
+.all-favorites__icon_stt_added, .teasers__favorite_stt_added {
+  fill: #ffc108;
+  stroke: #ffc108;
+}
+
 /* all-favorites */
 /* --------------------------------------------- */
 .all-favorites {
@@ -1255,7 +1265,6 @@ textarea {
 }
 .all-favorites__icon {
   vertical-align: middle;
-  color: #d9dbdc;
 }
 .all-favorites__h {
   color: #D7D9DA;
@@ -1267,6 +1276,15 @@ textarea {
 }
 
 /* all-favorites */
+/* ---------------------------------------END--- */
+/* icon-star */
+/* --------------------------------------------- */
+.icon-star {
+  stroke-miterlimit: 10;
+  stroke-width: 0.8;
+}
+
+/* icon-star */
 /* ---------------------------------------END--- */
 /* teasers */
 /* --------------------------------------------- */
@@ -1387,7 +1405,7 @@ textarea {
 .teasers_lt_list .teasers__img-a {
   display: table-cell;
   vertical-align: top;
-  width: 1px;
+  width: 190px;
 }
 .teasers_lt_list .teasers__img {
   width: 190px;
@@ -2043,6 +2061,7 @@ select option {
   height: 7px;
   top: 6px;
   left: 5px;
+  color: #78c58b;
   -moz-transition-property: opacity;
   -o-transition-property: opacity;
   -webkit-transition-property: opacity;
@@ -2417,6 +2436,7 @@ select option {
 .act-buttons__icon {
   position: relative;
   top: -1px;
+  margin-right: 5px;
 }
 
 /* act-buttons */
