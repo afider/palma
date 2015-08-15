@@ -63,6 +63,9 @@
 	width: 100%
 	min-width: $page_w
 
+	&_sidebars_left
+		
+
 	&__header
 		//background: #adf785
 		border-bottom: 1px solid #e0e0e0
@@ -75,7 +78,8 @@
 		@extend %clear
 		max-width: $page_w_max
 
-	&__body
+	&_columns_left  &__body
+		@extend %clear
 
 	&__in
 		padding-bottom: $footer_h
@@ -85,6 +89,10 @@
 		img
 			max-width: 100%
 			height: auto
+
+	&_sidebars_left &__mainbar
+		float: left
+		width: 69.4%
 
 	&__space
 		padding-right: 100px
@@ -98,6 +106,16 @@
 		height: $footer_h
 		min-width: $min-width
 		border-top: 1px solid $dark-el-color__sep
+
+	&__sidebar
+		float: left
+		width: 30.6%
+		@extend %bszbb
+		margin-bottom: $content_bot_space-sm
+
+		&_lt_left
+			padding-right: 20px
+	
 
 	
 /* page
@@ -135,6 +153,10 @@
 	background: $dark-el-color__bg
 	padding: 23px 0 16px 0
 	margin-bottom: 28px
+
+	&_lt_inner
+		padding-left: 15px
+		padding-right: 15px
 
 /* search-panel
 /* ---------------------------------------END--- */
@@ -1013,6 +1035,9 @@
 .tab-nav
 	vertical-align: middle
 	display: inline-block
+
+	&_space_bottom
+		margin-bottom: $content_bot_space-sm
 	
 	&__lst
 		margin: 0
@@ -1742,19 +1767,33 @@ select
 
 .main-search
 	margin-bottom: 10px
+	position: relative
+	padding-right: 52px
+	
+
+	&_lt_inner
+		
 
 	&__category
-		width: 240px
+		width: 26%
 
 	&__input
-		width: 453px
+		width: 49%
 
 	&__place
-		width: 235px
+		width: 25%
 
 	&__button
+		position: absolute
+		top: 0
+		right: 2px
 		padding: 0
 		width: 52px
+
+	&__icon
+		position: relative
+		top: -1px
+
 
 /* main-search
 /* ---------------------------------------END--- */
@@ -1941,4 +1980,58 @@ select
 
 
 /* complain
+/* ---------------------------------------END--- */
+
+
+/* user-nav
+/* --------------------------------------------- */
+
+.user-nav
+	background: $dark-el-color__bg
+	margin-bottom: $content_bot_space
+	padding: 14px
+	line-height: $menu-line-height
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		margin: 0
+		padding: 0
+		
+	&__a
+		text-transform: uppercase
+		+rem(letter-spacing, $letter-spacing)
+		display: block
+		+rem(font-size, 12px)
+		@extend %font-black
+		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
+		padding: 9px 0
+
+		.is-active > &
+			color: $text-light_color
+
+	&__sub
+		margin: 0 0 5px 10px
+		padding: 0
+		list-style-type: none
+		
+	&__sub-i
+		margin: 0
+		padding: 0
+		
+	&__sub-a
+		display: block
+		padding: 4px 0
+
+	&__legend
+		display: inline-block
+		color: $text-light_color
+		margin-left: 4px
+
+
+
+/* user-nav
 /* ---------------------------------------END--- */
