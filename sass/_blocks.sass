@@ -362,8 +362,18 @@
 	display: table
 	width: 100%
 
+	&_valign_middle &__i
+		vertical-align: middle
+		
+
 	&_space-bot_normal
 		margin-bottom: $content_bot_space
+
+	&_space-bot_sm
+		margin-bottom: $content_bot_space-sm
+
+	&_space-bot_smst
+		margin-bottom: $content_bot_space-smst
 
 	&_number_2 &__i
 		width: (100% / 2)
@@ -585,7 +595,18 @@
 	display: inline-block
 	vertical-align: middle
 	+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
+	margin-left: 20px
 
+	&_stt_logged
+		+link-color ($color: $text-light2_color, $color_hover: $link_color_hover, $color_visited: none)
+	
+	&__img
+		display: inline-block
+		vertical-align: middle
+		width: 36px
+		height: auto
+		border-radius: 50%
+		margin-right: 13px
 
 	&__h
 		+rem(font-size, 12px)
@@ -594,7 +615,15 @@
 		display: inline-block
 		vertical-align: middle
 		@extend %font-black
-		margin-left: 20px
+
+	&__arrow
+		width: 11px
+		height: 7px
+		display: inline-block
+		position: relative
+		top: -1px
+		margin-left: 5px
+		
 
 
 /* user
@@ -2034,4 +2063,19 @@ select
 
 
 /* user-nav
+/* ---------------------------------------END--- */
+
+
+/* text-with-legend
+/* --------------------------------------------- */
+
+.text-with-legend
+	display: inline-block
+	vertical-align: middle
+
+	&__legend
+		color: $text-light2_color
+		display: inline-block
+
+/* text-with-legend
 /* ---------------------------------------END--- */
