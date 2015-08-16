@@ -3,13 +3,36 @@
 
 		document.getElementById('svg-icons').innerHTML = SVG_ICONS;
  		
- 		animatePopupNav (); //-- анимация всплывающего меню
+ 		animatePopup (); //-- анимация всплывающих меню
  		customizeRadioCheckbox (); // кастомизация системных радиокнопок и чекбоксов
  		initCustomSelect (); //-- кастомизация дефолтного выпадающего списка
  		initInputFilled (); //-- добавление класса, для полей ввода текста, в которых есть текст
+ 		setAllChecked (); //-- установка всем чекбоксам при модерации checked
 		
 	});
 
+
+	function setAllChecked () {
+
+		$('.m-header__ctrl').on('click', function() {
+			
+			var el = $(this);
+			var checkbox = el.find('input');
+
+			if ( checkbox.is(':checked') ) {
+
+				$('.m-teasers__checkbox input').prop('checked', true);
+				customizeRadioCheckbox ();
+			}
+			else {
+
+				$('.m-teasers__checkbox input').prop('checked', false);
+				customizeRadioCheckbox ();
+			}
+
+			
+		});
+	} // setAllChecked ()
 
 	function initInputFilled () {
 
@@ -84,12 +107,17 @@
 	} // customizeRadioCheckbox ()
 
 
-	function animatePopupNav() {
-		$(".nav-ctrl").on('click', function(event) {
+	function animatePopup() {
+		$(".js-popup-nav__ctrl").on('click', function(event) {
 			event.preventDefault();
+
+			var el = $(this);
+			var elTargetClass = el.data('popup');
+			var elTarget = $('.' + elTargetClass);
+			console.log(elTarget);
 			
-			$(this).toggleClass('is-open');
-			$(".nav").toggleClass('is-open');
+			el.toggleClass('is-open');
+			elTarget.toggleClass('is-open');
 		});
 
 	} // animatePopupNav ()

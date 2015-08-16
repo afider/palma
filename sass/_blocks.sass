@@ -68,7 +68,7 @@
 
 	&__header
 		//background: #adf785
-		border-bottom: 1px solid #e0e0e0
+		border-bottom: 1px solid $dark-el-color__page-border
 		@include box-shadow(0 1px 0 #f2f2f2)
 		
 
@@ -592,13 +592,20 @@
 /* --------------------------------------------- */
 
 .user
+	position: relative
 	display: inline-block
 	vertical-align: middle
 	+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
 	margin-left: 20px
+	+transition-property(color, border)
+	+transition-duration(.5s)
+
+	&:hover
+		+transition-duration(.1s)
 
 	&_stt_logged
 		+link-color ($color: $text-light2_color, $color_hover: $link_color_hover, $color_visited: none)
+		cursor: pointer
 	
 	&__img
 		display: inline-block
@@ -623,7 +630,40 @@
 		position: relative
 		top: -1px
 		margin-left: 5px
+
+	&__popup
+		position: absolute
+		top: 53px
+		right: 0
+		width: 170px
+		background: #fff
+		+box-shadow(0px 8px 10px rgba(#000, .2))
+		border: 1px solid $dark-el-color__page-border
+		border-top: none
+		z-index: 100
+		padding: 10px 0
+		text-align: left
+		+transition-duration(.5s)
+		visibility: hidden
+		+opacity(0)
+
+		&.is-open
+			+opacity(1)
+			visibility: visible
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
 		
+	&__i
+		margin: 0
+		padding: 0
+		
+	&__a
+		display: block
+		padding: 6px 20px
+		+link-color ($color_visited: none)
 
 
 /* user
@@ -1430,6 +1470,7 @@ select
 	line-height: $menu-line-height
 	+rem(font-size, 14px)
 	color: $text-light_color
+	min-height: 18px
 
 	&.on
 		color: $text_color
@@ -1684,6 +1725,7 @@ select
 	text-transform: uppercase
 	+rem(letter-spacing, $letter-spacing)
 	padding: 0 25px
+	white-space: nowrap
 	height: $input-height_big
 	line-height: $input-height_big
 	-webkit-touch-callout: none
@@ -2018,7 +2060,7 @@ select
 .user-nav
 	background: $dark-el-color__bg
 	margin-bottom: $content_bot_space
-	padding: 14px
+	padding: 8px 14px 9px 14px
 	line-height: $menu-line-height
 
 	&__lst
@@ -2078,4 +2120,167 @@ select
 		display: inline-block
 
 /* text-with-legend
+/* ---------------------------------------END--- */
+
+
+/* m-header
+/* --------------------------------------------- */
+
+.m-header
+	padding: 12px 0
+	
+	&__all
+		height: 44px
+		width: 44px
+		background: $dark-el-color__bg
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+		border-radius: 4px
+		position: relative
+
+	&__ctrl
+		position: absolute
+		width: 18px
+		height: 18px
+		padding: 0
+		top: 50%
+		left: 50%
+		margin-left: -9px
+		margin-top: -9px
+
+/* m-header
+/* ---------------------------------------END--- */
+
+
+/* m-teasers
+/* --------------------------------------------- */
+
+.m-teasers
+
+	margin-bottom: $content_bot_space
+	
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		margin: 0
+		padding: 6px 0
+		border-bottom: 1px solid $dark-el-color__sep
+		
+		&_stl_important
+			border: 3px solid $important_color
+			margin-top: -1px
+			padding-left: 6px
+			margin-right: -12px
+
+	&__i_stl_important + &__i_stl_important
+		margin-top: -3px
+		
+	&__body
+		display: table
+		width: 100%
+
+	&__i_stl_important &__body
+		margin-left: -9px
+		
+
+	&__photo,
+	&__inf,
+	&__ctrl
+		display: table-cell
+		vertical-align: top
+
+	&__ctrl
+		width: 54px
+
+	&__photo
+		width: 190px
+
+	&__inf
+		padding-left: 15px
+		position: relative
+		padding-top: 30px
+		+rem(font-size, 12px)
+	
+	&__img
+		width: 190px
+		height: auto
+		display: block
+
+	&__checkbox
+		margin-left: 13px
+
+	&__h
+		position: absolute
+		top: 0
+		left: 15px
+		right: 0
+		display: block
+		@extend %bszbb
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		margin-bottom: 10px
+		padding: 0
+		+rem(font-size, 20px)
+		line-height: 1.1
+		@extend %font-medium
+		+link-color ($color: $text_color, $color_visited: $link_color_visited2)
+
+	&__price
+		display: inline-block
+		vertical-align: middle
+		color: $price_color
+		+rem(font-size, 16px)
+		margin-right: 5px
+		width: 126px
+
+	&__line
+		display: table
+		width: 100%
+
+		&_lt_bottom
+			
+
+	&__col
+		display: table-cell
+		vertical-align: top
+
+		&_align_right
+			text-align: right
+
+	&__line_lt_bottom &__col
+		vertical-align: bottom
+		height: 77px
+
+
+	&__prop
+		vertical-align: middle
+		display: inline-block
+		color: $text-light_color
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		max-width: 140px
+
+	&__views
+		vertical-align: middle
+
+	&__spaced-line
+		margin-bottom: 5px
+
+/* m-teasers
+/* ---------------------------------------END--- */
+
+
+/* link-stop
+/* --------------------------------------------- */
+
+.link-stop
+	+link-color ($color: $stop-color, $color_hover: $link_color_hover, $color_visited: none)
+
+/* link-stop
 /* ---------------------------------------END--- */
