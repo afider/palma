@@ -2425,6 +2425,15 @@ select option {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
+.button_space_sm {
+  margin-left: 9px;
+}
+.button_space_m {
+  margin-left: 12px;
+}
+.button_space_big {
+  margin-left: 27px;
+}
 .button_stl_bordered {
   border: 2px solid #78c58b;
   background: none;
