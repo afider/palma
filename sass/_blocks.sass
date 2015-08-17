@@ -68,7 +68,7 @@
 	$footer_h: 143px
 	$left-sidebar_w: 280px
 	$right-sidebar_w: 285px
-	$right-sidebar2_w: 330px
+	$right-sidebar2_w: 260px
 	
 	@extend %bszbb
 	position: relative
@@ -196,6 +196,7 @@
 		width: $right-sidebar2_w
 		margin-left: - $right-sidebar2_w
 		padding-top: 35px
+		padding-right: 10px
 
 		&:before
 			content: ''
@@ -1421,6 +1422,9 @@ input:-ms-input-placeholder
 	
 	&_space_left
 		margin-left: 12px
+		
+	&_w_fluid-half
+		width: $fluid_w_half
 
 	&_w_sm
 		width: 146px
@@ -1544,7 +1548,11 @@ select
 			vertical-align: top
 			padding-top: 10px
 
+		&_space_left
+			padding-left: 12px
 
+		&_w_fliud-half
+			width: 35%
 
 
 /* form-columns
@@ -1668,6 +1676,9 @@ select
 	border-radius: $border-radius
 	background: #fff
 	text-align: left
+
+	&_w_fluid-half
+		width: $fluid_w_half
 
 	&_w_category
 		width: 240px

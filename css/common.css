@@ -810,7 +810,7 @@ textarea {
   margin-right: 285px;
 }
 .page_stl_bg.page_sidebars_right .page__content {
-  margin-right: 330px;
+  margin-right: 260px;
   padding-right: 30px;
 }
 .page_sidebars_left .page__mainbar, .page_sidebars_right .page__mainbar, .page_sidebars_both .page__mainbar {
@@ -833,9 +833,10 @@ textarea {
   margin-left: -285px;
 }
 .page_stl_bg .page__sidebar {
-  width: 330px;
-  margin-left: -330px;
+  width: 260px;
+  margin-left: -260px;
   padding-top: 35px;
+  padding-right: 10px;
 }
 .page_stl_bg .page__sidebar:before {
   content: "";
@@ -2069,6 +2070,9 @@ input:-ms-input-placeholder {
 .input_space_left {
   margin-left: 12px;
 }
+.input_w_fluid-half {
+  width: 45%;
+}
 .input_w_sm {
   width: 146px;
 }
@@ -2196,6 +2200,12 @@ select option {
 .form-columns__i_valign_top {
   vertical-align: top;
   padding-top: 10px;
+}
+.form-columns__i_space_left {
+  padding-left: 12px;
+}
+.form-columns__i_w_fliud-half {
+  width: 35%;
 }
 
 /* form-columns */
@@ -2336,6 +2346,9 @@ select option {
   border-radius: 3px;
   background: #fff;
   text-align: left;
+}
+.select_w_fluid-half {
+  width: 45%;
 }
 .select_w_category {
   width: 240px;
