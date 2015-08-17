@@ -50,7 +50,7 @@
 
 .centered
 	margin: auto
-	min-width: $min-width
+	min-width: $page_w_min
 	max-width: $page_w_max_sm
 	padding-left: 10px
 	padding-right: 10px
@@ -66,11 +66,14 @@
 
 .page
 	$footer_h: 143px
+	$left-sidebar_w: 280px
+	$right-sidebar_w: 285px
+
 
 	position: relative
 	min-height: 100%
 	width: 100%
-	min-width: $page_w
+	min-width: $page_w_min
 
 	&_sidebars_left
 		
@@ -87,7 +90,8 @@
 		@extend %clear
 		max-width: $page_w_max
 
-	&_columns_left  &__body
+	&_sidebars_left  &__body,
+	&_sidebars_right  &__body
 		@extend %clear
 
 	&__in
@@ -99,13 +103,48 @@
 			max-width: 100%
 			height: auto
 
-	&_sidebars_left &__mainbar
+	&__content
+		margin: 0
+		min-height: 20px
+		//background: #f6f866
+
+	&_sidebars_left &__content
+		margin-left: $left-sidebar_w
+
+	&_sidebars_right &__content
+		margin-right: $right-sidebar_w
+
+	&_sidebars_both &__content
+		margin-left: $left-sidebar_w
+		margin-right: $right-sidebar_w
+
+
+	&_sidebars_left &__mainbar,
+	&_sidebars_right &__mainbar,
+	&_sidebars_both &__mainbar
 		float: left
-		width: 69.4%
+		width: 100%
+
+
+	&__sidebar
+		float: left
+		width: $left-sidebar_w
+		@extend %bszbb
+		margin-bottom: $content_bot_space-sm
+
+		&_lt_left
+			padding-right: 20px
+			margin-left: -100%
+
+		&_lt_right
+			width: $right-sidebar_w
+			padding-left: 20px
+			margin-left: - $right-sidebar_w
 
 	&__space
 		padding-right: 100px
-		
+
+			
 	&__footer
 		@extend %bszbb
 		padding-top: 13px
@@ -113,17 +152,10 @@
 		//background: #f1acf2
 		margin-top: -$footer_h
 		height: $footer_h
-		min-width: $min-width
+		min-width: $page_w_min
 		border-top: 1px solid $dark-el-color__sep
 
-	&__sidebar
-		float: left
-		width: 30.6%
-		@extend %bszbb
-		margin-bottom: $content_bot_space-sm
 
-		&_lt_left
-			padding-right: 20px
 	
 
 	
@@ -565,7 +597,7 @@
 		@extend %bszbb
 		display: inline-block
 		vertical-align: top
-		width: (100%/4) - 4%
+		width: (100%/4) - 2.3%
 
 
 /* nav-teasers
@@ -1876,11 +1908,17 @@ select
 
 .detail
 	margin-bottom: $content_bot_space-sm
+	@extend %clear
+
 	&__photos
-		width: 431px
+		width: 50%
+		float: left
 
 	&__legend
+		@extend %bszbb
 		padding-left: 20px
+		float: left
+		width: 50%
 
 	&__price
 		+rem(font-size, 20px)
@@ -1909,22 +1947,26 @@ select
 /* --------------------------------------------- */
 
 .properties
-	display: block
-	@extend %clear
+
+	margin-bottom: $content_bot_space
+
+	&__i
+		margin-bottom: 8px
+		@extend %clear
+	
 
 	&__h,
 	&__value
-		margin-bottom: 8px
+		float: left
 	
 	&__h
-		float: left
-		padding-right: 30px
-		clear:left
-		width: 120px
+		@extend %bszbb
+		padding-right: 20px
+		width: 36%
 		color: $text-light_color
 
-
 	&__value
+		width: 64%
 
 		
 
@@ -1936,18 +1978,23 @@ select
 /* --------------------------------------------- */
 
 .act-buttons
-	display: table
-	width: 100%
+	@extend %clear
 
 	&__i
-		display: table-cell
-		vertical-align: top
-
+		float: left
+		width: 50%
+		@extend %bszbb
+		min-width: 210px
+		margin-bottom: $content_bot_space-sm
+		padding-right: 15px
 
 		&_tp_phone
-			padding-right: 10px
+			
 		&_tp_mess
-			padding-left: 10px
+			
+
+	&__button
+		padding: 0
 
 	&__icon
 		position: relative
@@ -2290,4 +2337,18 @@ select
 	+link-color ($color: $stop-color, $color_hover: $link_color_hover, $color_visited: none)
 
 /* link-stop
+/* ---------------------------------------END--- */
+
+
+/* right-sidebar
+/* --------------------------------------------- */
+
+.right-sidebar
+	background: #E0D7D7
+	min-height: 200px
+	text-align: center
+	@extend %bszbb
+	padding-top: 40px
+
+/* right-sidebar
 /* ---------------------------------------END--- */
