@@ -700,6 +700,16 @@ textarea {
 
 /* clearfix */
 /* ---------------------------------------END--- */
+.all-favorites__icon, .teasers__favorite, .add-to-favorites__icon {
+  stroke: #c4cacf;
+  fill: none;
+}
+
+.all-favorites__icon_stt_added, .teasers__favorite:hover, .teasers__favorite_stt_added, .add-to-favorites:hover .add-to-favorites__icon {
+  fill: #ffc108;
+  stroke: #ffc108;
+}
+
 /* centered */
 /* --------------------------------------------- */
 .centered {
@@ -1358,16 +1368,6 @@ textarea {
 
 /* add-button */
 /* ---------------------------------------END--- */
-.all-favorites__icon, .teasers__favorite, .add-to-favorites__icon {
-  stroke: #c4cacf;
-  fill: none;
-}
-
-.all-favorites__icon_stt_added, .teasers__favorite_stt_added {
-  fill: #ffc108;
-  stroke: #ffc108;
-}
-
 /* all-favorites */
 /* --------------------------------------------- */
 .all-favorites {
@@ -1476,6 +1476,10 @@ textarea {
   vertical-align: middle;
   color: #ffc108;
   margin-left: 15px;
+  cursor: pointer;
+}
+.teasers__favorite_stt_added {
+  cursor: default;
 }
 .teasers__prop {
   vertical-align: middle;
@@ -2657,8 +2661,13 @@ select option {
 /* --------------------------------------------- */
 .add-to-favorites {
   display: inline-block;
-  color: #8996A0;
   white-space: nowrap;
+}
+.add-to-favorites:visited {
+  color: #003663;
+}
+.add-to-favorites:hover {
+  color: #6699cc;
 }
 .add-to-favorites__icon {
   color: #c4cacf;
@@ -2669,12 +2678,6 @@ select option {
 .add-to-favorites__h {
   display: inline-block;
 }
-.add-to-favorites__h:visited {
-  color: #003663;
-}
-.add-to-favorites__h:hover {
-  color: #6699cc;
-}
 
 /* add-to-favorites */
 /* ---------------------------------------END--- */
@@ -2682,8 +2685,13 @@ select option {
 /* --------------------------------------------- */
 .complain {
   display: inline-block;
-  color: #8996A0;
   white-space: nowrap;
+}
+.complain:visited {
+  color: #003663;
+}
+.complain:hover {
+  color: #6699cc;
 }
 .complain__icon {
   color: #c4cacf;
@@ -2691,14 +2699,11 @@ select option {
   top: -2px;
   margin-right: 7px;
 }
+.complain:hover .complain__icon {
+  color: #f36c4f;
+}
 .complain__h {
   display: inline-block;
-}
-.complain__h:visited {
-  color: #003663;
-}
-.complain__h:hover {
-  color: #6699cc;
 }
 
 /* complain */

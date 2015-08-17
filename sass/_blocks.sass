@@ -36,6 +36,15 @@
 /* ---------------------------------------END--- */
 
 
+%star-favorites-no
+	stroke: $dark-el-color__fill
+	fill: none
+
+%star-favorites-yes
+	fill: $star-color
+	stroke: $star-color
+
+
 /* centered
 /* --------------------------------------------- */
 
@@ -687,19 +696,6 @@
 /* ---------------------------------------END--- */
 
 
-
-
-%star-favorites-no
-	stroke: $dark-el-color__fill
-	fill: none
-
-%star-favorites-yes
-	fill: $star-color
-	stroke: $star-color
-	
-
-
-
 /* all-favorites
 /* --------------------------------------------- */
 
@@ -812,10 +808,15 @@
 		vertical-align: middle
 		color: $favorite_color
 		margin-left: 15px
+		cursor: pointer
 		@extend %star-favorites-no
+
+		&:hover
+			@extend %star-favorites-yes
 
 		&_stt_added
 			@extend %star-favorites-yes
+			cursor: default
 
 	&__prop
 		vertical-align: middle
@@ -2010,8 +2011,8 @@ select
 
 .add-to-favorites
 	display: inline-block
-	color: $text-light_color
 	white-space: nowrap
+	+link-color ($color_visited: none)
 
 	&__icon
 		color: $dark-el-color__fill
@@ -2020,9 +2021,12 @@ select
 		margin-right: 7px
 		@extend %star-favorites-no
 
+	&:hover &__icon
+		@extend %star-favorites-yes
+
 	&__h
 		display: inline-block
-		+link-color ($color_visited: none)
+		
 
 
 
@@ -2035,7 +2039,7 @@ select
 
 .complain
 	display: inline-block
-	color: $text-light_color
+	+link-color ($color_visited: none)
 	white-space: nowrap
 
 	&__icon
@@ -2044,9 +2048,12 @@ select
 		top: -2px
 		margin-right: 7px
 
+	&:hover &__icon
+		color: $stop-color
+
 	&__h
 		display: inline-block
-		+link-color ($color_visited: none)
+		
 
 
 
