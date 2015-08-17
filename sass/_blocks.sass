@@ -68,20 +68,30 @@
 	$footer_h: 143px
 	$left-sidebar_w: 280px
 	$right-sidebar_w: 285px
-
-
+	$right-sidebar2_w: 330px
+	
+	@extend %bszbb
 	position: relative
 	min-height: 100%
 	width: 100%
 	min-width: $page_w_min
 
-	&_sidebars_left
-		
+	&_stl_bg
+		background: $dark-el-color__bg
+		padding-left: 15px
+		padding-right: 15px
+
+	&_stl_bg &__header
+		margin-left: -15px
+		margin-right: -15px
 
 	&__header
 		//background: #adf785
 		border-bottom: 1px solid $dark-el-color__page-border
 		@include box-shadow(0 1px 0 #f2f2f2)
+		background: #fff
+
+
 		
 
 	&__header-in
@@ -94,6 +104,25 @@
 	&_sidebars_right  &__body
 		@extend %clear
 
+	&__body
+		background: #fff
+
+	&_stl_bg &__body
+		margin-top: 23px
+		margin-bottom: 32px
+		padding-left: 30px
+		position: relative
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			left: 0
+			height: 4px
+			background: #dbf0e0
+
 	&__in
 		padding-bottom: $footer_h
 
@@ -102,10 +131,27 @@
 		img
 			max-width: 100%
 			height: auto
+	
+	&_stl_bg &__content
+		padding-top: 1px
+		padding-bottom: 1px
+		padding-right: 20px
+		position: relative
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			bottom: -15px
+			width: 1px
+			background: rgba($dark-el-color__fill, .2)
 
 	&__content
 		margin: 0
 		min-height: 20px
+
 		//background: #f6f866
 
 	&_sidebars_left &__content
@@ -118,6 +164,10 @@
 		margin-left: $left-sidebar_w
 		margin-right: $right-sidebar_w
 
+	&_stl_bg.page_sidebars_right &__content
+		margin-right: $right-sidebar2_w
+		padding-right: 30px
+		
 
 	&_sidebars_left &__mainbar,
 	&_sidebars_right &__mainbar,
@@ -131,6 +181,7 @@
 		width: $left-sidebar_w
 		@extend %bszbb
 		margin-bottom: $content_bot_space-sm
+		position: relative
 
 		&_lt_left
 			padding-right: 20px
@@ -140,12 +191,29 @@
 			width: $right-sidebar_w
 			padding-left: 20px
 			margin-left: - $right-sidebar_w
+	
+	&_stl_bg &__sidebar
+		width: $right-sidebar2_w
+		margin-left: - $right-sidebar2_w
+		padding-top: 35px
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: -10px
+			left: 0
+			height: 4px
+			background: #fee9d1
+		
 
 	&__space
 		padding-right: 100px
 
 			
 	&__footer
+		background: #fff
 		@extend %bszbb
 		padding-top: 13px
 		position: relative
@@ -514,6 +582,7 @@
 /* --------------------------------------------- */
 
 .bordered-panel
+	background: #fff
 	padding-top: 13px
 	border-top: 1px solid $dark-el-color__sep
 
@@ -2344,11 +2413,24 @@ select
 /* --------------------------------------------- */
 
 .right-sidebar
-	background: #E0D7D7
+	background: $dark-el-color__bg
 	min-height: 200px
 	text-align: center
 	@extend %bszbb
 	padding-top: 40px
 
 /* right-sidebar
+/* ---------------------------------------END--- */
+
+
+/* msg-link
+/* --------------------------------------------- */
+
+.msg-link
+	@extend %font-regular
+	font-weight: bold
+	+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
+
+
+/* msg-link
 /* ---------------------------------------END--- */
