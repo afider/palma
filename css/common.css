@@ -663,7 +663,7 @@ textarea {
   resize: vertical;
 }
 
-.centered, .page__footer, .page__sidebar, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .m-teasers__h {
+.centered, .page__footer, .page__sidebar, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .m-teasers__h {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1620,6 +1620,11 @@ textarea {
 /* ---------------------------------------END--- */
 /* nav-quantity */
 /* --------------------------------------------- */
+.nav-quantity {
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #dadada;
+}
 .nav-quantity__lst {
   margin: 0;
   padding: 0;
@@ -1628,6 +1633,10 @@ textarea {
 .nav-quantity__i {
   margin: 0;
   padding: 0;
+  display: inline-block;
+  width: 24%;
+  vertical-align: top;
+  padding-right: 20px;
 }
 .nav-quantity__a {
   display: block;
@@ -1669,19 +1678,6 @@ textarea {
 }
 
 /* separator */
-/* ---------------------------------------END--- */
-/* quantity-columns */
-/* --------------------------------------------- */
-.quantity-columns {
-  padding-bottom: 12px;
-  margin-bottom: 18px;
-  border-bottom: 1px solid #dadada;
-}
-.quantity-columns__i {
-  padding-right: 20px;
-}
-
-/* quantity-columns */
 /* ---------------------------------------END--- */
 /* breadcrumbs */
 /* --------------------------------------------- */
