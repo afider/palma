@@ -10,9 +10,11 @@
 		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/fotorama.css">
+		<link rel="stylesheet" href="css/chosen.css">
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/fotorama.js"></script>
 		<script src="js/jquery.customselect.js"></script>
+		<script src="js/chosen.jquery.js"></script>
 		<script src="js/svg.js"></script>
 		<script src="js/common.js"></script>
 		<!--[if IE 9]>
@@ -381,7 +383,7 @@
 									</div><!-- tab-nav -->
 								
 									<form action="#search">
-										<div class="main-search main-search_lt_inner input-train">
+										<div class="main-search input-train">
 										
 											<select id="search__cagegory" name="search__cagegory" class="select select_h_big js-select input-train__i main-search__category">
 												<option value="0" selected="">Выберите категорию</option>
@@ -451,7 +453,7 @@
 											
 											<input type="text" name="search__input" id="search__input" placeholder="Поиск по объявлениям" class="input input_h_big input-train__i main-search__input">
 										
-											<select id="sel-train-2" name="sel-train-2" class="select select_h_big js-select input-train__i main-search__place">
+											<select id="search_city" name="search_city" data-width="25%" class="smart-select smart-select_h_big js-smart-select main-search__place input-train__i">
 												<option value="1">Выберите город</option>
 												<option value="2">Москва</option>
 												<option value="3">Санкт-Петербург</option>
@@ -500,7 +502,7 @@
 											</svg>
 											Срочно
 										</label>
-						
+
 									</form>
 							
 									

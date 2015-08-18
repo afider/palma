@@ -8,8 +8,25 @@
  		initCustomSelect (); //-- кастомизация дефолтного выпадающего списка
  		initInputFilled (); //-- добавление класса, для полей ввода текста, в которых есть текст
  		setAllChecked (); //-- установка всем чекбоксам при модерации checked
+ 		initSmartSelect (); //-- кастомизация дефолтного выпадающего списка в список с возможностью поиска
 		
 	});
+
+
+	function initSmartSelect () {
+
+		$('.js-smart-select').each(function() {
+			 var el = $(this);
+			 var selectW = el.data('width');
+
+			 el.chosen({
+				disable_search_threshold: 10,
+				width: selectW,
+				no_results_text: "Может вы ошиблись? Такого не нашлось:"
+			});
+
+		});
+	} // initSmartSelect ()
 
 
 	function setAllChecked () {

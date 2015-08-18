@@ -1796,6 +1796,7 @@ select
 		border-left-width: 0
 		border-radius: 0
 
+
 		&:first-child
 			border-left-style: solid
 			border-left-width: 1px
@@ -1803,6 +1804,7 @@ select
 
 		&:last-child
 			border-radius: 0 $border-radius $border-radius 0
+
 
 		& + .select
 			margin-left: -1px
@@ -1969,6 +1971,15 @@ select
 
 	&__place
 		width: 25%
+
+		& + .chosen-container-single .chosen-single
+			border-radius: 0
+			position: relative
+			left: -1px
+		
+		& + .chosen-container-single .chosen-drop
+			margin-left: -1px
+
 
 	&__button
 		position: absolute
@@ -2447,4 +2458,37 @@ select
 
 
 /* msg-link
+/* ---------------------------------------END--- */
+
+
+/* smart-select
+/* --------------------------------------------- */
+
+.smart-select
+
+	width: 350px
+
+	&__icon
+		width: 11px
+		height: 7px
+		position: absolute
+		top: 50%
+		margin-top: -3px
+		left: 50%
+		margin-left: -5px
+		color: $dark-el-color__fill
+
+	&__arrow
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		width: 38px !important
+		//background: red
+
+	&.is-selected &__icon,
+	.chosen-with-drop &__icon
+		color: $focus_color	
+
+/* smart-select
 /* ---------------------------------------END--- */
