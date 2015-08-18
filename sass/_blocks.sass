@@ -548,6 +548,9 @@
 		line-height: 70px
 		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
 
+		+max-screen($mq-main-nav-w)
+			padding: 0 5px !important
+
 		.is-active &
 			color: $active-color
 
@@ -686,6 +689,9 @@
 	&__icon
 		margin-left: 30px
 
+		+max-screen($mq-header-w)
+			margin-left: 12px !important
+
 		
 	&__h
 		+rem(font-size, 12px)
@@ -694,6 +700,9 @@
 		display: inline-block
 		vertical-align: middle
 		margin-left: 10px
+
+		+max-screen($mq-header-w)
+			margin-left: 2px !important
 
 /* enter
 /* ---------------------------------------END--- */
@@ -713,6 +722,9 @@
 
 	&:hover
 		+transition-duration(.1s)
+
+	+max-screen($mq-header-w)
+		margin-left: 8px !important
 
 	&_stt_logged
 		+link-color ($color: $text-light2_color, $color_hover: $link_color_hover, $color_visited: none)
@@ -789,6 +801,9 @@
 	vertical-align: middle
 	margin-left: 30px
 
+	+max-screen($mq-header-w)
+		margin-left: 6px !important
+
 	&__icon
 		width: 32px
 		height: 32px
@@ -819,6 +834,9 @@
 		display: inline-block
 		vertical-align: middle
 		margin-left: 10px
+
+		+max-screen($mq-header-w)
+			margin-left: 4px !important
 
 /* all-favorites
 /* ---------------------------------------END--- */
