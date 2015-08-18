@@ -800,14 +800,31 @@
 	display: inline-block
 	vertical-align: middle
 	margin-left: 30px
+	width: 32px
+	height: 32px
+	background: $main-color
+	position: relative
+	border-radius: 50%
+	@include transition-duration(.9s)
+	@include transition-property(background)
+
+	&:hover
+		background: $active-color
+		@include transition-duration(.2s)
 
 	+max-screen($mq-header-w)
 		margin-left: 6px !important
 
-	&__icon
-		width: 32px
-		height: 32px
+	& &__icon
+		width: 10px
+		height: 10px
 		display: block
+		color: #fff
+		position: absolute
+		top: 50%
+		margin-top: -5px
+		left: 50%
+		margin-left: -5px
 
 /* add-button
 /* ---------------------------------------END--- */
