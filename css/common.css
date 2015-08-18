@@ -2524,6 +2524,9 @@ select option {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
+.button_w_fluid-half {
+  width: 45%;
+}
 .button_space_sm {
   margin-left: 9px;
 }
