@@ -103,6 +103,8 @@
             }
         });
     };
-
-    $('input[placeholder], textarea[placeholder]').placeholder();
+    
+    $(function () {
+        $('input[placeholder], textarea[placeholder]').placeholder();
+    });
 })(jQuery);
