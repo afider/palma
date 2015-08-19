@@ -1,140 +1,82 @@
+(function ($) {
+    var uid = 1;
+    $.fn.customCheckbox = function () {
+        return this.each(function () {
+            var self = $(this),
+                input = self.find('input'),
+                type = input.attr('type'),
+                name = (input.attr('name') || 'custom_' + type + '_' + uid++).replace(/[^a-zA-Z0-9_\-]/g, '_');
 
-	$(function() {
+            self.addClass('is-' + type).addClass(name);
 
-		document.getElementById('svg-icons').innerHTML = SVG_ICONS;
- 		
- 		animatePopup (); //-- анимация всплывающих меню
- 		customizeRadioCheckbox (); // кастомизация системных радиокнопок и чекбоксов
- 		initCustomSelect (); //-- кастомизация дефолтного выпадающего списка
- 		initInputFilled (); //-- добавление класса, для полей ввода текста, в которых есть текст
- 		setAllChecked (); //-- установка всем чекбоксам при модерации checked
- 		initSmartSelect (); //-- кастомизация дефолтного выпадающего списка в список с возможностью поиска
-		
-	});
+            input.change(function () {
+                if (type === 'radio') {
+                    $('.' + name).removeClass('on');
+                }
+                self[ $(this).is(':checked') ? 'addClass' : 'removeClass' ]('on');
+            });
 
+            self[ input.is(':checked') ? 'addClass' : 'removeClass' ]('on');
+        });
+    };
+}(jQuery));
 
-	function initSmartSelect () {
+(function ($) {
+    var stateClass = "is-filled";
+    $.fn.customInput = function () {
+        return this.each(function () {
+            var self = $(this);
 
-		$('.js-smart-select').each(function() {
-			 var el = $(this);
-			 var selectW = el.data('width');
+            if (self.val() !== '') {
+                self.addClass(stateClass);
+            }
 
-			 el.chosen({
-				disable_search_threshold: 10,
-				width: selectW,
-				no_results_text: "Может вы ошиблись? Такого не нашлось:"
-			});
+            self.blur(function () {
+                if (self.val() === '') {
+                    self.removeClass(stateClass);
+                }
+            });
+            self.keyup(function () {
+                self[ self.val() !== '' ? 'addClass' : 'removeClass' ](stateClass);
+            });
+        });
+    };
+}(jQuery));
 
-		});
-	} // initSmartSelect ()
+(function (exports, $) {
+    "use strict";
+    $(function () {
+        // вставляем иконки
+        $('#svg-icons').html(exports.SVG_ICONS);
 
+        // кастомные селекты
+        $('.js-select').customSelect();
 
-	function setAllChecked () {
+        // кастомные чекбоксы/радио кнопки
+        $('.js-cr').customCheckbox();
 
-		$('.m-header__ctrl').on('click', function() {
-			
-			var el = $(this);
-			var checkbox = el.find('input');
+        // добавление класса, для полей ввода текста, в которых есть текст
+        $('.input').customInput();
 
-			if ( checkbox.is(':checked') ) {
+        // анимация всплывающих меню
+        $(".js-popup-nav__ctrl").on('click', function(e) {
+            e.preventDefault();
+            var self = $(this),
+                target = $('.' + self.data('popup'));
 
-				$('.m-teasers__checkbox input').prop('checked', true);
-				customizeRadioCheckbox ();
-			}
-			else {
+            self.toggleClass('is-open');
+            target.toggleClass('is-open');
+        });
 
-				$('.m-teasers__checkbox input').prop('checked', false);
-				customizeRadioCheckbox ();
-			}
+        // кастомизация дефолтного выпадающего списка в список с возможностью поиска
+        $('.js-smart-select').each(function() {
+            var self = $(this);
 
-			
-		});
-	} // setAllChecked ()
-
-	function initInputFilled () {
-
-		var input = $('.input');
-		var stateClass = "is-filled";
-
-		input.each( function(){
-
-			var __this = $(this);
-
-			if( __this.val() !== '') __this.addClass(stateClass);
-		});
-
-		input.blur(function() {
-
-			var __this = $(this);
-
-			if ( __this.val() === '' ) __this.removeClass(stateClass);
-		});
-
-		input.mouseover(function() {
-
-			var __this = $(this);
-
-			if ( __this.val() !== '' ) __this.addClass(stateClass);
-		});
-
-		input.keyup(function() {
-
-			var __this = $(this);
-			console.log('up');
-
-			if( __this.val() !== '' ) __this.addClass(stateClass);
-			else __this.removeClass(stateClass);
-		});
-	} // initInputFilled ()
-
-
-	function initCustomSelect () {
-
-		$('.js-select').customSelect();
-
-	} // initCustomSelect ()
-
-	function customizeRadioCheckbox() {
-		var cr = $('.js-cr input');
-		var classOnState = 'on';
-
-		setOnOff (cr);
-
-		cr.each(function(){
-
-			var el = $(this);
-			var elLabel = el.parent('label');
-			el.is(':radio') ? elLabel.addClass('is-radio') : elLabel.addClass('is-checkbox');
-
-		});
-
-		cr.on('click', function() { setOnOff (cr); });
-
-		function setOnOff (input) {
-
-			input.each(function(){
-
-				var el = $(this);
-				var elLabel = el.parent('label');
-
-				el.is(':checked') ? elLabel.addClass(classOnState) : elLabel.removeClass(classOnState);
-			});
-		} // setOnOff ();
-
-	} // customizeRadioCheckbox ()
-
-
-	function animatePopup() {
-		$(".js-popup-nav__ctrl").on('click', function(event) {
-			event.preventDefault();
-
-			var el = $(this);
-			var elTargetClass = el.data('popup');
-			var elTarget = $('.' + elTargetClass);
-			console.log(elTarget);
-			
-			el.toggleClass('is-open');
-			elTarget.toggleClass('is-open');
-		});
-
-	} // animatePopupNav ()
+            self.chosen({
+                disable_search_threshold: 10,
+                width: self.data('width'),
+                no_results_text: "Может вы ошиблись? Такого не нашлось:"
+            });
+        });
+    });
+}(this, jQuery));

@@ -1,27 +1,24 @@
 <!doctype html>
-<!--[if IE 9 ]> <html lang="ru-RU" class="ie9"> <![endif]-->
-<!---[if (gt IE 9)|!(IE)]><!-->
-<html lang="ru-RU">
-<!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Site name</title>
 
-	<head> 
-		<meta charset="utf-8">
-		<title>Site name</title>
-		<link rel="shortcut icon" href="img/favicon.ico">
-		<link rel="stylesheet" href="css/common.css">
-		<link rel="stylesheet" href="css/fotorama.css">
-		<link rel="stylesheet" href="css/chosen.css">
-		<script src="js/jquery-2.1.4.min.js"></script>
-		<script src="js/fotorama.js"></script>
-		<script src="js/jquery.customselect.js"></script>
-		<script src="js/chosen.jquery.js"></script>
-		<script src="js/svg.js"></script>
-		<script src="js/common.js"></script>
-		<!--[if IE 9]>
-			<script src="js/jquery.placeholder.js"></script>
-			<script src="js/common-ie.js"></script>
-		<![endif]-->
-	</head>
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/fotorama.css">
+	<link rel="stylesheet" href="css/chosen.css">
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.customselect.js"></script>
+	<script src="js/chosen.jquery.js"></script>
+	<script src="js/svg.js"></script>
+	<script src="js/common.js"></script>
+	<!--[if lt IE 9]><script src="js/jquery.placeholder.js"></script><![endif]-->
+</head>
 
 	<body>
 
@@ -526,13 +523,26 @@
 							<div class="form-line">
 								<div class="form-label form-label_lt_top">Радиокнопки:</div> 
 								<label for="radio-1" class="cr js-cr">
-									<input type="radio" name="radio" id="radio-1" checked>
+									<input type="radio" name="radio[r1]" id="radio-1" checked>
 									Частное лицо
 								</label>
 
 								<label for="radio-2" class="cr cr_space_left js-cr">
-									<input type="radio" name="radio" id="radio-2">
+									<input type="radio" name="radio[r1]" id="radio-2">
 									Компания
+								</label>
+							</div><!-- form-line -->
+
+							<div class="form-line">
+								<div class="form-label form-label_lt_top">Радиокнопки:</div>
+								<label for="radio-1" class="cr js-cr">
+									<input type="radio" name="radio[r2]" id="radio-11" checked>
+									Радио 1
+								</label>
+
+								<label for="radio-2" class="cr cr_space_left js-cr">
+									<input type="radio" name="radio[r2]" id="radio-12">
+									Радио 2
 								</label>
 							</div><!-- form-line -->
 
