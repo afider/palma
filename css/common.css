@@ -2653,8 +2653,13 @@ select option {
 }
 .main-search__place {
   width: 25%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 44px;
+  visibility: hidden;
 }
-.main-search__place + .chosen-container-single .chosen-single {
+.main-search__place + .chosen-container-single .chosen-single, .main-search__place + .chosen-container-multi {
   border-radius: 0;
   position: relative;
   left: -1px;

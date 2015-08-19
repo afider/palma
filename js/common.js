@@ -22,9 +22,19 @@
 			 el.chosen({
 				disable_search_threshold: 10,
 				width: selectW,
-				no_results_text: "Может вы ошиблись? Такого не нашлось:"
+				no_results_text: "Может вы ошиблись? Такого не нашлось:",
 			});
 
+		});
+
+		var selectCity = $('#search_city');
+		var selectCityW = selectCity.data('width');
+
+		selectCity.chosen({
+			disable_search_threshold: 10,
+			width: selectCityW,
+			no_results_text: "Может вы ошиблись? Такого не нашлось:",
+			max_selected_options: 1
 		});
 	} // initSmartSelect ()
 
