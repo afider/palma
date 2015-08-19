@@ -1,24 +1,26 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<title>Site name</title>
+<!--[if IE 9 ]> <html lang="ru-RU" class="ie9"> <![endif]-->
+<!---[if (gt IE 9)|!(IE)]><!-->
+<html lang="ru-RU">
+<!--<![endif]-->
+	<head> 
+		<meta charset="utf-8">
+		<title>Site name</title>
 
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/fotorama.css">
-	<link rel="stylesheet" href="css/chosen.css">
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/chosen.css">
 
-	<script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/jquery.customselect.js"></script>
-	<script src="js/chosen.jquery.js"></script>
-	<script src="js/svg.js"></script>
-	<script src="js/common.js"></script>
-	<!--[if lt IE 9]><script src="js/jquery.placeholder.js"></script><![endif]-->
-</head>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/jquery.customselect.js"></script>
+		<script src="js/chosen.jquery.js"></script>
+		<script src="js/svg.js"></script>
+		<script src="js/common.js"></script>
+
+		<!--[if IE 9]>
+			<script src="js/jquery.placeholder.js"></script>
+		<![endif]-->
+	</head>
 
 	<body>
 
@@ -571,7 +573,79 @@
 
 							<div class="form-line form-label-left-space">
 								<label for="smart-select" class="form-label form-label_lt_top">Ваш город</label>
-								<select id="smart-select" name="smart-select" data-width="100%" data-placeholder="Выберите город..." class="smart-select js-smart-select">
+								<select id="smart-select" name="smart-select" multiple data-width="50%" data-placeholder="Выберите город..." class="smart-select js-smart-select">
+									<option value="1">Выберите город</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Очень длинный пункт выпадающего списка практически как предложение</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+							
+							</div><!-- form-line -->
+
+							<div class="form-line form-label-left-space">
+								<label for="smart-select00" class="form-label form-label_lt_top">Ваш город</label>
+								<select id="smart-select00" name="smart-select00" multiple data-width="50%" data-placeholder="Выберите город..." class="smart-select smart-select_h_big js-smart-select">
+									<option value="1">Выберите город</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Очень длинный пункт выпадающего списка практически как предложение</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+							
+							</div><!-- form-line -->
+
+							<div class="form-line form-label-left-space">
+								<label for="smart-select000" class="form-label form-label_lt_top">Ваш город x</label>
+								<select id="smart-select000" name="smart-select000" multiple data-width="50%" data-placeholder="Выберите город..." class="smart-select smart-select_h_sm js-smart-select">
+									<option value="1">Выберите город</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Очень длинный пункт выпадающего списка практически как предложение</option>
+									<option value="16">Воронеж</option>
+									<option value="16">Петропавловск-Камчатский</option>
+								</select>
+							
+							</div><!-- form-line -->
+
+							<div class="form-line form-label-left-space">
+								<label for="smart-select0" class="form-label form-label_lt_top">Ваш город</label>
+								<select id="smart-select0" name="smart-select0" data-width="100%" data-placeholder="Выберите город..." class="smart-select js-smart-select">
 									<option value="1">Выберите город</option>
 									<option value="2">Москва</option>
 									<option value="3">Санкт-Петербург</option>

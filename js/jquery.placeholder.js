@@ -4,6 +4,7 @@
 * Copyright 2010, Daniel Stocks (http://webcloud.se)
 * Released under the MIT, BSD, and GPL Licenses.
 */
+
 (function($) {
     function Placeholder(input) {
         this.input = input;
@@ -55,7 +56,7 @@
             input.attr('realType', 'password');
             this.isPassword = true;
             // IE < 9 doesn't allow changing the type of password inputs
-            if (!!$('.lt-ie9').length && input[0].outerHTML) {
+            if (!!$('.ie9').length && input[0].outerHTML) {
                 var fakeHTML = $(input[0].outerHTML.replace(/type=(['"])?password\1/gi, 'type=$1text$1'));
                 this.fakePassword = fakeHTML.val(input.attr('placeholder')).addClass('placeholder').focus(function() {
                     input.trigger('focus');
@@ -63,7 +64,7 @@
                 });
                 $(input[0].form).submit(function() {
                     fakeHTML.remove();
-                    input.show()
+                    input.show();
                 });
             }
         }
@@ -83,7 +84,7 @@
 
             // On page refresh, IE doesn't re-populate user input
             // until the window.onload event is fired.
-            if (!!$('.lt-ie9').length) {
+            if (!!$('.ie9').length) {
                 $(window).load(function() {
                     if(input.val()) {
                         input.removeClass("placeholder");
@@ -104,5 +105,10 @@
         });
     };
 
-    $('input[placeholder], textarea[placeholder]').placeholder();
+
+    $(function () {
+        $('input[placeholder], textarea[placeholder]').placeholder();
+    });
+
+  
 })(jQuery);

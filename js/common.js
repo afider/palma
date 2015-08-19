@@ -39,6 +39,9 @@
             self.keyup(function () {
                 self[ self.val() !== '' ? 'addClass' : 'removeClass' ](stateClass);
             });
+            self.mouseover(function () {
+                self[ self.val() !== '' ? 'addClass' : 'removeClass' ](stateClass);
+            });
         });
     };
 }(jQuery));
@@ -77,6 +80,16 @@
                 width: self.data('width'),
                 no_results_text: "Может вы ошиблись? Такого не нашлось:"
             });
+        });
+
+        var selectCity = $('#search_city');
+        var selectCityW = selectCity.data('width');
+
+        selectCity.chosen({
+            disable_search_threshold: 10,
+            width: selectCityW,
+            no_results_text: "Может вы ошиблись? Такого не нашлось:",
+            max_selected_options: 1
         });
     });
 }(this, jQuery));
