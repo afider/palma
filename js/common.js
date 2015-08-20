@@ -48,6 +48,7 @@
 
 (function (exports, $) {
     "use strict";
+
     $(function () {
         // вставляем иконки
         $('#svg-icons').html(exports.SVG_ICONS);
@@ -82,10 +83,32 @@
             });
         });
 
-        var selectCity = $('#search_city');
-        var selectCityW = selectCity.data('width');
+        // кастомизация выбор города
+        var selectCity = $('#search_city'),
+            selectCityW = selectCity.data('width');
 
-        selectCity.chosen({
+        selectCity.on({
+            'chosen:ready': function (event, params) {
+                var select = $(params.chosen.form_field);
+
+                if (!!select.val()) {
+                    params.chosen.search_container.hide();
+                }
+            },
+            'change': function (event, params) {
+                if (!params.chosen) {
+                    return this;
+                }
+
+                if (!!params.selected) {
+                    params.chosen.search_container.hide();
+                }
+                if (!!params.deselected) {
+                    params.chosen.search_container.show();
+                    params.chosen.choices_click(event);
+                }
+            }
+        }).chosen({
             disable_search_threshold: 10,
             width: selectCityW,
             no_results_text: "Может вы ошиблись? Такого не нашлось:",
