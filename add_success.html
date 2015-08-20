@@ -26,7 +26,7 @@
 
 		<div id="svg-icons"></div><!-- svg-icons -->
 
-		<div class="page page_sidebars_right page_stl_bg">
+		<div class="page page_stl_bg">
 
 			<div class="page__in">		
 	
@@ -360,184 +360,21 @@
 						
 						<div class="page__content">
 
-							<h1>Подать объявление</h1>
+							<h1 class="txt-to-center">Ваше объявление успешно добавлено</h1>
 
-							<form action="#add">
-								
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_tp_label">
-										
-									</div>
-									<div class="form-columns__i">
-										<label for="add-radio-1" class="cr js-cr">
-											<input type="radio" name="add-radio" id="add-radio-1" checked>
-											Частное лицо
-										</label>
-										<label for="add-radio-2" class="cr cr_space_left js-cr">
-											<input type="radio" name="add-radio" id="add-radio-2">
-											Компания
-										</label>
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
+							<div class="content-mess content-mess_tp_centered">
+								<p>Объявление <a href="#" class="txt-important">название объявления</a> добавлено на сайт. <br>
+								<p>Оно появится в результатах поиска после проверки модератором. <br>
+								<p>Вы всегда можете отредактировать или удалить свое объявление в <a href="#">личном кабинете</a>.</p>
+								<p>На ваш электронный адрес address@address.com отправлено письмо с инструкцией по подтверждению регистрации </p>
+								<p><span class="txt-important">Внимание!</span> Пока вы не подтвердите регистрацию, посетители сайта не смогут писать вам вопросы по объявлениям.</p>
+							</div>
 
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_tp_label">
-										<label for="add__name" class="form-label">
-											Ваше имя
-										</label>
-									</div>
-									<div class="form-columns__i">
-										<input type="text" name="add__name" id="add__name" class="input input_w_fluid-half">
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
+							<div class="separator separator_space_bottom"></div>
 
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_tp_label">
-										<label for="add__e-mail" class="form-label">
-											Электронная почта
-										</label>
-									</div>
-									<div class="form-columns__i">
-										<input type="text" name="add__e-mail" id="add__e-mail" class="input input_w_fluid-half">
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
+							<h2 class="h1 txt-to-center">Подайте быстрее</h2>
 
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_tp_label">
-										<label for="add__phone" class="form-label">
-											Телефон
-										</label>
-									</div>
-									<div class="form-columns__i">
-										<input type="text" name="add__phone" id="add__phone" class="input input_w_fluid-half">
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
-
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_tp_label">
-										<label for="add__region" class="form-label">
-											Город
-										</label>
-									</div>
-									<div class="form-columns__i">
-										<select id="add__region" name="add__region" class="select select_w_fluid-half js-select">
-											<option value="1">Выберите регион</option>
-											<option value="2">Москва</option>
-											<option value="3">Санкт-Петербург</option>
-											<option value="4">Новосибирск</option>
-											<option value="5">Екатеринбург</option>
-											<option value="6">Нижний Новгород</option>
-											<option value="7">Самара</option>
-											<option value="8">Казань</option>
-											<option value="9">Омск</option>
-											<option value="10">Челябинск</option>
-											<option value="11">Ростов-на-Дону</option>
-											<option value="12">Уфа</option>
-											<option value="13">Волгоград</option>
-											<option value="14">Пермь</option>
-											<option value="15">Красноярск</option>
-											<option value="16">Воронеж</option>
-											<option value="16">Петропавловск-Камчатский</option>
-										</select>
-
-										<select id="add__city" name="add__city" class="select select_w_fluid-half js-select space-left-sm">
-											<option value="1">Выберите регион</option>
-											<option value="2">Москва</option>
-											<option value="3">Санкт-Петербург</option>
-											<option value="4">Новосибирск</option>
-											<option value="5">Екатеринбург</option>
-											<option value="6">Нижний Новгород</option>
-											<option value="7">Самара</option>
-											<option value="8">Казань</option>
-											<option value="9">Омск</option>
-											<option value="10">Челябинск</option>
-											<option value="11">Ростов-на-Дону</option>
-											<option value="12">Уфа</option>
-											<option value="13">Волгоград</option>
-											<option value="14">Пермь</option>
-											<option value="15">Красноярск</option>
-											<option value="16">Воронеж</option>
-											<option value="16">Петропавловск-Камчатский</option>
-										</select>
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
-
-								<div class="separator separator_space_bottom-sm"></div>
-
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_tp_label">
-										<label for="add__cat" class="form-label">
-											Категория
-										</label>
-									</div>
-									<div class="form-columns__i">
-										<input type="text" name="add__cat" id="add__cat" class="input input_w_fluid-half">
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
-
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_tp_label">
-										<label for="add__type" class="form-label">
-											Тип сделки
-										</label>
-									</div>
-									<div class="form-columns__i">
-										<input type="text" name="add__type" id="add__type" class="input input_w_fluid-half">
-										<label for="add__change" class="cr cr_space_left js-cr">
-											<input type="checkbox" id="add__change" checked>
-											<svg class="cr__icon">
-												<use xlink:href="#icon_checked"></use>
-											</svg>
-											Рассматриваю обмен
-										</label>
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
-
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_tp_label">
-										<label for="add__title" class="form-label form-label_stl_important">
-											Название объявления
-										</label>
-									</div>
-									<div class="form-columns__i">
-										<input type="text" name="add__title" id="add__title" class="input input_w_fluid">
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
-
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_valign_top form-columns__i_tp_label">
-										<label for="add__mess" class="form-label form-label_stl_important">
-											Сообщение
-										</label>
-									</div>
-									<div class="form-columns__i form-columns__i_valign_top">
-										<textarea name="add__mess" id="add__mess" cols="40" rows="10" class="input  input_w_fluid"></textarea>
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
-
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_tp_label">
-										<label for="add__price" class="form-label">Цена</label>
-									</div>
-									<div class="form-columns__i">
-										<input type="text" name="add__price" id="add__price" class="input input_w_sm">
-										<span class="space-left-sm">рублей, &#8381;</span>
-										<span class="space-left">Рекомендации по ценам</span>
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
-
-								<div class="form-columns">
-									<div class="form-columns__i form-columns__i_tp_label">
-
-									</div>
-									<div class="form-columns__i">
-										<input type="submit" value="Далее" class="button button_w_fluid-half button_stt_disabled">
-									</div><!-- form-columns__i -->
-								</div><!-- form-columns -->
-
-								
-
-							</form>
+							<p>Промо-блоки, баннеры, блок «Продайте быстрее» Представление блоков носит рекомендательный характер. Детализация планируется на этапе внедрения платной функциональности.</p>
 							
 						</div><!-- page__content -->
 
@@ -545,9 +382,7 @@
 
 					<aside class="page__sidebar page__sidebar_lt_right">
 
-						<p>Пожалуйста, по возможности заполните максимальное количество полей, этим вы поможете людям найти ваше объявление.</p>
-
-						<p><a href="#" class="msg-link">Правила размещения объявлений</a></p>
+						
 					</aside>
 	
 					

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -574,7 +575,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail_
   font-family: "Roboto Medium", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .detail__sub-h, .msg-link {
+.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .detail__sub-h, .msg-link, .txt-important {
   font-family: "Roboto", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -670,12 +671,12 @@ textarea {
 
 /* clearfix */
 /* --------------------------------------------- */
-.page__header-in:before, .page_sidebars_left .page__body:before, .page_sidebars_right .page__body:before, .footer-nav:before, .main-nav:before, .teasers__lst:before, .tab-nav__lst:before, .page-nav__lst:before, .input-train:before, .detail:before, .properties__i:before, .act-buttons:before, .page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .properties__i:after, .act-buttons:after {
+.page__header-in:before, .page_sidebars_left .page__body:before, .page_sidebars_right .page__body:before, .footer-nav:before, .main-nav:before, .teasers__lst:before, .tab-nav__lst:before, .page-nav__lst:before, .input-train:before, .detail:before, .act-buttons:before, .page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .act-buttons:after {
   display: table;
   content: "";
   clear: both;
 }
-.page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .properties__i:after, .act-buttons:after {
+.page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .act-buttons:after {
   clear: both;
 }
 
@@ -758,6 +759,7 @@ textarea {
   margin-bottom: 32px;
   padding-left: 30px;
   position: relative;
+  max-width: 1000px;
 }
 .page_stl_bg .page__body:before {
   content: "";
@@ -768,6 +770,9 @@ textarea {
   left: 0;
   height: 4px;
   background: #dbf0e0;
+}
+.page_stl_bg.page_sidebars_left .page__body, .page_stl_bg.page_sidebars_right .page__body {
+  max-width: 1200px;
 }
 .page__in {
   padding-bottom: 143px;
@@ -784,8 +789,9 @@ textarea {
   padding-bottom: 1px;
   padding-right: 20px;
   position: relative;
+  min-height: 300px;
 }
-.page_stl_bg .page__content:after {
+.page_stl_bg.page_sidebars_right .page__content:after {
   content: "";
   display: block;
   position: absolute;
@@ -832,13 +838,13 @@ textarea {
   padding-left: 20px;
   margin-left: -285px;
 }
-.page_stl_bg .page__sidebar {
+.page_stl_bg.page_sidebars_right .page__sidebar {
   width: 260px;
   margin-left: -260px;
   padding-top: 35px;
   padding-right: 10px;
 }
-.page_stl_bg .page__sidebar:before {
+.page_stl_bg.page_sidebars_right .page__sidebar:before {
   content: "";
   display: block;
   position: absolute;
@@ -2210,6 +2216,15 @@ select option {
   width: 100%;
   margin-bottom: 15px;
 }
+.form-columns_bot-space_normal {
+  margin-bottom: 20px;
+}
+.form-columns_bot-space_more {
+  margin-bottom: 25px;
+}
+.form-columns_bot-space_big {
+  margin-bottom: 30px;
+}
 .form-columns__i {
   display: table-cell;
   vertical-align: middle;
@@ -2723,16 +2738,22 @@ select option {
 }
 .properties__i {
   margin-bottom: 8px;
+  display: table;
+  width: 100%;
 }
 .properties__h, .properties__value {
-  float: left;
+  display: table-cell;
+  vertical-align: top;
 }
 .properties__h {
   padding-right: 20px;
-  width: 36%;
+  width: 175px;
   color: #8996A0;
 }
-.properties__value {
+.properties_tp_detail .properties__h {
+  width: 36%;
+}
+.properties_tp_detail .properties__value {
   width: 64%;
 }
 
@@ -3136,6 +3157,68 @@ select option {
 
 /* smart-select */
 /* ---------------------------------------END--- */
+/* h-with-legend */
+/* --------------------------------------------- */
+.h-with-legend {
+  margin-bottom: 4px;
+}
+.h-with-legend__txt {
+  margin-bottom: 30px;
+}
+
+/* h-with-legend */
+/* ---------------------------------------END--- */
+/* go-back */
+/* --------------------------------------------- */
+.go-back {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.go-back:visited {
+  color: #003663;
+}
+.go-back:hover {
+  color: #6699cc;
+}
+.go-back:before {
+  content: "←";
+  display: block;
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* go-back */
+/* ---------------------------------------END--- */
+/* content-mess */
+/* --------------------------------------------- */
+.content-mess {
+  width: 65%;
+  margin-bottom: 25px;
+}
+.content-mess_tp_centered {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.content-mess p {
+  margin-bottom: 10px;
+}
+
+/* content-mess */
+/* ---------------------------------------END--- */
+/* txt-centered */
+/* --------------------------------------------- */
+.txt-to-center {
+  text-align: center;
+}
+
+/* txt-centered */
+/* ---------------------------------------END--- */
+.txt-important {
+  font-weight: bold;
+}
 
 @media screen and (max-width: 1150px) {
   .main-nav__a {
