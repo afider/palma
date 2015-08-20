@@ -1,8 +1,6 @@
 <!doctype html>
-<!--[if IE 9 ]> <html lang="ru-RU" class="ie9"> <![endif]-->
-<!---[if (gt IE 9)|!(IE)]><!-->
-<html lang="ru-RU">
-<!--<![endif]-->
+<!--[if IE]>         <html lang="ru-RU" class="ie9"> <![endif]-->
+<!--[if !(IE)]><!--> <html lang="ru-RU"> <!--<![endif]-->
 	<head> 
 		<meta charset="utf-8">
 		<title>Site name</title>
@@ -17,7 +15,7 @@
 		<script src="js/svg.js"></script>
 		<script src="js/common.js"></script>
 
-		<!--[if IE 9]>
+		<!--[if IE]>
 			<script src="js/jquery.placeholder.js"></script>
 		<![endif]-->
 	</head>
@@ -524,26 +522,26 @@
 							
 							<div class="form-line">
 								<div class="form-label form-label_lt_top">Радиокнопки:</div> 
-								<label for="radio-1" class="cr js-cr">
-									<input type="radio" name="radio[r1]" id="radio-1" checked>
+								<label class="cr js-cr">
+									<input type="radio" name="radio[r1]" checked>
 									Частное лицо
 								</label>
 
-								<label for="radio-2" class="cr cr_space_left js-cr">
-									<input type="radio" name="radio[r1]" id="radio-2">
+								<label class="cr cr_space_left js-cr">
+									<input type="radio" name="radio[r1]">
 									Компания
 								</label>
 							</div><!-- form-line -->
 
 							<div class="form-line">
 								<div class="form-label form-label_lt_top">Радиокнопки:</div>
-								<label for="radio-1" class="cr js-cr">
-									<input type="radio" name="radio[r2]" id="radio-11" checked>
+								<label class="cr js-cr">
+									<input type="radio" name="radio[r2]">
 									Радио 1
 								</label>
 
-								<label for="radio-2" class="cr cr_space_left js-cr">
-									<input type="radio" name="radio[r2]" id="radio-12">
+								<label class="cr cr_space_left js-cr">
+									<input type="radio" name="radio[r2]" checked>
 									Радио 2
 								</label>
 							</div><!-- form-line -->
