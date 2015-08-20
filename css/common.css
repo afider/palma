@@ -1735,6 +1735,15 @@ textarea {
 
 /* section-h */
 /* ---------------------------------------END--- */
+/* small-section-h */
+/* --------------------------------------------- */
+.small-section-h {
+  margin: 20px 0;
+  padding: 0;
+}
+
+/* small-section-h */
+/* ---------------------------------------END--- */
 /* nav-quantity */
 /* --------------------------------------------- */
 .nav-quantity {
@@ -2558,6 +2567,12 @@ select option {
   -o-transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
+}
+.button_w_fix {
+  width: 350px;
+}
+.button_w_fix-m {
+  width: 276px;
 }
 .button_w_fluid-half {
   width: 45%;
