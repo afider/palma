@@ -2075,6 +2075,11 @@ input:-ms-input-placeholder {
   margin-left: 12px;
 }
 
+.form-txt {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .form-col {
   display: inline-block;
   vertical-align: top;
@@ -2110,6 +2115,9 @@ input:-ms-input-placeholder {
 }
 .input_w_sm {
   width: 146px;
+}
+.input_w_m {
+  width: 276px;
 }
 .input_w_main-search {
   width: 470px;
@@ -2172,7 +2180,8 @@ select option {
 }
 
 .form-label {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   line-height: 1.2;
 }
 .form-label_stl_important {
@@ -2196,8 +2205,10 @@ select option {
 
 .form-legend {
   font-size: 12px;
-  display: inline-block;
   vertical-align: middle;
+  color: #8996A0;
+  padding-top: 6px;
+  font-style: italic;
 }
 
 .placeholder {
@@ -3234,6 +3245,22 @@ select option {
 .txt-important {
   font-weight: bold;
 }
+
+/* act-link */
+/* --------------------------------------------- */
+.act-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+.act-link:visited {
+  color: #003663;
+}
+.act-link:hover {
+  color: #6699cc;
+}
+
+/* act-link */
+/* ---------------------------------------END--- */
 
 @media screen and (max-width: 1150px) {
   .main-nav__a {
