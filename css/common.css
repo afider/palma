@@ -575,7 +575,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail_
   font-family: "Roboto Medium", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .detail__sub-h, .msg-link, .txt-important {
+.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .detail__sub-h, .msg-link, .txt-important, .location-question__city {
   font-family: "Roboto", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -663,7 +663,7 @@ textarea {
   resize: vertical;
 }
 
-.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar {
+.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -894,6 +894,9 @@ textarea {
   background: #f8f8f8;
   padding: 23px 0 16px 0;
   margin-bottom: 28px;
+}
+.search-panel__body {
+  position: relative;
 }
 .search-panel_lt_inner {
   padding-left: 15px;
@@ -2682,6 +2685,7 @@ select option {
 /* main-search */
 /* --------------------------------------------- */
 .main-search {
+  position: relative;
   margin-bottom: 10px;
   position: relative;
   padding-right: 52px;
@@ -3261,6 +3265,83 @@ select option {
 
 /* act-link */
 /* ---------------------------------------END--- */
+/* location-question */
+/* --------------------------------------------- */
+.location-question {
+  position: absolute;
+  top: 44px;
+  left: 10px;
+  right: 63px;
+}
+.location-question__body {
+  position: absolute;
+  right: 0;
+  width: 25%;
+}
+.location-question__popup {
+  position: absolute;
+  background: #fff;
+  top: 8px;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  padding: 14px;
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.location-question.is-open .location-question__popup {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  visibility: visible;
+}
+.location-question.is-open .location-question__popup:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.location-question__mess {
+  text-align: center;
+  color: #60676D;
+  margin-bottom: 10px;
+}
+.location-question__city {
+  display: inline-block;
+  font-weight: bold;
+}
+.location-question__nowrap {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.location-question__yes, .location-question__no {
+  padding: 0 0;
+}.location-question__yes {
+  width: 18%;
+}.location-question__no {
+  width: 74%;
+  margin-left: 12px;
+}
+/* location-question */
+/* ---------------------------------------END--- */
 
 @media screen and (max-width: 1150px) {
   .main-nav__a {
@@ -3287,5 +3368,19 @@ select option {
 
   .all-favorites__h {
     margin-left: 4px !important;
+  }
+}
+
+@media screen and (max-width: 1126px) {
+  .location-question__yes, .location-question__no {
+    width: 100%;
+  }
+
+  .location-question__yes {
+    margin-bottom: 10px;
+  }
+
+  .location-question__no {
+    margin-left: 0;
   }
 }

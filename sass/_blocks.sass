@@ -272,6 +272,9 @@
 	padding: 23px 0 16px 0
 	margin-bottom: 28px
 
+	&__body
+		position: relative
+
 	&_lt_inner
 		padding-left: 15px
 		padding-right: 15px
@@ -2031,6 +2034,7 @@ select
 /* --------------------------------------------- */
 
 .main-search
+	position: relative
 	margin-bottom: 10px
 	position: relative
 	padding-right: 52px
@@ -2671,4 +2675,94 @@ select
 	vertical-align: middle
 
 /* act-link
+/* ---------------------------------------END--- */
+
+
+/* location-question
+/* --------------------------------------------- */
+
+.location-question
+	position: absolute
+	top: 44px
+	left: 10px
+	right: 63px
+	//height: 2px
+	//background: #7CCC2D
+
+	&__body
+		position: absolute
+		right: 0
+		width: 25%
+		//height: 2px
+		//background: red
+
+	&__popup
+		position: absolute
+		background: #fff
+		top: 8px
+		right: 0
+		left: 0
+		z-index: 100
+		@extend %bszbb
+		padding: 14px
+		+box-shadow(0 0 6px rgba(#000, .2))
+		border-radius: $border-radius
+		visibility: hidden
+		+opacity(0)
+		+transition-duration(.5s)
+
+	&.is-open &__popup
+		+opacity(1)
+		visibility: visible
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: -5px
+			left: 50%
+			margin-left: -5px
+			width: 10px
+			height: 10px
+			background: #fff
+			+rotate(45deg)
+
+	&__mess
+		text-align: center
+		color: $text-light2_color
+		margin-bottom: 10px
+
+	&__city
+		display: inline-block
+		@extend %font-regular
+		font-weight: bold
+
+	&__nowrap
+		display: block
+		white-space: nowrap
+		overflow: hidden
+
+	&__yes,
+	&__no
+		padding: 0 0
+		+max-screen($mq-location-q-w)
+			width: 100%
+
+	&__yes
+		width: 18%
+		+max-screen($mq-location-q-w)
+			margin-bottom: 10px
+
+	&__no
+		width: 74%
+		margin-left: 12px
+
+		+max-screen($mq-location-q-w)
+			margin-left: 0
+
+	
+
+
+
+/* location-question
 /* ---------------------------------------END--- */
