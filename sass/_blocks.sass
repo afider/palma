@@ -1448,6 +1448,15 @@ input:-ms-input-placeholder
 	&_space_more
 		margin-bottom: $content_bot_space-more
 
+	&_bot-space_normal
+		margin-bottom: $content_bot_space
+
+	&_bot-space_more
+		margin-bottom: $content_bot_space-more
+
+	&_bot-space_big
+		margin-bottom: $content_bot_space-big
+
 .space-left
 	margin-left: 27px
 
@@ -1489,6 +1498,10 @@ input:-ms-input-placeholder
 
 	&_w_m
 		width: 276px
+
+	&_w_mm
+		width: 300px
+		
 
 	&_w_main-search
 		width: 470px
@@ -1552,6 +1565,7 @@ select
 	
 	&_lt_top
 		margin-bottom: 7px
+		display: block
 
 	&_w_same
 		width: 200px
@@ -1749,6 +1763,16 @@ select
 	border-radius: $border-radius
 	background: #fff
 	text-align: left
+
+	&_space_sm
+		margin-left: 9px
+	&_space_m
+		margin-left: 12px
+	&_space_big
+		margin-left: 27px
+
+	&_w_mm
+		width: 300px
 
 	&_w_fluid-half
 		width: $fluid_w_half
@@ -2570,6 +2594,9 @@ select
 
 	width: 350px
 
+	&_w_mm
+		width: 300px
+
 	&__icon
 		width: 11px
 		height: 7px
@@ -2702,7 +2729,7 @@ select
 		top: 8px
 		right: 0
 		left: 0
-		z-index: 100
+		z-index: 99
 		@extend %bszbb
 		padding: 14px
 		+box-shadow(0 0 6px rgba(#000, .2))
