@@ -83,6 +83,46 @@
             });
         });
 
+
+        // подключение плагина для установки интервалов
+        $(".interval-slider").each(function() {
+            var self = $(this);
+            var interval = self.parents('.interval');
+            var minimum = interval.find('.interval__i_tp_min .interval__val');
+            var maximum = interval.find('.interval__i_tp_max .interval__val');
+
+            var boundsMin = self.data('min');
+            var boundsMax = self.data('max');
+
+            var defValMin = self.data('valmin');
+            var defValMax = self.data('valmax');
+            
+            var rangeStep = self.data('step');
+
+            self.rangeSlider({
+                arrows:false,
+                bounds: {min: boundsMin, max: boundsMax},
+                defaultValues:{min: defValMin, max: defValMax},
+                step: rangeStep,
+                //valueLabels: "hide",
+                
+
+            });
+
+            var basicValues = self.rangeSlider("values");
+
+            minimum.text(Math.round(basicValues.min));
+            maximum.text(Math.round(basicValues.max));
+
+            self.bind("valuesChanging", function(e, data){
+                minimum.text(Math.round(data.values.min));
+                maximum.text(Math.round(data.values.max));
+              console.log("Something moved. min: " + Math.round(data.values.min) + " max: " + Math.round(data.values.max));
+            });
+
+        });
+        
+
         // кастомизация выбор города
         var selectCity = $('#search_city'),
             selectCityW = selectCity.data('width');

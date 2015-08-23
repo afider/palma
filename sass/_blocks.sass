@@ -1499,6 +1499,9 @@ input:-ms-input-placeholder
 	&_w_m
 		width: 276px
 
+	&_w_smm
+		width: 250px
+
 	&_w_mm
 		width: 300px
 		
@@ -2792,4 +2795,229 @@ select
 
 
 /* location-question
+/* ---------------------------------------END--- */
+
+
+/* range-slider
+/* --------------------------------------------- */
+
+.interval
+	
+
+.ui-rangeSlider
+	height: $interval-bar-h
+
+.ui-rangeSlider .ui-rangeSlider-innerBar
+	height: $interval-bar-h
+	margin: 0
+	background: $dark-el-color__fill
+	border-radius: 2px
+
+
+.ui-rangeSlider .ui-rangeSlider-handle
+	width: 14px
+	height: 14px
+	background: $main-color
+	border-radius: 50%
+	cursor: col-resize
+	top: -5px !important
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -3px
+		margin-left: -3px
+		background: #fff
+
+		width: 6px
+		height: 6px
+		border-radius: 50%
+
+
+.ui-rangeSlider .ui-rangeSlider-bar
+	margin: 0
+	background: #CCC
+	//background: yellow
+	background: $main-color
+	height: $interval-bar-h
+	cursor: move
+	cursor: grab
+	cursor: -moz-grab
+
+
+
+.ui-rangeSlider .ui-rangeSlider-bar.ui-draggable-dragging
+	cursor:	-moz-grabbing
+	cursor: grabbing
+
+
+.ui-rangeSlider-arrow
+	height: 16px
+	margin: 2px 0
+	width: 16px
+	background-repeat: no-repeat
+
+
+.ui-rangeSlider-arrow.ui-rangeSlider-leftArrow
+	background: red
+	background-position: center left
+
+
+.ui-rangeSlider-arrow.ui-rangeSlider-rightArrow
+	background: red
+	background-position: center right
+
+
+.ui-rangeSlider-arrow-inner
+	display: none
+
+
+.ui-rangeSlider-container
+	height: $interval-bar-h
+
+
+.ui-rangeSlider-withArrows .ui-rangeSlider-container
+	margin: 0 11px
+
+
+.ui-rangeSlider-noArrow .ui-rangeSlider-container
+	margin: 0
+
+
+.ui-rangeSlider-label
+	margin: 0 2px 2px
+	background: #fff
+	+box-shadow(0 0 6px rgba(#000, .2))
+	border-radius: $border-radius
+	background-position: bottom center
+	background-repeat: no-repeat
+	white-space: nowrap
+	bottom: 15px
+	padding: 3px 6px 7px
+	cursor: col-resize
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		bottom: -5px
+		left: 50%
+		margin-left: -5px
+		width: 10px
+		height: 10px
+		background: #fff
+		+rotate(45deg)
+
+
+.ui-rangeSlider-label-inner
+	display: none
+
+
+/*
+ * Edit slider
+ */
+
+input.ui-editRangeSlider-inputValue
+	width: 3em
+	vertical-align: middle
+	text-align: center
+
+
+/* range-slider
+/* ---------------------------------------END--- */
+
+
+/* interval
+/* --------------------------------------------- */
+
+.interval
+	width: 350px
+	@extend %bszbb
+	vertical-align: middle
+	display: inline-block
+	background: #fff
+	border: 1px solid $dark-el-color__form-el
+	border-radius: $border-radius
+	cursor: pointer
+	position: relative
+	@extend %clear
+
+	&_w_mm
+		width: 300px
+
+	&_w_smm
+		width: 250px
+
+	&_space_sm
+		margin-left: 9px
+	&_space_m
+		margin-left: 12px
+	&_space_big
+		margin-left: 27px
+
+	&__i
+		@extend %bszbb
+		float: left
+		height: $input-height - 2
+		line-height: $input-height - 2
+		border-left: 1px solid $dark-el-color__form-el
+		width: 50%
+		padding: 0 14px
+
+		&:first-child
+			border-left: none
+
+	&__legend
+		display: inline-block
+
+	&__val
+		display: inline-block
+
+/* interval
+/* ---------------------------------------END--- */
+
+
+/* popup
+/* --------------------------------------------- */
+
+.popup
+	position: absolute
+	background: #fff
+	top: 100%
+	margin-top: 9px
+	right: 0
+	left: 0
+	z-index: 99
+	@extend %bszbb
+	padding: 14px
+	+box-shadow(0 0 6px rgba(#000, .2))
+	border-radius: $border-radius
+	visibility: hidden
+	+opacity(0)
+	+transition-duration(.5s)
+
+	&_tp_interval
+		padding-top: 30px
+		padding-bottom: 30px
+
+	.is-open > &
+		+opacity(1)
+		visibility: visible
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: -5px
+			left: 50%
+			margin-left: -5px
+			width: 10px
+			height: 10px
+			background: #fff
+			+rotate(45deg)
+
+/* popup
 /* ---------------------------------------END--- */
