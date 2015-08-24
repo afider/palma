@@ -83,7 +83,6 @@
             });
         });
 
-
         // подключение плагина для установки интервалов
         $(".interval-slider").each(function() {
             var self = $(this);
@@ -96,7 +95,7 @@
 
             var defValMin = self.data('valmin');
             var defValMax = self.data('valmax');
-            
+
             var rangeStep = self.data('step');
 
             self.rangeSlider({
@@ -121,6 +120,40 @@
             });
 
         });
+
+        // Подключение плагина всплывающих окон
+        // Add it after jquery.magnific-popup.js and before first initialization code
+        $.extend(true, $.magnificPopup.defaults, {
+          tClose: 'Закрыть (Esc)', // Alt text on close button
+          tLoading: 'Идет загрузка...', // Text that is displayed during loading. Can contain %curr% and %total% keys
+          gallery: {
+            tPrev: 'Предыдущая (или кнопка «влево»)', // Alt text on left arrow
+            tNext: 'Следающая (или кнопка «вправо»)', // Alt text on right arrow
+            tCounter: '%curr% из %total%' // Markup for "1 of 7" counter
+          },
+          image: {
+            tError: '<a href="%url%">Изображения по такой ссылке</a> нет.' // Error message when image could not be loaded
+          },
+          ajax: {
+            tError: '<a href="%url%">Содержимое</a> не загружается.' // Error message when ajax request failed
+          }
+        });
+
+        $('.js-popup').magnificPopup({
+                type: 'inline',
+
+                fixedContentPos: true,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+                
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-slide-bottom'
+            });
         
 
         // кастомизация выбор города

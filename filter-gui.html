@@ -16,6 +16,7 @@
 		<script src="js/chosen.jquery.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/jQAllRangeSliders-withRuler-min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/svg.js"></script>
 		<script src="js/common.js"></script>
 
@@ -729,7 +730,7 @@
 										<div class="interval__val">1000</div>
 										<div class="interval__legend">&#8381;</div>
 									</div>
-									<div class="popup popup_tp_interval">
+									<div class="hint hint_tp_interval">
 										<div class="interval-slider" data-min="0" data-max="1000" data-valmin="100" data-valmax="900" data-step="100"></div>
 									</div>
 								</div><!-- interval -->
@@ -744,7 +745,7 @@
 										<div class="interval__val">1000000</div>
 										<div class="interval__legend">&#8381;</div>
 									</div>
-									<div class="popup popup_tp_interval">
+									<div class="hint hint_tp_interval">
 										<div class="interval-slider" data-min="10000" data-max="1000000" data-valmin="0" data-valmax="1000000" data-step="1000"></div>
 									</div>
 								</div><!-- interval -->
@@ -767,7 +768,7 @@
 										<div class="interval__val">500</div>
 										<div class="interval__legend">&#8381;</div>
 									</div>
-									<div class="popup popup_tp_interval">
+									<div class="hint hint_tp_interval">
 										<div class="interval-slider" data-min="0" data-max="750" data-valmin="100" data-valmax="500" data-step="10"></div>
 									</div>
 								</div><!-- interval -->
@@ -785,7 +786,38 @@
 
 
 						</form>
-	
+
+						<h2>Диалоговые окна</h2>
+
+						<p>
+							<a class=" js-popup" href="#check-email">Проверьте свою почту</a><br>
+							<a class=" js-popup" href="#change-email">Изменение адреса электронной почты</a>
+						</p>
+						
+						<div id="check-email" class="popup mfp-hide">
+							<div class="popup__body">
+								<h2 class="popup__h">Проверьте свою почту</h2>
+								<p>На <span class="txt-important">mail@domain.com</span> отправлено письмо со ссылкой. Перейдите по ссылке, чтобы подтвердить смену адреса.</p>
+								<p>Если вы не видите письмо, проверьте, не попало ли оно в спам.</p>
+							</div><!-- popup__body -->
+						</div><!-- popup -->
+
+						<div id="change-email" class="popup mfp-hide">
+							<div class="popup__body">
+								<h2 class="popup__h popup__h_stl_up">Изменение адреса электронной почты</h2>
+								<form action="#change-email">
+									
+									<div class="form-line">
+										<label for="change-email_email" class="form-label form-label_lt_top">Новый адрес</label>
+										<input type="text" name="change-email_email" id="change-email_email" class="input">
+									</div><!-- form-line -->
+
+									<input type="submit" value="Продолжить" class="button button_w_smm">
+
+								</form>
+							</div><!-- popup__body -->
+						</div><!-- popup -->
+
 						
 					</div><!-- search-panel__body centered -->
 				</div><!-- search-panel -->

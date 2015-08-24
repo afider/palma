@@ -1957,11 +1957,26 @@ select
 		background: $active-color
 		+transition-duration(.2s)
 
+
+	&_w_sm
+		width: 146px
+
+	&_w_m
+		width: 276px
+
+	&_w_smm
+		width: 250px
+
+	&_w_mm
+		width: 300px
+
 	&_w_fix
 		width: 350px
 
 	&_w_fix-m
 		width: 276px
+
+
 
 	&_w_fluid-half
 		width: $fluid_w_half
@@ -2992,10 +3007,10 @@ input.ui-editRangeSlider-inputValue
 /* ---------------------------------------END--- */
 
 
-/* popup
+/* hint
 /* --------------------------------------------- */
 
-.popup
+.hint
 	position: absolute
 	background: #fff
 	top: 100%
@@ -3030,6 +3045,43 @@ input.ui-editRangeSlider-inputValue
 			height: 10px
 			background: #fff
 			+rotate(45deg)
+
+/* hint
+/* ---------------------------------------END--- */
+
+
+/* popup
+/* --------------------------------------------- */
+
+.popup
+	background: $dark-el-color__bg
+	padding: 1px
+	text-align: left
+	max-width: 500px
+	margin: 40px auto
+	position: relative
+	@extend %bszbb
+
+	p
+		margin-bottom: 12px
+
+	&__body
+		margin: 49px 69px
+	
+	&_w_m
+		width: 400px
+
+	&__h
+		+rem(font-size, 24px)
+		margin: 0 0 22px 0
+		padding: 0
+
+		&_stl_up
+			+rem(font-size, 12px)
+			text-transform: uppercase
+			+rem(letter-spacing, $letter-spacing)
+			@extend %font-black
+		
 
 /* popup
 /* ---------------------------------------END--- */
