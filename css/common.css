@@ -571,6 +571,13 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Proxima Nova Black";
+  src: url("../fonts/ProximaNovaBlack.eot");
+  src: url("../fonts/ProximaNovaBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaBlack.woff") format("woff"), url("../fonts/ProximaNovaBlack.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail__price, .m-teasers__h {
   font-family: "Roboto Medium", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
@@ -589,6 +596,10 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail_
 
 h1, .h1, .font-light, .button_size_sm {
   font-family: "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
+}
+
+.font-logo, text {
+  font-family: "Proxima Nova Black", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
 /* font */
@@ -3533,7 +3544,6 @@ input.ui-editRangeSlider-inputValue {
   background: #fff;
   border: 1px solid #d3d8db;
   border-radius: 3px;
-  cursor: pointer;
   position: relative;
 }
 .interval_w_mm {
@@ -3558,6 +3568,7 @@ input.ui-editRangeSlider-inputValue {
   border-left: 1px solid #d3d8db;
   width: 50%;
   padding: 0 14px;
+  cursor: pointer;
 }
 .interval__i:first-child {
   border-left: none;
@@ -3567,6 +3578,17 @@ input.ui-editRangeSlider-inputValue {
 }
 .interval__val {
   display: inline-block;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: right;
+}
+.interval_w_mm .interval__val {
+  width: 74px;
+}
+.interval_w_smm .interval__val {
+  width: 50px;
 }
 
 /* interval */
@@ -3656,6 +3678,23 @@ input.ui-editRangeSlider-inputValue {
 
 /* popup */
 /* ---------------------------------------END--- */
+.wrapper {
+  width: 545px;
+  height: 90px;
+  text-align: center;
+  line-height: 1;
+  background: #EDEDED;
+}
+
+text {
+  fill: url(#p-stripes);
+  font-size: 120px;
+  font-size: 12rem;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  letter-spacing: 0.6rem;
+}
+
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;

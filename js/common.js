@@ -83,12 +83,17 @@
             });
         });
 
-        // подключение плагина для установки интервалов
+
+        // подключение плагина для установки интервалов и связанные с ним конструкции
         $(".interval-slider").each(function() {
             var self = $(this);
             var interval = self.parents('.interval');
+
             var minimum = interval.find('.interval__i_tp_min .interval__val');
             var maximum = interval.find('.interval__i_tp_max .interval__val');
+
+            var minimumVal = minimum.val();
+            var maximumVal = maximum.val();
 
             var boundsMin = self.data('min');
             var boundsMax = self.data('max');
@@ -98,26 +103,82 @@
 
             var rangeStep = self.data('step');
 
+            var stateClass = 'is-open';
+
             self.rangeSlider({
                 arrows:false,
                 bounds: {min: boundsMin, max: boundsMax},
                 defaultValues:{min: defValMin, max: defValMax},
                 step: rangeStep,
                 //valueLabels: "hide",
-                
-
             });
 
             var basicValues = self.rangeSlider("values");
 
-            minimum.text(Math.round(basicValues.min));
-            maximum.text(Math.round(basicValues.max));
+            minimum.val(Math.round(basicValues.min));
+            maximum.val(Math.round(basicValues.max));
 
+            // устанавливаем соответствующие значения инпутам при перетаскивании слайдера
             self.bind("valuesChanging", function(e, data){
-                minimum.text(Math.round(data.values.min));
-                maximum.text(Math.round(data.values.max));
+                minimum.val(Math.round(data.values.min));
+                maximum.val(Math.round(data.values.max));
               console.log("Something moved. min: " + Math.round(data.values.min) + " max: " + Math.round(data.values.max));
             });
+
+
+            // устанавливаем класс блоку .interval для появления слайдера при получени фокуса полем ввода
+            minimum.on('focusin', function() { interval.addClass(stateClass); });
+            minimum.on('focusout', function() { interval.removeClass(stateClass); });
+
+            maximum.on('focusin', function() { interval.addClass(stateClass); });
+            maximum.on('focusout', function() { interval.removeClass(stateClass); });
+
+            
+            // устанавливаем соответствующие значения минимальному уровню слайдера при изменении min-инпута
+             if (minimum.val() !== '') {
+                self.rangeSlider("values", minimum.val(), maximum.val());
+            }
+
+            minimum.blur(function () {
+                if (minimum.val() === '') {
+                    self.rangeSlider("values", defValMin, defValMax);
+                }
+            });
+
+            minimum.keyup(function () {
+                if (minimum.val() !== '') {
+                    self.rangeSlider("values", minimum.val(), maximum.val());
+                }
+                
+            });
+
+            minimum.mouseover(function () {
+                self.rangeSlider("values", minimum.val(), maximum.val());
+            });
+
+
+            // устанавливаем соответствующие значения минимальному уровню слайдера при изменении max-инпута
+             if (maximum.val() !== '') {
+                self.rangeSlider("values", minimum.val(), maximum.val());
+            }
+
+            maximum.blur(function () {
+                if (maximum.val() === '') {
+                    self.rangeSlider("values", defValMin, defValMax);
+                }
+            });
+
+            maximum.keyup(function () {
+                if (maximum.val() !== '') {
+                    self.rangeSlider("values", minimum.val(), maximum.val());
+                }
+                
+            });
+
+            maximum.mouseover(function () {
+                self.rangeSlider("values", minimum.val(), maximum.val());
+            });
+            
 
         });
 

@@ -2816,8 +2816,6 @@ select
 /* range-slider
 /* --------------------------------------------- */
 
-.interval
-	
 
 .ui-rangeSlider
 	height: $interval-bar-h
@@ -2968,7 +2966,6 @@ input.ui-editRangeSlider-inputValue
 	background: #fff
 	border: 1px solid $dark-el-color__form-el
 	border-radius: $border-radius
-	cursor: pointer
 	position: relative
 	@extend %clear
 
@@ -2993,6 +2990,7 @@ input.ui-editRangeSlider-inputValue
 		border-left: 1px solid $dark-el-color__form-el
 		width: 50%
 		padding: 0 14px
+		cursor: pointer
 
 		&:first-child
 			border-left: none
@@ -3000,8 +2998,24 @@ input.ui-editRangeSlider-inputValue
 	&__legend
 		display: inline-block
 
+
 	&__val
 		display: inline-block
+		width: 100px
+		margin: 0
+		padding: 0
+		
+		border: none
+		//outline: 1px solid red
+		text-align: right
+
+	&_w_mm &__val
+		width: 74px
+
+	&_w_smm &__val
+		width: 50px
+
+
 
 /* interval
 /* ---------------------------------------END--- */
@@ -3085,3 +3099,21 @@ input.ui-editRangeSlider-inputValue
 
 /* popup
 /* ---------------------------------------END--- */
+
+
+
+.wrapper
+	
+	width: 545px
+	height: 90px
+	text-align: center
+	line-height: 1
+	background: #EDEDED
+
+text
+	fill: url(#p-stripes)
+	@extend %font-logo
+	+rem(font-size, 120px)
+	text-transform: uppercase
+	+rem(letter-spacing, 6px)
+
