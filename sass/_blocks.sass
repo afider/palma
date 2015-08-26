@@ -1442,9 +1442,6 @@ input:-ms-input-placeholder
 	&_align_right
 		text-align: right
 
-	&_space_bot
-		margin-bottom: 30px
-
 	&_space_more
 		margin-bottom: $content_bot_space-more
 
@@ -1561,6 +1558,11 @@ select
 	display: inline-block
 	vertical-align: middle
 	line-height: $menu-line-height
+
+	&_stl_caps
+		text-transform: uppercase
+		+rem(letter-spacing, $letter-spacing)
+		+rem(font-size, 11px)
 
 	&_stl_important
 		@extend %font-regular
@@ -2911,6 +2913,7 @@ select
 	bottom: 15px
 	padding: 3px 6px 7px
 	cursor: col-resize
+	border: 1px solid $dark-el-color__form-el
 
 	&:before
 		content: ''
@@ -2923,7 +2926,7 @@ select
 		height: 10px
 		background: #fff
 		+rotate(45deg)
-		border: 1px solid rgba(#000, .2)
+		border: 1px solid $dark-el-color__form-el
 
 	&:after
 		content: ''
@@ -2967,7 +2970,7 @@ input.ui-editRangeSlider-inputValue
 	border: 1px solid $dark-el-color__form-el
 	border-radius: $border-radius
 	position: relative
-	@extend %clear
+	
 
 	&_w_mm
 		width: 300px
@@ -2984,11 +2987,11 @@ input.ui-editRangeSlider-inputValue
 
 	&__i
 		@extend %bszbb
-		float: left
+		display: table-cell
 		height: $input-height - 2
 		line-height: $input-height - 2
 		border-left: 1px solid $dark-el-color__form-el
-		width: 50%
+		width: 50% !important
 		padding: 0 14px
 		cursor: pointer
 
@@ -2996,24 +2999,42 @@ input.ui-editRangeSlider-inputValue
 			border-left: none
 
 	&__legend
-		display: inline-block
+		display: table-cell
+		width: 1px
+		white-space: nowrap
 
+	&__legend + &__input
+		padding-left: 5px
+
+	&__input + &__legend
+		padding-left: 5px
+
+	&__body
+		display: table
+		width: 100%
+
+	&__data
+		display: table
+		width: 100%
+
+	&__input
+		display: table-cell
 
 	&__val
-		display: inline-block
-		width: 100px
 		margin: 0
 		padding: 0
-		
+		width: 100%
 		border: none
 		//outline: 1px solid red
 		text-align: right
 
+
+
 	&_w_mm &__val
-		width: 74px
+		//width: 74px
 
 	&_w_smm &__val
-		width: 50px
+		//width: 50px
 
 
 
@@ -3098,6 +3119,80 @@ input.ui-editRangeSlider-inputValue
 		
 
 /* popup
+/* ---------------------------------------END--- */
+
+
+/* grid
+/* --------------------------------------------- */
+
+
+.grid
+	margin-left: -15px
+	
+	margin-bottom: $content_bot_space-sm
+
+	&_bot-space_normal
+		margin-bottom: $content_bot_space
+
+	&_bot-space_more
+		margin-bottom: $content_bot_space-more
+
+	&_bot-space_big
+		margin-bottom: $content_bot_space-big
+
+
+		
+
+	&__row
+		display: table
+		width: 100%
+
+	&__i
+		position: relative
+		@extend %bszbb
+		padding-left: 15px
+		display: table-cell
+		width: 100%
+		vertical-align: bottom
+
+
+
+		&_valign_middle
+			vertical-align: top
+			padding-top: 29px
+
+	&_columns_2 &__i
+		width: (100% / 2)
+		
+
+	&_columns_3 &__i
+		width: (100% / 3)
+
+	&_columns_3 &__i_columns_2
+		width: 100% - (100% / 3)	
+
+
+	&_columns_4 &__i
+		width: (100% / 4)
+
+	&_columns_4 &__i_columns_3
+		width: 100% - (100% / 4)
+		
+	&_columns_4 &__i_columns_2
+		width: 100% - (100% / 2)
+
+
+		
+
+	& .input,
+	& .select,
+	& .interval
+		width: 100%
+
+
+
+
+/* grid
 /* ---------------------------------------END--- */
 
 
