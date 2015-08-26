@@ -2757,6 +2757,7 @@ select
 		visibility: hidden
 		+opacity(0)
 		+transition-duration(.5s)
+		border: 1px solid $dark-el-color__form-el
 
 	&.is-open &__popup
 		+opacity(1)
@@ -2773,6 +2774,18 @@ select
 			height: 10px
 			background: #fff
 			+rotate(45deg)
+			border: 1px solid $dark-el-color__form-el
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -10px
+			width: 20px
+			height: 10px
+			background: #fff
 
 	&__mess
 		text-align: center
@@ -3060,6 +3073,7 @@ input.ui-editRangeSlider-inputValue
 	visibility: hidden
 	+opacity(0)
 	+transition-duration(.5s)
+	border: 1px solid $dark-el-color__form-el
 
 	&_tp_interval
 		padding-top: 30px
@@ -3080,6 +3094,18 @@ input.ui-editRangeSlider-inputValue
 			height: 10px
 			background: #fff
 			+rotate(45deg)
+			border: 1px solid $dark-el-color__form-el
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -10px
+			width: 20px
+			height: 10px
+			background: #fff
 
 /* hint
 /* ---------------------------------------END--- */
@@ -3157,9 +3183,8 @@ input.ui-editRangeSlider-inputValue
 
 
 
-		&_valign_middle
-			vertical-align: top
-			padding-top: 29px
+		&_tp_text
+			padding-bottom: 10px
 
 	&_columns_2 &__i
 		width: (100% / 2)
