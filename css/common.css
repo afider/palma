@@ -1687,6 +1687,11 @@ textarea {
 /* ---------------------------------------END--- */
 /* photo-inf */
 /* --------------------------------------------- */
+.photo-inf {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+}
 .photo-inf:before {
   content: "";
   display: block;
@@ -3094,6 +3099,7 @@ select option {
 }
 .m-teasers__photo {
   width: 190px;
+  position: relative;
 }
 .m-teasers__inf {
   padding-left: 15px;
@@ -3170,6 +3176,10 @@ select option {
 }
 .m-teasers__spaced-line {
   margin-bottom: 5px;
+}
+.m-teasers__photo-inf {
+  left: 11px;
+  bottom: 9px;
 }
 
 /* m-teasers */
@@ -3510,6 +3520,7 @@ select option {
   padding: 3px 6px 7px;
   cursor: col-resize;
   border: 1px solid #d3d8db;
+  z-index: 100;
 }
 .ui-rangeSlider-label:before {
   content: "";

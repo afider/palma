@@ -1059,6 +1059,9 @@
 /* --------------------------------------------- */
 
 .photo-inf
+	position: absolute
+	bottom: 10px
+	left: 15px
 
 	&:before
 		content: ''
@@ -2492,6 +2495,7 @@ select
 
 	&__photo
 		width: 190px
+		position: relative
 
 	&__inf
 		padding-left: 15px
@@ -2565,6 +2569,10 @@ select
 
 	&__spaced-line
 		margin-bottom: 5px
+
+	&__photo-inf
+		left: 11px
+		bottom: 9px
 
 /* m-teasers
 /* ---------------------------------------END--- */
@@ -2927,6 +2935,7 @@ select
 	padding: 3px 6px 7px
 	cursor: col-resize
 	border: 1px solid $dark-el-color__form-el
+	z-index: 100
 
 	&:before
 		content: ''
