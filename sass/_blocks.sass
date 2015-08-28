@@ -3132,6 +3132,9 @@ input.ui-editRangeSlider-inputValue
 	position: relative
 	@extend %bszbb
 
+	&_w_big
+		max-width: 800px
+
 	p
 		margin-bottom: 12px
 
@@ -3146,7 +3149,7 @@ input.ui-editRangeSlider-inputValue
 		margin: 0 0 22px 0
 		padding: 0
 
-		&_stl_up
+		&_stl_caps
 			+rem(font-size, 12px)
 			text-transform: uppercase
 			+rem(letter-spacing, $letter-spacing)
@@ -3181,6 +3184,9 @@ input.ui-editRangeSlider-inputValue
 	&__row
 		display: table
 		width: 100%
+
+	&_valign_top &__i
+		vertical-align: top
 
 	&__i
 		position: relative
@@ -3230,6 +3236,109 @@ input.ui-editRangeSlider-inputValue
 /* ---------------------------------------END--- */
 
 
+/* scroller
+/* --------------------------------------------- */
+
+.scroller
+	overflow: hidden
+	position: relative
+	//background: red
+	margin-bottom: $content_bot_space
+
+	&::-webkit-scrollbar
+		width: 0
+
+	&__body
+		overflow-y: scroll
+		-webkit-overflow-scrolling: touch
+
+	&__content
+		padding-right: 30px
+
+	&_stt_scroll &__track
+		display: block
+		
+	&__track
+		display: none
+		position: absolute
+		z-index: 2
+		top: 0
+		bottom: 0
+		right: 0
+		width: 8px
+		border: 1px solid $dark-el-color__form-el
+		pointer-events: none
+
+	&__bar
+		position: absolute
+		z-index: 1
+		width: 8px
+		background: $dark-el-color__form-el
+		pointer-events: auto
+
+
+/* scroller
+/* ---------------------------------------END--- */
+
+
+/* multiselect-search
+/* --------------------------------------------- */
+
+.multiselect-search
+	position: relative
+	margin-bottom: 10px
+	position: relative
+	padding-right: 52px
+	@extend %clear
+
+	&__select
+		
+
+	&__label
+		float: left
+		width: 35%
+		@extend %bszbb
+		padding-right: 15px
+		
+	&__button
+		position: absolute
+		top: 0
+		right: 2px
+		padding: 0
+		width: 52px
+		border-radius: 0 $border-radius $border-radius 0
+
+	&__vmiddle
+		display: table-cell
+		height: $input-height_big
+		vertical-align: middle
+		line-height: $menu-line-height
+
+/* multiselect-search
+/* ---------------------------------------END--- */
+
+
+/* city-list
+/* --------------------------------------------- */
+
+.city-list
+	@extend %clear
+
+	&__i
+		float: left
+		width: 50%
+		@extend %bszbb
+
+		&:first-child
+			padding-right: 20px
+		&:last-child
+			padding-left: 20px
+
+	&__scroll
+		height: 300px
+
+/* city-list
+/* ---------------------------------------END--- */
 
 .wrapper
 	

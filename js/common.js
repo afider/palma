@@ -62,6 +62,21 @@
         // добавление класса, для полей ввода текста, в которых есть текст
         $('.input').customInput();
 
+        // инициализация плагина для кастомизации стандартных полос прокрутки
+        $('.js-scroller').baron({
+            scroller: '.scroller__body',
+            bar: '.scroller__bar',
+            barOnCls: 'scroller_stt_scroll'
+            });
+
+        $('.js-scroller .scroller__body').scroll(function() {
+            var scrollSpace = $(this).scrollTop();
+            var self = $(this);
+            var selfParent = self.parent();
+            if (scrollSpace > 0) selfParent.addClass('scroller_stt_scrolled');
+            else  selfParent.removeClass('scroller_stt_scrolled');
+        });
+
         // анимация всплывающих меню
         $(".js-popup-nav__ctrl").on('click', function(e) {
             e.preventDefault();
@@ -245,6 +260,38 @@
         }).chosen({
             disable_search_threshold: 10,
             width: selectCityW,
+            no_results_text: "Может вы ошиблись? Такого не нашлось:",
+            max_selected_options: 1
+        });
+
+
+        var selectCity2 = $('#search_city2'),
+            selectCityW2 = selectCity2.data('width');
+
+        selectCity2.on({
+            'chosen:ready': function (event, params) {
+                var select = $(params.chosen.form_field);
+
+                if (!!select.val()) {
+                    params.chosen.search_container.hide();
+                }
+            },
+            'change': function (event, params) {
+                if (!params.chosen) {
+                    return this;
+                }
+
+                if (!!params.selected) {
+                    params.chosen.search_container.hide();
+                }
+                if (!!params.deselected) {
+                    params.chosen.search_container.show();
+                    params.chosen.choices_click(event);
+                }
+            }
+        }).chosen({
+            disable_search_threshold: 10,
+            width: selectCityW2,
             no_results_text: "Может вы ошиблись? Такого не нашлось:",
             max_selected_options: 1
         });
