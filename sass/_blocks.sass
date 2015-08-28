@@ -3324,7 +3324,7 @@ input.ui-editRangeSlider-inputValue
 .city-list
 	@extend %clear
 
-	&__i
+	&__column
 		float: left
 		width: 50%
 		@extend %bszbb
@@ -3336,6 +3336,44 @@ input.ui-editRangeSlider-inputValue
 
 	&__scroll
 		height: 300px
+
+	&__dl
+		display: block
+		
+
+	&__letter
+		display: block
+		color: $active-color2
+		@extend %font-regular
+		font-weight: bold
+
+	&__body
+		display: block
+		margin: 0
+		padding: 0
+		
+
+	&__lst
+		margin: 0 0 $content_bot_space 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		display: block
+		margin: 0
+		padding: 0
+		+transition-duration(.5s)
+		cursor: pointer
+
+		&:hover
+			color: $link_color_hover
+			+transition-duration(.1s)
+
+		&.is-active
+			@extend %font-regular
+			font-weight: bold
+			color: $text_color
+		
 
 /* city-list
 /* ---------------------------------------END--- */
