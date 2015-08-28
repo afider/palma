@@ -38,11 +38,19 @@
 
 %star-favorites-no
 	stroke: $dark-el-color__fill
-	fill: none
+	fill: #ffffff
+
+%star-favorites-no2
+	stroke: #ffffff
+	fill: #ffffff
 
 %star-favorites-yes
 	fill: $star-color
 	stroke: $star-color
+
+%star-favorites-yes2
+	fill: $star-color2
+	stroke: $star-color2
 
 
 /* centered
@@ -903,9 +911,33 @@
 		float: left
 		display: block
 
+
 	&__img-a
 		display: block
 		position: relative
+
+	&__i_stl_urgently &__img-a,
+	&__i_stl_special &__img-a
+		&:before
+			content: '\0441\0440\043E\0447\043D\043E'
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			padding: 4px 14px
+			background: $active-color
+			text-transform: uppercase
+			+rem(letter-spacing, $letter-spacing)
+			+rem(font-size, 11px)
+			color: #fff
+
+	&__i_stl_special &__img-a
+	
+		&:before
+			content: '\0441\043F\0435\0446\043F\0440\0435\0434\043B\043E\0436\0435\043D\0438\0435'
+			background: $main-color2
+
+
 
 	&__img
 		display: block
@@ -921,6 +953,20 @@
 		border-color: $important_color
 		+box-shadow(inset -1px -1px 0 1px $important_color, inset 1px -1px 0 1px $important_color)
 
+	&__i_stl_urgently &__legend,
+	&_lt_list &__i_stl_urgently
+		border-color: $active-color
+		background: $active-color
+	
+	&__i_stl_special &__legend,
+	&_lt_list &__i_stl_special
+		border-color: $main-color2
+		background: $main-color2	
+
+	&__i_stl_bg &__legend,
+	&_lt_list &__i_stl_bg
+		border-color: $dark-el-color__fill
+		background: $dark-el-color__fill
 
 	&__h
 		display: block
@@ -934,16 +980,31 @@
 		@extend %font-medium
 		+link-color ($color: $text_color, $color_visited: $link_color_visited2)
 
+	&__i_stl_urgently &__h,
+	&__i_stl_special &__h,
+	&__i_stl_bg &__h
+		+link-color ($color: #fff, $color_visited: $link_color_visited2)
+
 	&__price
 		color: $price_color
 		+rem(font-size, 16px)
 		margin-bottom: 10px
+
+	&__i_stl_urgently &__price,
+	&__i_stl_special &__price,
+	&__i_stl_bg &__price
+		color: #fff
 
 	&__footer
 		display: table
 		width: 100%
 		color: $text-light_color
 		+rem(font-size, 12px)
+
+	&__i_stl_urgently &__footer,
+	&__i_stl_special &__footer,
+	&__i_stl_bg &__footer
+		color: #fff
 
 	&__footer-i
 		display: table-cell
@@ -965,6 +1026,17 @@
 		&_stt_added
 			@extend %star-favorites-yes
 			cursor: default
+
+	&__i_stl_urgently &__favorite,
+	&__i_stl_special &__favorite,
+	&__i_stl_bg &__favorite
+		@extend %star-favorites-no2
+
+		&:hover
+			@extend %star-favorites-yes2
+
+		&_stt_added
+			@extend %star-favorites-yes2
 
 	&__prop
 		vertical-align: middle
@@ -997,13 +1069,10 @@
 
 
 	&_lt_list &__i_stl_important
-		border: 3px solid $important_color
-		margin-top: -1px
-		margin-left: -3px
-
-
-		&:first-child
-			border-top: 3px solid $important_color
+		outline: 3px solid $important_color
+		margin-top: 3px
+		margin-bottom: 6px
+		border-bottom: none
 
 	&_lt_list &__i_stl_important + &__i_stl_important
 		margin-top: -3px
