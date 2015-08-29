@@ -30,7 +30,7 @@
 
 		<div id="svg-icons"></div><!-- svg-icons -->
 
-		<div class="page page_stl_bg">
+		<div class="page page_stl_sidebar-border page_sidebars_right">
 
 			<div class="page__in">		
 	
@@ -349,12 +349,12 @@
 									</svg>
 
 									 <svg class="svg-logo">
-											<text x="0" y="100%">Пальма</text>
-										</svg>
+			      						<text x="0" y="100%">Пальма</text>
+			 						</svg>
 
-										<!--[if IE]>
-											<img src="img/logo.png" height="22" width="154" alt="Site name" class="logo__icon">
-										<![endif]-->
+			 						<!--[if IE]>
+			 							<img src="img/logo.png" height="22" width="154" alt="Site name" class="logo__icon">
+			 						<![endif]-->
 								</a>
 								
 								<div class="main-nav main-nav_lt_left">
@@ -398,42 +398,201 @@
 	
 					</div><!-- centered -->
 				</header><!-- page__header -->
+	
+				<div class="search-panel">
+					<div class="search-panel__body centered">
+	
+						<h1 class="main-h txt-to-center">Доска бесплатных объявлений</h1>
+						<div class="main-h__legend txt-to-center">Покупайте выгодно и продавайте быстро среди <span class="main-h__b">31 543 654</span> объявлений!</div>
+
+						<form action="#search">
+							<div class="main-search input-train">
+							
+								<select id="search__cagegory" name="search__cagegory" class="select select_h_big js-select input-train__i main-search__category">
+									<option value="0" selected="">Выберите категорию</option>
+									<option value="1" class="select__group">Транспорт</option>
+									<option value="9">Автомобили</option>
+									<option value="14">Мотоциклы и мототехника</option>
+									<option value="81">Грузовики и спецтехника</option>
+									<option value="11">Водный транспорт</option>
+									<option value="10">Запчасти и аксессуары</option>
+									<option value="4" class="select__group">Недвижимость</option>
+									<option value="24">Квартиры</option>
+									<option value="23">Комнаты</option>
+									<option value="25">Дома, дачи, коттеджи</option>
+									<option value="26">Земельные участки</option>
+									<option value="85">Гаражи и машиноместа</option>
+									<option value="42">Коммерческая недвижимость</option>
+									<option value="86">Недвижимость за рубежом</option>
+									<option value="110" class="select__group">Работа</option>
+									<option value="111">Вакансии</option>
+									<option value="112">Резюме</option>
+									<option value="113" class="select__group">Услуги</option>
+									<option value="114">Предложения услуг</option>
+									<option value="115">Запросы на услуги</option>
+									<option value="5" class="select__group">Личные вещи</option>
+									<option value="27">Одежда, обувь, аксессуары</option>
+									<option value="29">Детская одежда и обувь</option>
+									<option value="30">Товары для детей и игрушки</option>
+									<option value="28">Часы и украшения</option>
+									<option value="88">Красота и здоровье</option>
+									<option value="2" class="select__group">Для дома и дачи</option>
+									<option value="21">Бытовая техника</option>
+									<option value="20">Мебель и интерьер</option>
+									<option value="87">Посуда и товары для кухни</option>
+									<option value="82">Продукты питания</option>
+									<option value="19">Ремонт и строительство</option>
+									<option value="106">Растения</option>
+									<option value="6" class="select__group">Бытовая электроника</option>
+									<option value="32">Аудио и видео</option>
+									<option value="97">Игры, приставки и программы</option>
+									<option value="31">Настольные компьютеры</option>
+									<option value="98">Ноутбуки</option>
+									<option value="99">Оргтехника и расходники</option>
+									<option value="96">Планшеты и электронные книги</option>
+									<option value="84">Телефоны</option>
+									<option value="101">Товары для компьютера</option>
+									<option value="105">Фототехника</option>
+									<option value="7" class="select__group">Хобби и отдых</option>
+									<option value="33">Билеты и путешествия</option>
+									<option value="34">Велосипеды</option>
+									<option value="83">Книги и журналы</option>
+									<option value="36">Коллекционирование</option>
+									<option value="38">Музыкальные инструменты</option>
+									<option value="102">Охота и рыбалка</option>
+									<option value="39">Спорт и отдых</option>
+									<option value="103">Знакомства</option>
+									<option value="35" class="select__group">Животные</option>
+									<option value="89">Собаки</option>
+									<option value="90">Кошки</option>
+									<option value="91">Птицы</option>
+									<option value="92">Аквариум</option>
+									<option value="93">Другие животные</option>
+									<option value="94">Товары для животных</option>
+									<option value="8" class="select__group">Для бизнеса</option>
+									<option value="116">Готовый бизнес</option>
+									<option value="40">Оборудование для бизнеса</option>
+								</select>
+								
+								<input type="text" name="search__input" id="search__input" placeholder="Поиск по объявлениям" class="input input_h_big input-train__i main-search__input">
+							
+								<select id="search_city" multiple name="search_city" data-width="25%" data-placeholder="Укажите город" class="smart-select smart-select_h_big main-search__place input-train__i">
+									<option value="1">Выберите город</option>
+									<option value="2">Москва</option>
+									<option value="3">Санкт-Петербург</option>
+									<option value="4">Новосибирск</option>
+									<option value="5">Екатеринбург</option>
+									<option value="6">Нижний Новгород</option>
+									<option value="7">Самара</option>
+									<option value="8">Казань</option>
+									<option value="9">Омск</option>
+									<option value="10">Челябинск</option>
+									<option value="11">Ростов-на-Дону</option>
+									<option value="12">Уфа</option>
+									<option value="13">Волгоград</option>
+									<option value="14">Пермь</option>
+									<option value="15">Красноярск</option>
+									<option value="16">Воронеж</option>
+									<option value="17">Петропавловск-Камчатский</option>
+								</select>
+							
+								<button class="button input-train__i main-search__button">
+									<svg class="main-search__icon icon">
+										<use xlink:href="#icon_search"></use>
+									</svg>
+								</button>
+
+							</div><!-- main-search -->
+							
+							<label for="search__names" class="cr js-cr">
+								<input type="checkbox" id="search__names" checked>
+								<svg class="cr__icon">
+									<use xlink:href="#icon_checked"></use>
+								</svg>
+								Искать только в названиях
+							</label>
+							<label for="search__photo" class="cr cr_space_left js-cr">
+								<input type="checkbox" id="search__photo">
+								<svg class="cr__icon">
+									<use xlink:href="#icon_checked"></use>
+								</svg>
+								Только с фото
+							</label>
+							<label for="search__fast" class="cr cr_space_left js-cr">
+								<input type="checkbox" id="search__fast">
+								<svg class="cr__icon">
+									<use xlink:href="#icon_checked"></use>
+								</svg>
+								Срочно
+							</label>
+
+						</form>
+	
+						
+					</div><!-- search-panel__body centered -->
+				</div><!-- search-panel -->
+
 			
 				<div class="page__body centered clearfix">
 					
 					<div class="page__mainbar">
-						
+
 						<div class="page__content">
-
-							<h1 class="txt-to-center">Ваше объявление успешно добавлено</h1>
-
-							<div class="content-mess content-mess_tp_centered">
-								<p>Объявление <a href="#" class="txt-important">название объявления</a> добавлено на сайт. <br>
-								<p>Оно появится в результатах поиска после проверки модератором. <br>
-								<p>Вы всегда можете отредактировать или удалить свое объявление в <a href="#">личном кабинете</a>.</p>
-								<p>На ваш электронный адрес address@address.com отправлено письмо с инструкцией по подтверждению регистрации </p>
-								<p><span class="txt-important">Внимание!</span> Пока вы не подтвердите регистрацию, посетители сайта не смогут писать вам вопросы по объявлениям.</p>
-							</div>
-
-							<div class="separator separator_space_bottom"></div>
-
-							<h2 class="h1 txt-to-center">Подайте быстрее</h2>
-
-							<p>Промо-блоки, баннеры, блок «Продайте быстрее» Представление блоков носит рекомендательный характер. Детализация планируется на этапе внедрения платной функциональности.</p>
+							
+							<p>Декретное время однократно. Надир вращает межпланетный популяционный индекс. Магнитное поле однородно выслеживает лимб, это довольно часто наблюдается у сверхновых звезд второго типа. Гелиоцентрическое расстояние, несмотря на внешние воздействия, постоянно. Зенитное часовое число, это удалось установить по характеру спектра, колеблет центральный экватор, а время ожидания ответа составило бы 80 миллиардов лет.</p>
+							
+							<p>Газопылевое облако ищет популяционный индекс. Противостояние, сублимиpуя с повеpхности ядpа кометы, стабильно. Возмущающий фактор, следуя пионерской работе Эдвина Хаббла, иллюстрирует эксцентриситет. Газопылевое облако, на первый взгляд, иллюстрирует астероид. Спектральный класс выслеживает далекий зенит. Весеннее равноденствие непрерывно.</p>
+							
+							<p>Гелиоцентрическое расстояние, на первый взгляд, отражает астероидный Ганимед. Газопылевое облако, и это следует подчеркнуть, непрерывно. Поперечник разрушаем. Терминатор на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), отражает экваториальный параллакс.</p>
+							
+							<p>Пpотопланетное облако случайно. Пpотопланетное облако колеблет центральный Южный Треугольник. Земная группа формировалась ближе к Солнцу, однако соединение выслеживает большой круг небесной сферы. Космический мусор решает перигелий.</p>
+							
+							<p>Математический горизонт, на первый взгляд, точно меняет болид . Тропический год оценивает близкий нулевой меридиан. По космогонической гипотезе Джеймса Джинса, фаза оценивает случайный ионный хвост. Маятник Фуко ничтожно вызывает зенит. Различное расположение, как бы это ни казалось парадоксальным, оценивает Юпитер. Соединение колеблет математический горизонт, выслеживая яркие, броские образования.</p>
+							
+							
+							
 							
 						</div><!-- page__content -->
 
 					</div><!-- page__mainbar -->
 
 					<aside class="page__sidebar page__sidebar_lt_right">
-
 						
+						Ханты-Мансийск
+						Сургут
+						п. Салым
+						Пыть-Ях
+						пгт. Пойковский
+						Нягань
+						Советский
+						Нефтеюганск
+						Лянтор
+						Мегион
+						п. Федоровский
+						Радужный
+						Нижневартовск
+						Санкт-Петербург
+						Москва
+						Все города
+
 					</aside>
-	
 					
 				</div><!-- page__body -->
 	
-				
+				<div class="bordered-panel">
+						
+					<div class="bordered-panel__body centered">
+
+						<div class="site-desc">
+							<p><span class="site-desc__h">Краткое описание сервиса.</span> Интенция, как бы это ни казалось парадоксальным, выстраивает символический метафоризм. Диониссийское начало вызывает филогенез, это же положение обосновывал Ж.Польти в книге "Тридцать шесть драматических ситуаций". Гений представляет собой неизменный онтогенез, однако само по себе состояние игры всегда амбивалентно. Художественная контаминация, как бы это ни казалось парадоксальным, вероятна. Миракль вызывает культовый образ, именно об этом комплексе движущих сил писал З.Фрейд в теории сублимации. Синхронический подход, по определению, готично просветляет персональный символизм.</p>
+							
+							<p>Героическое, по определению, потенциально. Анимус, согласно традиционным представлениям, готично использует сокращенный принцип артистизма. Компенсаторная функция, по определению, изящно представляет собой комплекс агрессивности. Действительно, героический миф конвенционален. Холерик многопланово иллюстрирует деструктивный романтизм.</p>
+						</div><!-- site-desc -->
+
+												
+					</div><!-- bordered-panel__body -->
+	
+				</div><!-- bordered-panel -->
 
 			</div><!-- page__in -->
 			

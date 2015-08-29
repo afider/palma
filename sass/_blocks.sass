@@ -76,6 +76,7 @@
 	$footer_h: 143px
 	$left-sidebar_w: 280px
 	$right-sidebar_w: 285px
+	$right-sidebar_bordered: 36%
 	$right-sidebar2_w: 260px
 	
 	@extend %bszbb
@@ -115,6 +116,20 @@
 
 	&__body
 		background: #fff
+
+	&_stl_sidebar-border &__body
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: -28px
+			bottom: 0
+			right: $right-sidebar_bordered
+			width: 1px
+			background: $dark-el-color__sep
+			
+		
 
 	&_stl_bg &__body
 		margin-top: 23px
@@ -183,6 +198,10 @@
 	&_stl_bg.page_sidebars_right &__content
 		margin-right: $right-sidebar2_w
 		padding-right: 30px
+
+	&_stl_sidebar-border.page_sidebars_right &__content
+		margin-right: $right-sidebar_bordered
+		padding-right: 40px
 		
 
 	&_sidebars_left &__mainbar,
@@ -207,6 +226,11 @@
 			width: $right-sidebar_w
 			padding-left: 20px
 			margin-left: - $right-sidebar_w
+
+	&_stl_sidebar-border.page_sidebars_right &__sidebar
+		width: $right-sidebar_bordered
+		margin-left: - $right-sidebar_bordered
+		padding-left: 40px
 	
 	&_stl_bg.page_sidebars_right &__sidebar
 		width: $right-sidebar2_w
@@ -608,6 +632,10 @@
 	background: #fff
 	padding-top: 13px
 	border-top: 1px solid $dark-el-color__sep
+	
+
+	&__body
+		margin-bottom: $content_bot_space-sm
 
 /* bordered-panel
 /* ---------------------------------------END--- */
@@ -627,7 +655,7 @@
 /* --------------------------------------------- */
 
 .rights
-	color: #979797
+	color: $text-light3_color
 	+rem(font-size, 11px)
 
 /* rights
@@ -3247,8 +3275,7 @@ input.ui-editRangeSlider-inputValue
 	&_bot-space_big
 		margin-bottom: $content_bot_space-big
 
-
-		
+	
 
 	&__row
 		display: table
@@ -3264,8 +3291,6 @@ input.ui-editRangeSlider-inputValue
 		display: table-cell
 		width: 100%
 		vertical-align: bottom
-
-
 
 		&_tp_text
 			padding-bottom: 10px
@@ -3291,15 +3316,10 @@ input.ui-editRangeSlider-inputValue
 		width: 100% - (100% / 2)
 
 
-		
-
 	& .input,
 	& .select,
 	& .interval
 		width: 100%
-
-
-
 
 /* grid
 /* ---------------------------------------END--- */
@@ -3447,18 +3467,68 @@ input.ui-editRangeSlider-inputValue
 /* city-list
 /* ---------------------------------------END--- */
 
-.wrapper
+
+/* svg-logo
+/* --------------------------------------------- */
+
+.svg-logo
+	display: block
+	width: 154px
+	height: 22px
+	//background: red
+
+.svg-logo
+	text
+		fill: url(#logo-gradient)
+		filter: url('#inset-shadow')
+		@extend %font-logo
+		+rem(font-size, 32px)
+		text-transform: uppercase
+		+rem(letter-spacing, 2px)
+
+.svg-logo-settings
+	position: absolute
+	top: 0
+	left: 0
+	height: 1px
+	width: 1px
+
+/* svg-logo
+/* ---------------------------------------END--- */
+
+
+/* site-desc
+/* --------------------------------------------- */
+
+.site-desc
+	color: $text-light3_color
+	padding-top: 10px
+	margin-bottom: 30px
+
+	&__h
+		color: $text_color
+		@extend %font-regular
+		font-weight: bold
+
+/* site-desc
+/* ---------------------------------------END--- */
+
+
+/* main-h
+/* --------------------------------------------- */
+
+.main-h
+	margin: 0 0 5px 0
+	padding: 0
+	+rem(font-size, 36px)
+
+	&__legend
+		margin-bottom: 17px
+
+	&__b
+		@extend %font-regular
+		font-weight: bold
 	
-	width: 545px
-	height: 90px
-	text-align: center
-	line-height: 1
-	background: #EDEDED
 
-text
-	fill: url(#p-stripes)
-	@extend %font-logo
-	+rem(font-size, 120px)
-	text-transform: uppercase
-	+rem(letter-spacing, 6px)
-
+/* main-h
+/* ---------------------------------------END--- */

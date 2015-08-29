@@ -582,7 +582,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail_
   font-family: "Roboto Medium", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .detail__sub-h, .msg-link, .txt-important, .location-question__city, .city-list__letter, .city-list__i.is-active {
+.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .detail__sub-h, .msg-link, .txt-important, .location-question__city, .city-list__letter, .city-list__i.is-active, .site-desc__h, .main-h__b {
   font-family: "Roboto", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -598,7 +598,7 @@ h1, .h1, .font-light, .button_size_sm {
   font-family: "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-.font-logo, text {
+.font-logo, .svg-logo text {
   font-family: "Proxima Nova Black", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -775,6 +775,19 @@ textarea {
 .page__body {
   background: #fff;
 }
+.page_stl_sidebar-border .page__body {
+  position: relative;
+}
+.page_stl_sidebar-border .page__body:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -28px;
+  bottom: 0;
+  right: 36%;
+  width: 1px;
+  background: #dadada;
+}
 .page_stl_bg .page__body {
   margin-top: 23px;
   margin-bottom: 32px;
@@ -840,6 +853,10 @@ textarea {
   margin-right: 260px;
   padding-right: 30px;
 }
+.page_stl_sidebar-border.page_sidebars_right .page__content {
+  margin-right: 36%;
+  padding-right: 40px;
+}
 .page_sidebars_left .page__mainbar, .page_sidebars_right .page__mainbar, .page_sidebars_both .page__mainbar {
   float: left;
   width: 100%;
@@ -858,6 +875,11 @@ textarea {
   width: 285px;
   padding-left: 20px;
   margin-left: -285px;
+}
+.page_stl_sidebar-border.page_sidebars_right .page__sidebar {
+  width: 36%;
+  margin-left: -36%;
+  padding-left: 40px;
 }
 .page_stl_bg.page_sidebars_right .page__sidebar {
   width: 260px;
@@ -1242,6 +1264,9 @@ textarea {
   background: #fff;
   padding-top: 13px;
   border-top: 1px solid #dadada;
+}
+.bordered-panel__body {
+  margin-bottom: 15px;
 }
 
 /* bordered-panel */
@@ -3973,23 +3998,65 @@ input.ui-editRangeSlider-inputValue {
 
 /* city-list */
 /* ---------------------------------------END--- */
-.wrapper {
-  width: 545px;
-  height: 90px;
-  text-align: center;
-  line-height: 1;
-  background: #EDEDED;
+/* svg-logo */
+/* --------------------------------------------- */
+.svg-logo {
+  display: block;
+  width: 154px;
+  height: 22px;
 }
 
-text {
-  fill: url(#p-stripes);
-  font-size: 120px;
-  font-size: 12rem;
+.svg-logo text {
+  fill: url(#logo-gradient);
+  filter: url("#inset-shadow");
+  font-size: 32px;
+  font-size: 3.2rem;
   text-transform: uppercase;
-  letter-spacing: 6px;
-  letter-spacing: 0.6rem;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
 }
 
+.svg-logo-settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 1px;
+}
+
+/* svg-logo */
+/* ---------------------------------------END--- */
+/* site-desc */
+/* --------------------------------------------- */
+.site-desc {
+  color: #979797;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+.site-desc__h {
+  color: #363636;
+  font-weight: bold;
+}
+
+/* site-desc */
+/* ---------------------------------------END--- */
+/* main-h */
+/* --------------------------------------------- */
+.main-h {
+  margin: 0 0 5px 0;
+  padding: 0;
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+.main-h__legend {
+  margin-bottom: 17px;
+}
+.main-h__b {
+  font-weight: bold;
+}
+
+/* main-h */
+/* ---------------------------------------END--- */
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;

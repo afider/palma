@@ -46,11 +46,54 @@ body {
 	<div id="page">
 	
 		<div style=" margin-bottom:30px;">
-			<img src="img/logo.png" alt="">
+			<svg class="svg-logo-settings">
+			
+				<defs>
+			
+					<filter id='inset-shadow'>
+			
+						<!-- Сдвиг тени -->
+						<feOffset dx='0' dy='1'	/>
+			
+						<!-- Размытие тени -->
+						<feGaussianBlur stdDeviation='1' result='offset-blur' />
+			
+						<!-- Инвертируем drop shadow чтобы создать внутреннюю тень -->
+						<feComposite operator='out' in='SourceGraphic' in2='offset-blur' result='inverse' />
+			
+						<!-- Цвет и Прозрачность -->
+						<feFlood flood-color='black' flood-opacity='.45' result='color'	/>
+			
+						<!-- Обрезаем цвет внутрь тени -->
+						<feComposite operator='in' in='color' in2='inverse' result='shadow' />
+			
+						<!-- Раcполагаем тень поверх элемента -->
+						<feComposite operator='over' in='shadow' in2='SourceGraphic' />
+					</filter>
+			
+					<linearGradient id="logo-gradient">
+						<stop offset="0%" stop-color="#84cb96" />
+						<stop offset="25%" stop-color="#84cb96" />
+						<stop offset="100%" stop-color="#fab66d" />
+					</linearGradient>
+			
+				</defs>
+			
+			</svg>
+			
+			<svg class="svg-logo">
+				<text x="0" y="100%">Пальма</text>
+			</svg>
+
+			<!--[if IE]>
+				<img src="img/logo.png" height="22" width="154" alt="Site name" class="logo__icon">
+			<![endif]-->
 		</div>
+
 		<h1>Доска объявлений «Пальма»</h1>
 		
 		<ol>
+			<li><a href="main.html">Главная</a><span class="marked"> (main.html)</span></li>
 			<li><a href="catalog-tile-view.html">Каталог (плиткой)</a><span class="marked"> (catalog-tile-view.html)</span></li>
 			<li><a href="catalog-list-view.html">Каталог (списком)</a><span class="marked"> (catalog-list-view.html)</span></li>
 			<li><a href="typo.html">Элементы формы, типографика и т.п.</a><span class="marked"> (typo.html)</span></li>
