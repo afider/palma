@@ -3480,9 +3480,8 @@ input.ui-editRangeSlider-inputValue
 
 .svg-logo
 	text
-		//fill: url(#logo-gradient)
+		fill: url(#logo-gradient)
 		//filter: url('#inset-shadow')
-		// Firefox does not see this rules, so it plased inline in attributes for text tag
 		@extend %font-logo
 		+rem(font-size, 32px)
 		text-transform: uppercase
@@ -3494,7 +3493,40 @@ input.ui-editRangeSlider-inputValue
 	left: 0
 	height: 1px
 	width: 1px
- 
+
+
+// .wrapper
+// 	width: 545px
+// 	height: 90px
+// 	text-align: center
+// 	line-height: 1
+// 	background: #EDEDED
+
+// 	text
+// 		fill: url(#p-stripes)
+// 		@extend %font-logo
+// 		+rem(font-size, 120px)
+// 		text-transform: uppercase
+// 		+rem(letter-spacing, 6px)
+
+
+.wrapper
+	position: relative
+	width: 100%
+	height: 210px
+	margin: auto
+	text-align: center
+	background: red
+	display: block
+
+	line-height: 1
+
+	text 
+		fill: url(#p-stripes)
+		filter: url('#inset-shadow')
+		@extend %font-logo
+		font-size: 200px
+     
 
 /* svg-logo
 /* ---------------------------------------END--- */
@@ -3593,7 +3625,6 @@ input.ui-editRangeSlider-inputValue
 
 .catalog
 	@extend %clear
-	margin-bottom: $content_bot_space-sm
 	
 	&__lst
 		margin: 0
@@ -3639,14 +3670,13 @@ input.ui-editRangeSlider-inputValue
 		color: #fff
 		
 	&__a
-
-
-	&__sub-h,
-	&__a
 		height: 57px
 		display: table-cell
 		vertical-align: middle
 		//background: yellow
+
+	&__sub-h,
+	&__a
 		padding-right: 20px
 		+rem(font-size, 18px)
 		@extend %font-medium
@@ -3668,7 +3698,7 @@ input.ui-editRangeSlider-inputValue
 		border-radius: 14px
 		background: #fff
 		@extend %bszbb
-		padding: 12px 30px 30px 76px
+		padding: 21px 30px 30px 76px
 		+transition-duration(.2s)
 		//+box-shadow(0px 15px 15px rgba(#000, .2))
 		visibility: hidden
@@ -3681,7 +3711,9 @@ input.ui-editRangeSlider-inputValue
 		color: $active-color
 
 	&__sub-h
-		padding-left: 6px
+		padding: 10px 6px
+		display: inline-block
+		line-height: 1.1
 
 	&__sub-lst
 		margin: 0
