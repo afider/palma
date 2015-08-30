@@ -4005,6 +4005,9 @@ input.ui-editRangeSlider-inputValue {
   width: 154px;
   height: 22px;
 }
+.ie9 .svg-logo {
+  background: url("../img/logo.png") 0 0 no-repeat;
+}
 
 .svg-logo text {
   font-size: 32px;
@@ -4012,6 +4015,9 @@ input.ui-editRangeSlider-inputValue {
   text-transform: uppercase;
   letter-spacing: 2px;
   letter-spacing: 0.2rem;
+}
+.ie9 .svg-logo text {
+  display: none;
 }
 
 .svg-logo-settings {

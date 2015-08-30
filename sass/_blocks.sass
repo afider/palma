@@ -3478,6 +3478,9 @@ input.ui-editRangeSlider-inputValue
 	height: 22px
 	//background: red
 
+	.ie9 &
+		background: url("../img/logo.png") 0 0 no-repeat
+
 .svg-logo
 	text
 		//fill: url(#logo-gradient)
@@ -3487,6 +3490,9 @@ input.ui-editRangeSlider-inputValue
 		+rem(font-size, 32px)
 		text-transform: uppercase
 		+rem(letter-spacing, 2px)
+		
+		.ie9 &
+			display: none
 
 .svg-logo-settings
 	position: absolute
