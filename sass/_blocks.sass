@@ -1690,6 +1690,9 @@ select
 	padding-top: 6px
 	font-style: italic
 
+	&__b
+		@extend %font-black
+
 .placeholder
 	color: $placeholder_color
 
@@ -1992,6 +1995,9 @@ select
 	@extend %clear
 
 	margin-bottom: $content_bot_space-sm
+
+
+		
 	
 	&__i
 		float: left
@@ -2006,7 +2012,6 @@ select
 
 		&:last-child
 			border-radius: 0 $border-radius $border-radius 0
-
 
 		& + .select
 			margin-left: -1px
@@ -2182,6 +2187,12 @@ select
 	margin-bottom: 10px
 	position: relative
 	padding-right: 52px
+	@extend %bszbb
+
+	&_tp_filter
+		padding-right: 200px
+		//width: 90%
+
 	
 
 	&_lt_inner
@@ -2190,8 +2201,14 @@ select
 	&__category
 		width: 26%
 
+	&_tp_filter &__category
+		width: 50%
+
 	&__input
 		width: 49%
+
+	&_tp_filter &__input
+		width: 50%
 
 	&__place
 		width: 25%
@@ -2217,6 +2234,9 @@ select
 		right: 2px
 		padding: 0
 		width: 52px
+
+	&_tp_filter &__button
+		width: 200px
 
 	&__icon
 		position: relative
@@ -2490,6 +2510,7 @@ select
 		display: inline-block
 		color: $text-light_color
 		margin-left: 4px
+		@extend %font-light
 
 
 
@@ -3490,7 +3511,7 @@ input.ui-editRangeSlider-inputValue
 		+rem(font-size, 32px)
 		text-transform: uppercase
 		+rem(letter-spacing, 2px)
-		
+
 		.ie9 &
 			display: none
 
@@ -3708,4 +3729,14 @@ input.ui-editRangeSlider-inputValue
 
 
 /* catalog
+/* ---------------------------------------END--- */
+
+
+/* txt-color-stop
+/* --------------------------------------------- */
+
+.txt-color-stop
+	color: $stop_color
+
+/* txt-color-stop
 /* ---------------------------------------END--- */

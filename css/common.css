@@ -590,11 +590,11 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail_
   font-family: "Roboto Thin", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-.font-black, .footer-nav, .main-nav, .user__h, .button, .user-nav__a, .popup__h_stl_caps {
+.font-black, .footer-nav, .main-nav, .user__h, .form-legend__b, .button, .user-nav__a, .popup__h_stl_caps {
   font-family: "Roboto black", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-h1, .h1, .font-light, .button_size_sm {
+h1, .h1, .font-light, .button_size_sm, .user-nav__legend {
   font-family: "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -674,7 +674,7 @@ textarea {
   resize: vertical;
 }
 
-.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub {
+.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2829,11 +2829,20 @@ select option {
   position: relative;
   padding-right: 52px;
 }
+.main-search_tp_filter {
+  padding-right: 200px;
+}
 .main-search__category {
   width: 26%;
 }
+.main-search_tp_filter .main-search__category {
+  width: 50%;
+}
 .main-search__input {
   width: 49%;
+}
+.main-search_tp_filter .main-search__input {
+  width: 50%;
 }
 .main-search__place {
   width: 25%;
@@ -2857,6 +2866,9 @@ select option {
   right: 2px;
   padding: 0;
   width: 52px;
+}
+.main-search_tp_filter .main-search__button {
+  width: 200px;
 }
 .main-search__icon {
   position: relative;
@@ -4233,6 +4245,14 @@ input.ui-editRangeSlider-inputValue {
 }
 
 /* catalog */
+/* ---------------------------------------END--- */
+/* txt-color-stop */
+/* --------------------------------------------- */
+.txt-color-stop {
+  color: #f36c4f;
+}
+
+/* txt-color-stop */
 /* ---------------------------------------END--- */
 /* Magnific Popup CSS */
 .mfp-bg {
