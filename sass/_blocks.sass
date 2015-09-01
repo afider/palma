@@ -1681,10 +1681,10 @@ select
 
 .required-mark
 	color: #ff0000
-	font-size: 17px
+	+rem(font-size, 17px)
 
 .form-legend
-	font-size: 12px
+	+rem(font-size, 12px)
 	vertical-align: middle
 	color: $text-light_color
 	padding-top: 6px
@@ -3817,3 +3817,145 @@ input.ui-editRangeSlider-inputValue
 /* ---------------------------------------END--- */
 
 
+/* img-loader
+/* --------------------------------------------- */
+
+.photo-loader
+	padding: 14px
+	background: $dark-el-color__super-light
+	border: 1px solid $dark-el-color__light
+	border-radius: $border-radius
+
+	&__mess
+		color: $text-light_color
+		text-align: center
+		width: 67%
+		margin: auto
+		line-height: 1.7
+		margin-bottom: 16px
+
+	&__legend
+		+rem(font-size, 12px)
+		color: $text-light_color
+		padding-top: 6px
+		font-style: italic
+		position: absolute
+		top: 100%
+		left: 0
+
+		.ie9 &
+			margin-top: 13px
+
+	&__list
+		@extend %clear
+		margin-left: -5px
+
+	&__i
+		margin: 0 0 0 5px
+		padding: 0 0 35px 0
+		display: block
+		float: left
+		position: relative
+		
+
+	&__photo
+		width: 116px
+		height: 94px
+		background: #edeff1 url("../img/photo.gif") 0 0 no-repeat
+		margin-bottom: 2px
+		position: relative
+		display: table-cell
+		vertical-align: middle
+
+	& &__ctrl
+		.ie9 &
+			background: url("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==") 0 0 repeat
+
+		&:before,
+		&:after
+			background: #fff
+			height: 2px
+
+		&:before
+			top: 7px
+
+		&:after
+			bottom: 7px
+
+		&:hover
+			&:before,
+			&:after
+				background: $stop-color
+
+
+	& &__img
+		display: block
+		max-width: none
+		margin: auto
+		height: auto
+
+		&_fluid_w
+			max-width: 100%
+			.ie9 &
+				width: 100%
+
+		&_fluid_h
+			max-height: 100%
+			.ie9 &
+				height: 100%
+
+
+
+
+		
+
+/* img-loader
+/* ---------------------------------------END--- */
+
+
+/* close-button
+/* --------------------------------------------- */
+
+.close-button
+	cursor: pointer
+	position: absolute
+	top: 0
+	margin-top: 0
+	right: 0
+	width: 24px
+	height: 24px
+
+	overflow: hidden
+	text-indent: -9999px
+	//background: red !important
+
+	&:before,
+	&:after
+		content: ''
+		display: block
+		position: absolute
+
+		left: 9px
+		width: 12px
+		height: 1px
+		background: $text-light_color
+		+transition-duration(.5s)
+		+transition-property(background)
+		+transform-origin(left, center)
+
+	&:before
+		top: 7px
+		+rotate(45deg)
+
+	&:after
+		+rotate(-45deg)
+		bottom: 8px
+
+	&:hover
+		&:before,
+		&:after
+			background: $active-color
+			+transition-duration(.2s)
+
+/* close-button
+/* ---------------------------------------END--- */
