@@ -2762,6 +2762,24 @@ select option {
   height: 24px;
   border-radius: 50%;
 }
+.button_stl_spinner.button_size_sm:before {
+  margin-left: -11px;
+  margin-top: -13px;
+  width: 18px;
+  height: 18px;
+}
+.button_stl_spinner.button_size_m:before {
+  margin-left: -14px;
+  margin-top: -14px;
+  width: 20px;
+  height: 20px;
+}
+.button_stl_spinner.button_stl_bordered:before {
+  border-left-color: #78c58b;
+  border-top: 4px solid rgba(120, 197, 139, 0.3);
+  border-right: 4px solid rgba(120, 197, 139, 0.3);
+  border-bottom: 4px solid rgba(120, 197, 139, 0.3);
+}
 .button_w_sm {
   width: 146px;
 }

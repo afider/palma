@@ -2117,6 +2117,26 @@ select
 			height: $spinner-dim
 			border-radius: 50%
 
+		&.button_size_sm:before
+			margin-left: - (($spinner-dim_sm + $spinner-border_sm * 2) / 2)
+			margin-top: - (($spinner-dim_sm + $spinner-border_sm * 2 + 4) / 2)
+			width: $spinner-dim_sm
+			height: $spinner-dim_sm
+
+		&.button_size_m:before
+			margin-left: - (($spinner-dim_m + $spinner-border_m * 2) / 2)
+			margin-top: - (($spinner-dim_m + $spinner-border_m * 2) / 2)
+			width: $spinner-dim_m
+			height: $spinner-dim_m
+
+		&.button_stl_bordered:before
+			border-left-color: $main-color
+			border-top: $spinner-border solid rgba($main-color, $spinner-opacity)
+			border-right: $spinner-border solid rgba($main-color, $spinner-opacity)
+			border-bottom: $spinner-border solid rgba($main-color, $spinner-opacity)
+
+
+
 	&_w_sm
 		width: 146px
 
