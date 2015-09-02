@@ -674,7 +674,7 @@ textarea {
   resize: vertical;
 }
 
-.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub {
+.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub, .cabinet-columns .cabinet-columns__i {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -682,12 +682,12 @@ textarea {
 
 /* clearfix */
 /* --------------------------------------------- */
-.page__header-in:before, .page_sidebars_left .page__body:before, .page_sidebars_right .page__body:before, .footer-nav:before, .main-nav:before, .teasers__lst:before, .tab-nav__lst:before, .page-nav__lst:before, .input-train:before, .detail:before, .act-buttons:before, .multiselect-search:before, .city-list:before, .catalog:before, .photo-loader__list:before, .page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .act-buttons:after, .multiselect-search:after, .city-list:after, .catalog:after, .photo-loader__list:after {
+.page__header-in:before, .page_sidebars_left .page__body:before, .page_sidebars_right .page__body:before, .footer-nav:before, .main-nav:before, .teasers__lst:before, .tab-nav__lst:before, .page-nav__lst:before, .input-train:before, .detail:before, .act-buttons:before, .multiselect-search:before, .city-list:before, .catalog:before, .photo-loader__list:before, .cabinet-columns:before, .page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .act-buttons:after, .multiselect-search:after, .city-list:after, .catalog:after, .photo-loader__list:after, .cabinet-columns:after {
   display: table;
   content: "";
   clear: both;
 }
-.page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .act-buttons:after, .multiselect-search:after, .city-list:after, .catalog:after, .photo-loader__list:after {
+.page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .act-buttons:after, .multiselect-search:after, .city-list:after, .catalog:after, .photo-loader__list:after, .cabinet-columns:after {
   clear: both;
 }
 
@@ -4451,6 +4451,30 @@ input.ui-editRangeSlider-inputValue {
 }
 
 /* close-button */
+/* ---------------------------------------END--- */
+/* cabinet-columns */
+/* --------------------------------------------- */
+.cabinet-columns .cabinet-columns__i {
+  float: left;
+}
+.cabinet-columns .cabinet-columns__i_tp_mainbar {
+  width: 62%;
+  padding-right: 20px;
+}
+.cabinet-columns .cabinet-columns__i_tp_sidebar {
+  width: 38%;
+}
+
+/* cabinet-columns */
+/* ---------------------------------------END--- */
+/* teaser-detail */
+/* --------------------------------------------- */
+.teaser-detail {
+  background: #f8f8f8;
+  padding: 20px;
+}
+
+/* teaser-detail */
 /* ---------------------------------------END--- */
 /* Magnific Popup CSS */
 .mfp-bg {
