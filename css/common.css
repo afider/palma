@@ -4667,6 +4667,32 @@ input.ui-editRangeSlider-inputValue {
 
 /* inf-props */
 /* ---------------------------------------END--- */
+/* inf-desc */
+/* --------------------------------------------- */
+.inf-desc {
+  margin-bottom: 15px;
+}
+.inf-desc__i {
+  display: table;
+  width: 100%;
+  margin-bottom: 9px;
+}
+.inf-desc__cell {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+  padding-right: 15px;
+}.inf-desc__cell_tp_legend {
+  color: #979797;
+}
+.inf-desc__cell_tp_line {
+  display: block;
+  width: auto;
+  padding-right: 0;
+}
+
+/* inf-desc */
+/* ---------------------------------------END--- */
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -5221,6 +5247,13 @@ img.mfp-img {
 @media screen and (max-width: 1120px) {
   .teaser-detail__mess {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .inf-desc__cell {
+    display: block;
+    width: auto;
   }
 }
 
