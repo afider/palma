@@ -76,7 +76,7 @@
 	$footer_h: 143px
 	$left-sidebar_w: 280px
 	$right-sidebar_w: 285px
-	$right-sidebar_bordered: 36%
+	$right-sidebar_bordered: 28%
 	$right-sidebar2_w: 260px
 	
 	@extend %bszbb
@@ -3726,7 +3726,7 @@ input.ui-editRangeSlider-inputValue
 	&__i
 		margin: 11px 0
 		padding: 0 0 0 70px
-		width: 50%
+		width: (100% / 3)
 		float: left
 		@extend %bszbb
 		position: relative
@@ -3780,7 +3780,7 @@ input.ui-editRangeSlider-inputValue
 	&__i:hover &__sub
 		+opacity(1)
 		visibility: visible
-		+transition-delay(.3s)
+		//+transition-delay(.3s)
 
 	&__sub
 		position: absolute

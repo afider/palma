@@ -784,7 +784,7 @@ textarea {
   position: absolute;
   top: -28px;
   bottom: 0;
-  right: 36%;
+  right: 28%;
   width: 1px;
   background: #dadada;
 }
@@ -854,7 +854,7 @@ textarea {
   padding-right: 30px;
 }
 .page_stl_sidebar-border.page_sidebars_right .page__content {
-  margin-right: 36%;
+  margin-right: 28%;
   padding-right: 40px;
 }
 .page_sidebars_left .page__mainbar, .page_sidebars_right .page__mainbar, .page_sidebars_both .page__mainbar {
@@ -877,8 +877,8 @@ textarea {
   margin-left: -285px;
 }
 .page_stl_sidebar-border.page_sidebars_right .page__sidebar {
-  width: 36%;
-  margin-left: -36%;
+  width: 28%;
+  margin-left: -28%;
   padding-left: 40px;
 }
 .page_stl_bg.page_sidebars_right .page__sidebar {
@@ -4229,7 +4229,7 @@ input.ui-editRangeSlider-inputValue {
 .catalog__i {
   margin: 11px 0;
   padding: 0 0 0 70px;
-  width: 50%;
+  width: 33.33333%;
   float: left;
   position: relative;
 }
@@ -4281,10 +4281,6 @@ input.ui-editRangeSlider-inputValue {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   visibility: visible;
-  -moz-transition-delay: 0.3s;
-  -o-transition-delay: 0.3s;
-  -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
 }
 .catalog__sub {
   position: absolute;
