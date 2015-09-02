@@ -582,7 +582,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail_
   font-family: "Roboto Medium", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .detail__sub-h, .msg-link, .txt-important, .location-question__city, .city-list__letter, .city-list__i.is-active, .site-desc__h, .main-h__b, .location-list__i.is-active, .location-list__i_stl_important, .teaser-detail__h, .teaser-detail__small-h {
+.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .cancel-button, .detail__sub-h, .msg-link, .txt-important, .location-question__city, .city-list__letter, .city-list__i.is-active, .site-desc__h, .main-h__b, .location-list__i.is-active, .location-list__i_stl_important, .teaser-detail__h, .teaser-detail__small-h {
   font-family: "Roboto", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -594,7 +594,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail_
   font-family: "Roboto black", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-h1, .h1, .font-light, .button_size_sm, .user-nav__legend {
+h1, .h1, .font-light, .button_size_sm, .cancel-button_size_sm, .user-nav__legend {
   font-family: "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -674,7 +674,7 @@ textarea {
   resize: vertical;
 }
 
-.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub, .cabinet-columns .cabinet-columns__i, .inf-props__i {
+.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .cancel-button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub, .cabinet-columns .cabinet-columns__i, .inf-props__i {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2911,6 +2911,102 @@ select option {
 
 /* button */
 /* ---------------------------------------END--- */
+/* cancel-button */
+/* --------------------------------------------- */
+.cancel-button {
+  position: relative;
+  display: inline-block;
+  border: none;
+  color: #8996A0;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+  padding: 0 5px;
+  white-space: nowrap;
+  height: 44px;
+  line-height: 44px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: bold;
+  -moz-transition-duration: 0.9s;
+  -o-transition-duration: 0.9s;
+  -webkit-transition-duration: 0.9s;
+  transition-duration: 0.9s;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+.cancel-button:hover {
+  color: #f36c4f;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.cancel-button__close {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+.cancel-button__close:before, .cancel-button__close:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 9px;
+  width: 12px;
+  height: 2px;
+  background: #8996A0;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+.cancel-button__close:before {
+  top: 6px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.cancel-button__close:after {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  bottom: 8px;
+}
+.cancel-button:hover .cancel-button__close:before, .cancel-button:hover .cancel-button__close:after {
+  background: #f36c4f;
+}
+.cancel-button_size_m {
+  height: 38px;
+  line-height: 38px;
+}
+.cancel-button_size_sm {
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+/* cancel-button */
+/* ---------------------------------------END--- */
 /* main-search */
 /* --------------------------------------------- */
 .main-search {
@@ -4547,7 +4643,6 @@ input.ui-editRangeSlider-inputValue {
   background-position: center center;
   outline: none;
 }
-
 /* teaser-detail */
 /* ---------------------------------------END--- */
 /* inf-props */
@@ -5120,6 +5215,12 @@ img.mfp-img {
   .teaser-detail__button {
     width: 100%;
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .teaser-detail__mess {
+    text-align: center;
   }
 }
 

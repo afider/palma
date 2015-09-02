@@ -2275,6 +2275,91 @@ select
 /* ---------------------------------------END--- */
 
 
+/* cancel-button
+/* --------------------------------------------- */
+
+.cancel-button
+	position: relative
+	display: inline-block
+	border: none
+	color: $text-light_color
+	text-align: center
+	text-decoration: none
+	cursor: pointer
+	vertical-align: middle
+	outline: none
+	padding: 0 5px
+	white-space: nowrap
+	height: $input-height_big
+	line-height: $input-height_big
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	@extend %bszbb
+	@extend %font-regular
+	font-weight: bold
+	+transition-duration(.9s)
+	+transition-property(color)
+
+	&:hover
+		color: $stop-color
+		+transition-duration(.2s)
+
+	&__close
+		position: relative
+		display: inline-block
+		vertical-align: middle
+
+		width: 24px
+		height: 24px
+
+		&:before,
+		&:after
+			content: ''
+			display: block
+			position: absolute
+
+			left: 9px
+			width: 12px
+			height: 2px
+			background: $text-light_color
+			+transition-duration(.5s)
+			+transition-property(background)
+			+transform-origin(left, center)
+
+		&:before
+			top: 6px
+			+rotate(45deg)
+
+		&:after
+			+rotate(-45deg)
+			bottom: 8px
+
+		.cancel-button:hover &
+			&:before,
+			&:after
+				background: $stop-color
+
+	&_size_m
+		height: $input-height
+		line-height: $input-height
+
+	&_size_sm
+		height: $input-height_sm
+		line-height: $input-height_sm
+		@extend %font-light
+		font-weight: bold
+
+
+
+
+/* cancel-button
+/* ---------------------------------------END--- */
+
+
 /* main-search
 /* --------------------------------------------- */
 
@@ -4059,6 +4144,10 @@ input.ui-editRangeSlider-inputValue
 		background-repeat: no-repeat
 		background-position: center center
 		outline: none
+
+	&__mess
+		+max-screen(1120px)
+			text-align: center
 		
 
 /* teaser-detail
