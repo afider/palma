@@ -939,6 +939,10 @@
 		float: left
 		display: block
 
+	&_tp_cabinet &__i
+		cursor: pointer
+	&_tp_cabinet &__i_stl_important
+		cursor: default
 
 	&__img-a
 		display: block
@@ -964,7 +968,6 @@
 		&:before
 			content: '\0441\043F\0435\0446\043F\0440\0435\0434\043B\043E\0436\0435\043D\0438\0435'
 			background: $main-color2
-
 
 
 	&__img
@@ -1007,6 +1010,9 @@
 		line-height: 1.1
 		@extend %font-medium
 		+link-color ($color: $text_color, $color_visited: $link_color_visited2)
+
+	&_tp_cabinet &__h
+		color: $text_color
 
 	&__i_stl_urgently &__h,
 	&__i_stl_special &__h,
@@ -1122,6 +1128,10 @@
 		padding-bottom: 0
 		margin-bottom: 6px
 
+	&_tp_cabinet &__h
+		height: 93px
+		margin-bottom: 18px
+
 	&_lt_list &__price
 		margin-bottom: 5px
 
@@ -1145,6 +1155,17 @@
 	&_lt_list &__prop_tp_place
 		overflow: visible
 		max-width: 100%
+
+	&_tp_cabinet &__prop_tp_place
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+
+		+max-screen(1140px)
+			max-width: 120px
+
+		+max-screen(1065px)
+			max-width: 90px
 
 
 
@@ -3969,6 +3990,7 @@ input.ui-editRangeSlider-inputValue
 .teaser-detail
 	background: $dark-el-color__bg
 	padding: 14px
+	padding-bottom: 25px
 
 	&__h
 		+rem(font-size, 18px)
@@ -4025,7 +4047,7 @@ input.ui-editRangeSlider-inputValue
 		margin-left: -6px
 		margin-bottom: 30px
 		
-	&__img
+	& &__img
 		margin-left: 6px
 		margin-bottom: 6px
 		display: block
@@ -4036,6 +4058,7 @@ input.ui-editRangeSlider-inputValue
 		background-image: url("../img/photo.gif")
 		background-repeat: no-repeat
 		background-position: center center
+		outline: none
 		
 
 /* teaser-detail
