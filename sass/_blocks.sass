@@ -3843,9 +3843,6 @@ input.ui-editRangeSlider-inputValue
 		top: 100%
 		left: 0
 
-		.ie9 &
-			margin-top: 13px
-
 	&__list
 		@extend %clear
 		margin-left: -5px
@@ -3861,20 +3858,23 @@ input.ui-editRangeSlider-inputValue
 	&__photo
 		width: 116px
 		height: 94px
-		background: #edeff1 url("../img/photo.gif") 0 0 no-repeat
+		background-color: #edeff1
+		background-image: url("../img/photo.gif")
+		background-repeat: no-repeat
+		background-position: center center
 		margin-bottom: 2px
 		position: relative
-		display: table-cell
-		vertical-align: middle
 
 	& &__ctrl
+		background: rgba(#000, .4)
 		.ie9 &
-			background: url("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==") 0 0 repeat
+			//background: url("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==") 0 0 repeat
 
 		&:before,
 		&:after
 			background: #fff
 			height: 2px
+			left: 8px
 
 		&:before
 			top: 7px
@@ -3886,28 +3886,7 @@ input.ui-editRangeSlider-inputValue
 			&:before,
 			&:after
 				background: $stop-color
-
-
-	& &__img
-		display: block
-		max-width: none
-		margin: auto
-		height: auto
-
-		&_fluid_w
-			max-width: 100%
-			.ie9 &
-				width: 100%
-
-		&_fluid_h
-			max-height: 100%
-			.ie9 &
-				height: 100%
-
-
-
-
-		
+	
 
 /* img-loader
 /* ---------------------------------------END--- */
@@ -3924,6 +3903,7 @@ input.ui-editRangeSlider-inputValue
 	right: 0
 	width: 24px
 	height: 24px
+	z-index: 2
 
 	overflow: hidden
 	text-indent: -9999px
