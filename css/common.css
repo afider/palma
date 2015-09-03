@@ -733,14 +733,19 @@ textarea {
   fill: #ffffff;
 }
 
-.all-favorites__icon_stt_added, .teasers__favorite:hover, .teasers__favorite_stt_added, .add-to-favorites:hover .add-to-favorites__icon {
-  fill: #ffc108;
-  stroke: #ffc108;
+.all-favorites__icon_stt_added, .teasers__favorite_stt_added, .add-to-favorites_stt_added .add-to-favorites__icon {
+  fill: #ffc108 !important;
+  stroke: #ffc108 !important;
 }
 
-.teasers__i_stl_urgently .teasers__favorite:hover, .teasers__i_stl_special .teasers__favorite:hover, .teasers__i_stl_bg .teasers__favorite:hover, .teasers__i_stl_urgently .teasers__favorite_stt_added, .teasers__i_stl_special .teasers__favorite_stt_added, .teasers__i_stl_bg .teasers__favorite_stt_added {
-  fill: #F71A3E;
-  stroke: #F71A3E;
+.teasers__favorite:hover, .teasers__i_stl_urgently .teasers__favorite:hover, .teasers__i_stl_special .teasers__favorite:hover, .teasers__i_stl_bg .teasers__favorite:hover, .add-to-favorites:hover .add-to-favorites__icon {
+  fill: #ffffff;
+  stroke: #000000;
+}
+
+.teasers__i_stl_urgently .teasers__favorite_stt_added, .teasers__i_stl_special .teasers__favorite_stt_added, .teasers__i_stl_bg .teasers__favorite_stt_added {
+  fill: #F71A3E !important;
+  stroke: #F71A3E !important;
 }
 
 /* centered */

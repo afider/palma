@@ -45,12 +45,16 @@
 	fill: #ffffff
 
 %star-favorites-yes
-	fill: $star-color
-	stroke: $star-color
+	fill: $star-color !important
+	stroke: $star-color !important
+
+%star-favorites-hover
+	fill: #ffffff
+	stroke: #000000
 
 %star-favorites-yes2
-	fill: $star-color2
-	stroke: $star-color2
+	fill: $star-color2 !important
+	stroke: $star-color2 !important
 
 
 /* centered
@@ -1058,7 +1062,7 @@
 		@extend %star-favorites-no
 
 		&:hover
-			@extend %star-favorites-yes
+			@extend %star-favorites-hover
 
 		&_stt_added
 			@extend %star-favorites-yes
@@ -1070,7 +1074,7 @@
 		@extend %star-favorites-no2
 
 		&:hover
-			@extend %star-favorites-yes2
+			@extend %star-favorites-hover
 
 		&_stt_added
 			@extend %star-favorites-yes2
@@ -2623,6 +2627,9 @@ select
 		@extend %star-favorites-no
 
 	&:hover &__icon
+		@extend %star-favorites-hover
+
+	&_stt_added &__icon
 		@extend %star-favorites-yes
 
 	&__h
