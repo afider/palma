@@ -4263,8 +4263,80 @@ input.ui-editRangeSlider-inputValue
 			padding-right: 0
 
 
+/* inf-desc
+/* ---------------------------------------END--- */
+
+
+/* user-list
+/* --------------------------------------------- */
+
+.user-list
+	margin-bottom: $content_bot_space-big
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		margin: 0
+		padding: 20px
+		display: block
+		border-bottom: 1px solid $dark-el-color__sep
+		+rem(font-size, 12px)
+		cursor: pointer
+
+		&:first-child
+			border-top: 1px solid $dark-el-color__sep
+
+		&_stt_selected
+			outline: 3px solid $important_color
+			border: none !important
+
+	&__header
+		margin-bottom: 3px
 		
 
+	&__property
+		display: inline-block
+		margin-right: 14px
 
-/* inf-desc
+	&__name
+		+rem(font-size, 20px)
+		line-height: 1.1
+		@extend %font-medium
+		margin-bottom: 15px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		
+	&__footer
+		display: table
+		width: 100%
+
+	&__b
+		@extend %font-regular
+		font-weight: bold
+		display: inline-block
+		color: $text_color
+
+
+	&__cell
+		display: table-cell
+		vertical-align: top
+
+		+max-screen(1100px)
+			display: block
+			text-align: left
+			margin-bottom: 5px
+
+			&:last-child
+				margin-bottom: 0
+
+		&_tp_activity
+			color: $text-light_color
+			text-align: right
+	
+
+/* user-list
 /* ---------------------------------------END--- */
