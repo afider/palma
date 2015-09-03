@@ -4077,12 +4077,17 @@ input.ui-editRangeSlider-inputValue
 	padding: 14px
 	padding-bottom: 25px
 
-	&__h
+	&__h,
+	&__big-h
 		+rem(font-size, 18px)
 		@extend %font-regular
 		font-weight: bold
 		line-height: 1.3
 		margin-bottom: 4px
+
+	&__big-h
+		+rem(font-size, 20px)
+		margin-bottom: 27px
 
 	&__date-num
 		+rem(font-size, 12px)
@@ -4093,6 +4098,17 @@ input.ui-editRangeSlider-inputValue
 		display: inline-block
 
 	&__date
+		margin-right: 14px
+
+	&__id-mail
+		+rem(font-size, 12px)
+		margin-bottom: 3px
+	
+	&__id,	
+	&__mail
+		display: inline-block
+
+	&__id
 		margin-right: 14px
 
 	&__small-h
@@ -4154,6 +4170,42 @@ input.ui-editRangeSlider-inputValue
 /* ---------------------------------------END--- */
 
 
+/* inf-activity
+/* --------------------------------------------- */
+
+.inf-activity
+	margin-bottom: $content_bot_space-big
+
+	&__i
+		display: table
+		width: 100%
+		margin-bottom: 8px
+
+	&__cell
+		display: table-cell
+		vertical-align: top
+
+		&_tp_legend
+			color: $text-light3_color
+			padding-right: 10px
+
+		&_tp_act
+			text-align: right
+
+	&__num
+		@extend %font-regular
+		font-weight: bold
+		color: $text_color
+
+	&__a
+		@extend %font-regular
+		font-weight: bold
+		+link-color ($color: $text-light_color, $color_visited: none)
+
+/* inf-activity
+/* ---------------------------------------END--- */
+
+
 /* inf-props
 /* --------------------------------------------- */
 
@@ -4186,7 +4238,7 @@ input.ui-editRangeSlider-inputValue
 
 .inf-desc
 	margin-bottom: $content_bot_space-sm
-	
+
 	&__i
 		display: table
 		width: 100%
