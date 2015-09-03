@@ -855,7 +855,7 @@ textarea {
   margin-left: 280px;
 }
 .page_sidebars_right .page__content {
-  margin-right: 285px;
+  margin-right: 300px;
 }
 .page_sidebars_both .page__content {
   margin-left: 280px;
@@ -885,8 +885,11 @@ textarea {
 }
 .page__sidebar_lt_right {
   width: 285px;
-  padding-left: 20px;
+  padding-left: 5px;
   margin-left: -285px;
+}
+.page_stl_bg .page__sidebar_lt_right {
+  padding-left: 20px;
 }
 .page_stl_sidebar-border.page_sidebars_right .page__sidebar {
   width: 28%;
@@ -1865,6 +1868,15 @@ textarea {
 
 /* section-h */
 /* ---------------------------------------END--- */
+/* sidebar-h */
+/* --------------------------------------------- */
+.sidebar-h {
+  margin: 38px 0 16px 0;
+  padding: 0;
+}
+
+/* sidebar-h */
+/* ---------------------------------------END--- */
 /* small-section-h */
 /* --------------------------------------------- */
 .small-section-h {
@@ -2108,8 +2120,8 @@ textarea {
 /* ---------------------------------------END--- */
 /* teasers-filter */
 /* --------------------------------------------- */
-.teasers-filter_lt_tile {
-  width: 880px;
+.teasers-filter__i {
+  padding-right: 15px;
 }
 
 /* teasers-filter */

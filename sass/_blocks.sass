@@ -189,7 +189,7 @@
 		margin-left: $left-sidebar_w
 
 	&_sidebars_right &__content
-		margin-right: $right-sidebar_w
+		margin-right: $right-sidebar_w + 15
 
 	&_sidebars_both &__content
 		margin-left: $left-sidebar_w
@@ -224,8 +224,11 @@
 
 		&_lt_right
 			width: $right-sidebar_w
-			padding-left: 20px
+			padding-left: 5px
 			margin-left: - $right-sidebar_w
+
+	&_stl_bg &__sidebar_lt_right
+		padding-left: 20px
 
 	&_stl_sidebar-border.page_sidebars_right &__sidebar
 		width: $right-sidebar_bordered
@@ -1248,6 +1251,17 @@
 /* section-h
 /* ---------------------------------------END--- */
 
+/* sidebar-h
+/* --------------------------------------------- */
+
+.sidebar-h
+	margin: 38px 0 16px 0
+	padding: 0
+	
+
+/* sidebar-h
+/* ---------------------------------------END--- */
+
 
 /* small-section-h
 /* --------------------------------------------- */
@@ -1480,8 +1494,9 @@
 /* --------------------------------------------- */
 
 .teasers-filter
-	&_lt_tile
-		width: 880px
+	
+	&__i
+		padding-right: 15px
 
 /* teasers-filter
 /* ---------------------------------------END--- */
