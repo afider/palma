@@ -594,7 +594,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail_
   font-family: "Roboto Medium", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .cancel-button, .detail__sub-h, .msg-link, .txt-important, .location-question__city, .city-list__letter, .city-list__i.is-active, .site-desc__h, .main-h__b, .location-list__i.is-active, .location-list__i_stl_important, .teaser-detail__h, .teaser-detail__big-h, .teaser-detail__small-h, .inf-activity__num, .inf-activity__a, .user-list__b {
+.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .cancel-button, .detail__sub-h, .msg-link, .inf-h, .txt-colored, .txt-important, .location-question__city, .city-list__letter, .city-list__i.is-active, .site-desc__h, .main-h__b, .location-list__i.is-active, .location-list__i_stl_important, .teaser-detail__h, .teaser-detail__big-h, .teaser-detail__small-h, .inf-activity__num, .inf-activity__a, .user-list__b, .inf-nav__a {
   font-family: "Roboto", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -3517,16 +3517,31 @@ select option {
 /* --------------------------------------------- */
 .msg-link {
   font-weight: bold;
-  color: #363636;
-}
-.msg-link:visited {
-  color: #363636;
-}
-.msg-link:hover {
-  color: #6699cc;
 }
 
 /* msg-link */
+/* ---------------------------------------END--- */
+/* inf-h */
+/* --------------------------------------------- */
+.inf-h {
+  font-weight: bold;
+  color: #78c58b;
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* inf-h */
+/* ---------------------------------------END--- */
+/* txt-colored */
+/* --------------------------------------------- */
+.txt-colored {
+  font-weight: bold;
+  color: #78c58b;
+}
+
+/* txt-colored */
 /* ---------------------------------------END--- */
 /* smart-select */
 /* --------------------------------------------- */
@@ -4834,6 +4849,25 @@ input.ui-editRangeSlider-inputValue {
 }
 
 /* user-list */
+/* ---------------------------------------END--- */
+/* inf-nav */
+/* --------------------------------------------- */
+.inf-nav__lst {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.inf-nav__i {
+  margin: 0;
+  padding: 0;
+}
+.inf-nav__a {
+  display: inline-block;
+  font-weight: bold;
+  padding: 4px 0;
+}
+
+/* inf-nav */
 /* ---------------------------------------END--- */
 /* Magnific Popup CSS */
 .mfp-bg {

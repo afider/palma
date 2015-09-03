@@ -2925,10 +2925,35 @@ select
 .msg-link
 	@extend %font-regular
 	font-weight: bold
-	+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
-
 
 /* msg-link
+/* ---------------------------------------END--- */
+
+
+/* inf-h
+/* --------------------------------------------- */
+
+.inf-h
+	@extend %font-regular
+	font-weight: bold
+	color: $main-color
+	margin: 0 0 15px 0
+	padding: 0
+	+rem(font-size, 16px)
+
+/* inf-h
+/* ---------------------------------------END--- */
+
+
+/* txt-colored
+/* --------------------------------------------- */
+
+.txt-colored
+	@extend %font-regular
+	font-weight: bold
+	color: $main-color
+
+/* txt-colored
 /* ---------------------------------------END--- */
 
 
@@ -4357,4 +4382,29 @@ input.ui-editRangeSlider-inputValue
 	
 
 /* user-list
+/* ---------------------------------------END--- */
+
+
+/* inf-nav
+/* --------------------------------------------- */
+
+.inf-nav
+	
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		margin: 0
+		padding: 0
+		
+	&__a
+		display: inline-block
+		@extend %font-regular
+		font-weight: bold
+		padding: 4px 0
+		
+
+/* inf-nav
 /* ---------------------------------------END--- */
