@@ -428,18 +428,30 @@ ol {
 
 ul li,
 ol li {
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 
 .lst-bullet {
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   padding: 0;
+  list-style-type: none;
 }
 .lst-bullet li {
   display: block;
-  padding: 0 0 10px 25px;
-  background: url("../img/list-bullet.png") 10px 0 no-repeat;
+  padding: 0 0 0 20px;
   list-style-type: none;
+  position: relative;
+}
+.lst-bullet li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  background: #c4cacf;
+  border-radius: 50%;
 }
 
 /*  Headers */
@@ -1842,6 +1854,9 @@ textarea {
 .section-h {
   margin: 0 0 12px 0;
   padding: 0;
+}
+.section-h_bot-space_more {
+  margin-bottom: 25px;
 }
 .section-h__legend {
   display: inline-block;
