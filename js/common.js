@@ -137,7 +137,6 @@
             self.bind("valuesChanging", function(e, data){
                 minimum.val(Math.round(data.values.min));
                 maximum.val(Math.round(data.values.max));
-              console.log("Something moved. min: " + Math.round(data.values.min) + " max: " + Math.round(data.values.max));
             });
 
 
