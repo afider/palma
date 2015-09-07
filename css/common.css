@@ -590,7 +590,7 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: normal;
   font-style: normal;
 }
-h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail__price, .m-teasers__h, .catalog__sub-h, .catalog__a, .user-list__name {
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail__price, .m-teasers__h, .catalog__sub-h, .catalog__a, .user-list__name, .edit__i {
   font-family: "Roboto Medium", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -686,7 +686,7 @@ textarea {
   resize: vertical;
 }
 
-.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .cancel-button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub, .cabinet-columns .cabinet-columns__i, .inf-props__i {
+.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .cancel-button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub, .cabinet-columns .cabinet-columns__i, .inf-props__i, .edit__column {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -694,12 +694,12 @@ textarea {
 
 /* clearfix */
 /* --------------------------------------------- */
-.page__header-in:before, .page_sidebars_left .page__body:before, .page_sidebars_right .page__body:before, .footer-nav:before, .main-nav:before, .teasers__lst:before, .tab-nav__lst:before, .page-nav__lst:before, .input-train:before, .detail:before, .act-buttons:before, .multiselect-search:before, .city-list:before, .catalog:before, .photo-loader__list:before, .cabinet-columns:before, .teaser-detail__buttons:before, .teaser-detail__photo:before, .inf-props:before, .page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .act-buttons:after, .multiselect-search:after, .city-list:after, .catalog:after, .photo-loader__list:after, .cabinet-columns:after, .teaser-detail__buttons:after, .teaser-detail__photo:after, .inf-props:after {
+.page__header-in:before, .page_sidebars_left .page__body:before, .page_sidebars_right .page__body:before, .footer-nav:before, .main-nav:before, .teasers__lst:before, .tab-nav__lst:before, .page-nav__lst:before, .input-train:before, .detail:before, .act-buttons:before, .multiselect-search:before, .city-list:before, .catalog:before, .photo-loader__list:before, .cabinet-columns:before, .teaser-detail__buttons:before, .teaser-detail__photo:before, .inf-props:before, .edit:before, .page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .act-buttons:after, .multiselect-search:after, .city-list:after, .catalog:after, .photo-loader__list:after, .cabinet-columns:after, .teaser-detail__buttons:after, .teaser-detail__photo:after, .inf-props:after, .edit:after {
   display: table;
   content: "";
   clear: both;
 }
-.page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .act-buttons:after, .multiselect-search:after, .city-list:after, .catalog:after, .photo-loader__list:after, .cabinet-columns:after, .teaser-detail__buttons:after, .teaser-detail__photo:after, .inf-props:after {
+.page__header-in:after, .page_sidebars_left .page__body:after, .page_sidebars_right .page__body:after, .footer-nav:after, .main-nav:after, .teasers__lst:after, .tab-nav__lst:after, .page-nav__lst:after, .input-train:after, .detail:after, .act-buttons:after, .multiselect-search:after, .city-list:after, .catalog:after, .photo-loader__list:after, .cabinet-columns:after, .teaser-detail__buttons:after, .teaser-detail__photo:after, .inf-props:after, .edit:after {
   clear: both;
 }
 
@@ -2570,6 +2570,10 @@ select option {
   background: #fff;
   text-align: left;
 }
+.select_stt_disabled {
+  border-color: #e9ebed;
+  background: #fdfdfd;
+}
 .select_space_sm {
   margin-left: 9px;
 }
@@ -2635,6 +2639,9 @@ select option {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.select_stt_disabled .select__item {
+  color: #dadada;
+}
 .select__bg {
   display: block;
   padding: 0 25px 0 14px;
@@ -2665,6 +2672,9 @@ select option {
   left: 50%;
   margin-left: -5px;
   color: #c4cacf;
+}
+.select_stt_disabled .select__icon {
+  color: #e9ebed;
 }
 .select.is-selected .select__icon {
   color: #78c58b;
@@ -2894,7 +2904,6 @@ select option {
   background-color: none;
 }
 .button_color_grayscale {
-  background-color: #edeff1;
   color: #8996A0 !important;
 }
 .button_stl_bordered:active, .button_stl_bordered.button_stl_spinner {
@@ -3093,6 +3102,9 @@ select option {
 .main-search__icon {
   position: relative;
   top: -1px;
+}
+.main-search_items-w_half .main-search__category, .main-search_items-w_half .main-search__section {
+  width: 50%;
 }
 
 /* main-search */
@@ -4875,6 +4887,141 @@ input.ui-editRangeSlider-inputValue {
 }
 
 /* inf-nav */
+/* ---------------------------------------END--- */
+/* edit */
+/* --------------------------------------------- */
+.edit {
+  margin-bottom: 20px;
+}
+.edit__column {
+  float: left;
+}
+.edit__column_w_half {
+  width: 50%;
+}
+.edit__column_w_half:first-child {
+  padding-right: 15px;
+}
+.edit__column_w_half:last-child {
+  padding-left: 15px;
+}
+.edit__column_stt_disabled .edit__body {
+  background: #fcfcfc;
+}
+.edit__body {
+  background: #f8f8f8;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+}
+.edit__scroller {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.edit__scroll {
+  height: 700px;
+}
+.edit__actions {
+  text-align: center;
+}
+.edit__select {
+  margin-bottom: 19px;
+}
+.edit__separator {
+  border-bottom: 1px solid #dadada;
+  margin-bottom: 19px;
+}
+.edit__column_stt_disabled .edit__separator {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  visibility: hidden;
+}
+.edit__more {
+  text-align: center;
+}
+.edit__button {
+  width: 145px;
+}
+.edit__column_stt_disabled .edit__button {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  visibility: hidden;
+}
+.edit__lst {
+  margin: 2px 0 0 2px;
+  padding: 0;
+  list-style-type: none;
+}
+.edit__i {
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  display: block;
+  padding: 12px 65px 12px 20px;
+  font-size: 21px;
+  font-size: 2.1rem;
+  border-bottom: 1px solid #dadada;
+  line-height: 1.2;
+}
+.edit__i.is-active {
+  outline: 2px solid #fbb568;
+  cursor: default;
+}
+.edit__i_stl_input {
+  padding: 5px 65px 5px 5px;
+}
+.edit .edit__input {
+  width: 100%;
+  padding-left: 15px;
+  height: 39px;
+}
+.edit__ctrl {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 50%;
+  margin-top: -14px;
+  cursor: pointer;
+}
+.edit__ctrl_tp_edit {
+  right: 28px;
+}
+.edit__ctrl_tp_del {
+  right: 5px;
+}
+.edit__edit-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 50%;
+  margin-left: -8px;
+  color: #78c58b;
+}
+.edit__del-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 50%;
+  margin-left: -8px;
+  border-radius: 50%;
+  background: #f36c4f;
+}
+.edit__del-svg {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  color: #fff;
+  top: 50%;
+  margin-top: -4px;
+  left: 50%;
+  margin-left: -4px;
+  border-radius: 50%;
+}
+
+/* edit */
 /* ---------------------------------------END--- */
 /* Magnific Popup CSS */
 .mfp-bg {

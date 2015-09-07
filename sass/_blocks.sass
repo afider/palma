@@ -1918,6 +1918,10 @@ select
 	background: #fff
 	text-align: left
 
+	&_stt_disabled
+		border-color: $dark-el-color__light
+		background: #fdfdfd
+
 	&_space_sm
 		margin-left: 9px
 	&_space_m
@@ -1982,6 +1986,9 @@ select
 			text-overflow: ellipsis
 			white-space: nowrap
 
+	&_stt_disabled &__item
+		color: $dark-el-color__sep
+
 
 
 	&__bg
@@ -2017,6 +2024,9 @@ select
 		left: 50%
 		margin-left: -5px
 		color: $dark-el-color__fill
+
+	&_stt_disabled &__icon
+		color: $dark-el-color__light
 
 	&.is-selected &__icon
 		color: $focus_color
@@ -2244,7 +2254,7 @@ select
 		background-color: none
 
 	&_color_grayscale
-		background-color: #edeff1
+		//background-color: #edeff1
 		color: $text-light_color !important
 
 	&_stl_bordered
@@ -2450,6 +2460,10 @@ select
 	&__icon
 		position: relative
 		top: -1px
+
+	&_items-w_half &__category,
+	&_items-w_half &__section
+		width: 50%
 
 
 /* main-search
@@ -4421,3 +4435,142 @@ input.ui-editRangeSlider-inputValue
 
 /* inf-nav
 /* ---------------------------------------END--- */
+
+
+/* edit
+/* --------------------------------------------- */
+
+.edit
+	margin-bottom: $content_bot_space
+	@extend %clear
+
+	&__column
+		float: left
+		@extend %bszbb
+
+		&_w_half
+			width: 50%
+			&:first-child
+				padding-right: 15px
+			&:last-child
+				padding-left: 15px
+
+	&__column_stt_disabled &__body
+		background: $dark-el-color__super-light
+
+	&__body
+		background: $dark-el-color__bg
+		padding: 20px 15px
+		margin-bottom: $content_bot_space
+
+	&__scroller
+		margin: 0 0 $content_bot_space 0
+		padding: 0
+
+	&__scroll
+		height: 700px
+	
+
+	&__actions
+		text-align: center
+
+	&__select
+		margin-bottom: 19px
+
+	&__separator
+		border-bottom: 1px solid $dark-el-color__sep
+		margin-bottom: 19px
+
+	&__column_stt_disabled &__separator
+		+opacity(0)
+		visibility: hidden
+
+	&__more
+		text-align: center
+
+	&__button
+		width: 145px
+	&__column_stt_disabled &__button
+		+opacity(0)
+		visibility: hidden
+
+	&__lst
+		margin: 2px 0 0 2px
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		position: relative
+		cursor: pointer
+		margin: 0
+		display: block
+		padding: 12px 65px 12px 20px
+		@extend %font-medium
+		+rem(font-size, 21px)
+		border-bottom: 1px solid $dark-el-color__sep
+		line-height: $menu-line-height
+
+		&.is-active
+			outline: 2px solid $active-color
+			cursor: default
+
+		&_stl_input
+			padding: 5px 65px 5px 5px
+
+	& &__input
+		width: 100%
+		padding-left: 15px
+		height: 39px
+
+	&__ctrl
+		position: absolute
+		width: 28px
+		height: 28px
+		//background: yellow
+		top: 50%
+		margin-top: -14px
+		cursor: pointer
+
+		&_tp_edit
+			right: 28px
+
+		&_tp_del
+			right: 5px
+	
+	&__edit-icon
+		width: 16px
+		height: 16px
+		position: absolute
+		top: 50%
+		margin-top: -8px
+		left: 50%
+		margin-left: -8px
+		color: $main-color
+
+	&__del-icon
+		width: 16px
+		height: 16px
+		position: absolute
+		top: 50%
+		margin-top: -8px
+		left: 50%
+		margin-left: -8px
+		border-radius: 50%
+		background: $stop-color
+
+	&__del-svg
+		position: absolute
+		width: 8px
+		height: 8px
+		color: #fff
+		top: 50%
+		margin-top: -4px
+		left: 50%
+		margin-left: -4px
+		border-radius: 50%
+
+
+/* edit
+/* ---------------------------------------END--- */
+
+

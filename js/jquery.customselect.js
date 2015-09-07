@@ -13,9 +13,14 @@
 		if (settings) {
 			$.extend(config, settings);
 		}
+
 		this.each(function() {
 			var selected = 'is-selected';
 			var select = $(this);
+
+			if (select.is(":disabled")) {
+				select.addClass('select_stt_disabled');
+			}
 
 			var selectClasses = select.attr('class');
 			select.removeAttr('class');
@@ -26,6 +31,7 @@
 			selectWrap.addClass(selectClasses);
 			var selectWidth = select.width();
 			select.css('width', selectWidth);
+			
 			var update = function() {
 				var val = $('option:selected', this).text();
 				span.find('span span').text(val);
