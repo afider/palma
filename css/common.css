@@ -3046,6 +3046,9 @@ select option {
   position: relative;
   padding-right: 52px;
 }
+.main-search_lt_nobutton {
+  padding-right: 0;
+}
 .main-search_tp_filter {
   padding-right: 200px;
 }
