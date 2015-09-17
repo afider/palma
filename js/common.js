@@ -87,6 +87,17 @@
             target.toggleClass('is-open');
         });
 
+        $(document).click(function(e){
+            if (
+                $(e.target).parents().andSelf().filter('.main-nav').length != 1
+                ) {
+
+                $('.main-nav__i_more').removeClass('is-open');
+                $('.hint-bottom').removeClass('is-open');
+            }
+            
+        });
+
         // кастомизация дефолтного выпадающего списка в список с возможностью поиска
         $('.js-smart-select').each(function() {
             var self = $(this);

@@ -594,7 +594,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail_
   font-family: "Roboto Medium", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-.font-regular, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .cancel-button, .detail__sub-h, .msg-link, .inf-h, .txt-colored, .txt-important, .location-question__city, .city-list__letter, .city-list__i.is-active, .site-desc__h, .main-h__b, .location-list__i.is-active, .location-list__i_stl_important, .teaser-detail__h, .teaser-detail__big-h, .teaser-detail__small-h, .inf-activity__num, .inf-activity__a, .user-list__b, .inf-nav__a {
+.font-regular, .main-nav__more, .main-nav__sub-a, .category-nav__h, .tab-nav_stl_bold .tab-nav__a, .form-label_stl_important, .cancel-button, .detail__sub-h, .msg-link, .inf-h, .txt-colored, .txt-important, .location-question__city, .city-list__letter, .city-list__i.is-active, .site-desc__h, .main-h__b, .location-list__i.is-active, .location-list__i_stl_important, .teaser-detail__h, .teaser-detail__big-h, .teaser-detail__small-h, .inf-activity__num, .inf-activity__a, .user-list__b, .inf-nav__a {
   font-family: "Roboto", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -686,7 +686,7 @@ textarea {
   resize: vertical;
 }
 
-.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .cancel-button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub, .cabinet-columns .cabinet-columns__i, .inf-props__i, .edit__column {
+.centered, .page, .page__sidebar, .page__footer, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .cancel-button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .hint-bottom, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub, .cabinet-columns .cabinet-columns__i, .inf-props__i, .edit__column {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1233,6 +1233,46 @@ textarea {
   float: left;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+.main-nav__hint-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -7px;
+  width: 16px;
+  height: 8px;
+  overflow: hidden;
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  z-index: 100;
+}
+.main-nav__hint-arrow:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: 1px solid #d3d8db;
+  z-index: 100;
+}
+.main-nav__i_more.is-open .main-nav__hint-arrow {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  visibility: visible;
 }
 .main-nav__a {
   position: relative;
@@ -1243,6 +1283,7 @@ textarea {
   padding: 0 12px;
   height: 70px;
   line-height: 70px;
+  outline: none !important;
   color: #363636;
 }
 .main-nav__a:visited {
@@ -1262,6 +1303,40 @@ textarea {
   right: 0;
   height: 5px;
   background: #fbb568;
+}
+.main-nav__more {
+  width: 90%;
+  margin: auto;
+}
+.main-nav__sub-lst {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.main-nav__sub-i {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+.main-nav__sub-a {
+  display: block;
+  padding: 10px 12px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #363636;
+  font-weight: bold;
+  padding-bottom: 3px;
+  display: inline-block;
+}
+.main-nav__sub-a:visited {
+  color: #363636;
+}
+.main-nav__sub-a:hover {
+  color: #6699cc;
+}
+.main-nav__sub-i.is-active .main-nav__sub-a {
+  color: #fbb568;
 }
 
 /* main-nav */
@@ -3760,6 +3835,70 @@ select option {
   margin-left: 12px;
 }
 /* location-question */
+/* ---------------------------------------END--- */
+/* hint-bottom */
+/* --------------------------------------------- */
+.hint-bottom {
+  position: absolute;
+  top: 44px;
+  left: 10px;
+  right: 63px;
+  background: #fff;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  padding: 14px;
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  border: 1px solid #d3d8db;
+}
+.hint-bottom.is-open {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  visibility: visible;
+}
+.hint-bottom:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: 1px solid #d3d8db;
+}
+.hint-bottom:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 10px;
+  background: #fff;
+}
+.hint-bottom_no-arrow:before, .hint-bottom_no-arrow:after {
+  display: none;
+}
+
+/* hint-bottom */
 /* ---------------------------------------END--- */
 /* range-slider */
 /* --------------------------------------------- */

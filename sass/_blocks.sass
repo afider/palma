@@ -589,6 +589,39 @@
 		float: left
 		margin: 0
 		padding: 0
+		position: relative
+
+	&__hint-arrow
+		position: absolute
+		top: 100%
+		left: 50%
+		margin-left: -8px
+		margin-top: -7px
+		width: 16px
+		height: 8px
+		//background: red
+		overflow: hidden
+		visibility: hidden
+		+opacity(0)
+		+transition-duration(.5s)
+		z-index: 100
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 2px
+			left: 2px
+			width: 10px
+			height: 10px
+			background: #fff
+			+rotate(45deg)
+			border: 1px solid $dark-el-color__form-el
+			z-index: 100
+
+	&__i_more.is-open &__hint-arrow
+		+opacity(1)
+		visibility: visible
 		
 
 	&__a
@@ -599,6 +632,7 @@
 		padding: 0 12px
 		height: 70px
 		line-height: 70px
+		outline: none !important
 		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
 
 		+max-screen($mq-main-nav-w)
@@ -616,6 +650,37 @@
 				right: 0
 				height: 5px
 				background: $active-color
+
+	&__more
+		@extend %font-regular
+		width: 90%
+		margin: auto
+
+	&__sub-lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__sub-i
+		display: inline-block
+		vertical-align: top
+		margin: 0
+		padding: 0
+		
+	&__sub-a
+		display: block
+		padding: 10px 12px
+		+rem(font-size, 16px)
+		@extend %font-regular
+		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
+		font-weight: bold
+		padding-bottom: 3px
+		display: inline-block
+
+	&__sub-i.is-active &__sub-a
+		color: $active-color
+
+
 		
 
 /* main-nav
@@ -3202,6 +3267,66 @@ select
 
 
 /* location-question
+/* ---------------------------------------END--- */
+
+
+/* hint-bottom
+/* --------------------------------------------- */
+
+.hint-bottom
+	position: absolute
+	top: 44px
+	left: 10px
+	right: 63px
+	background: #fff
+	top: 100%
+	right: 0
+	left: 0
+	z-index: 99
+	@extend %bszbb
+	padding: 14px
+	
+	+box-shadow(0 0 6px rgba(#000, .2))
+	border-radius: $border-radius
+	visibility: hidden
+	+opacity(0)
+	+transition-duration(.5s)
+	border: 1px solid $dark-el-color__form-el
+
+	&.is-open
+		+opacity(1)
+		visibility: visible
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: -5px
+		left: 50%
+		margin-left: -5px
+		width: 10px
+		height: 10px
+		background: #fff
+		+rotate(45deg)
+		border: 1px solid $dark-el-color__form-el
+
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -10px
+		width: 20px
+		height: 10px
+		background: #fff
+
+	&_no-arrow
+		&:before,			
+		&:after
+			display: none
+
+/* hint-bottom
 /* ---------------------------------------END--- */
 
 
