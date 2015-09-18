@@ -4699,3 +4699,80 @@ input.ui-editRangeSlider-inputValue
 /* ---------------------------------------END--- */
 
 
+/* gallery
+/* --------------------------------------------- */
+
+$gallery_arrows_dim: 40px
+.gallery
+
+	.fotorama__fullscreen-icon
+		&:before
+			background: url("../img/zoom-in.svg") 0 0 no-repeat
+			background-size: cover
+
+body
+	.fotorama__arr
+		width: $gallery_arrows_dim
+		height: 100%
+		top: 16px
+		//margin-top: -50px
+		background: none
+		//+opacity(.5)
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -14px
+			width: $gallery_arrows_dim
+			height: $gallery_arrows_dim
+			
+			//background: red
+
+	.fotorama__arr--prev
+		left: 10px
+		&:before
+			left: 50%
+			margin-left: - $gallery_arrows_dim / 2
+			background: url("../img/previous-big.svg") 0 0 no-repeat
+			background-size: cover
+
+
+	.fotorama__arr--next
+		right: 10px
+		&:before
+			right: 50%
+			margin-right: - $gallery_arrows_dim / 2
+			background: url("../img/next-big.svg") 0 0 no-repeat
+			background-size: cover
+
+	.fotorama__fullscreen-icon
+		width: 54px
+		height: 54px
+		top: 0
+		right: 0
+		background: none
+		//+opacity(.5)
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -12px
+			left: 50%
+			margin-left: -12px
+			width: 24px
+			height: 24px
+
+.fotorama__fullscreen-icon
+	&:before
+		background: url("../img/zoom-out.svg") 0 0 no-repeat
+		background-size: cover
+
+
+/* gallery
+/* ---------------------------------------END--- */
+
+
