@@ -5180,7 +5180,7 @@ body .fotorama__arr:before {
   display: block;
   position: absolute;
   top: 50%;
-  margin-top: -14px;
+  margin-top: -20px;
   width: 40px;
   height: 40px;
 }
@@ -5214,11 +5214,11 @@ body .fotorama__fullscreen-icon:before {
   display: block;
   position: absolute;
   top: 50%;
-  margin-top: -12px;
+  margin-top: -17px;
   left: 50%;
-  margin-left: -12px;
-  width: 24px;
-  height: 24px;
+  margin-left: -17px;
+  width: 34px;
+  height: 34px;
 }
 
 .fotorama__fullscreen-icon:before {

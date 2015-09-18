@@ -4724,7 +4724,7 @@ body
 			display: block
 			position: absolute
 			top: 50%
-			margin-top: -14px
+			margin-top: - $gallery_arrows_dim / 2
 			width: $gallery_arrows_dim
 			height: $gallery_arrows_dim
 			
@@ -4754,17 +4754,18 @@ body
 		right: 0
 		background: none
 		//+opacity(.5)
-
+		
+		$fullscteen-icon-dim: 34px
 		&:before
 			content: ''
 			display: block
 			position: absolute
 			top: 50%
-			margin-top: -12px
+			margin-top: - $fullscteen-icon-dim / 2
 			left: 50%
-			margin-left: -12px
-			width: 24px
-			height: 24px
+			margin-left: - $fullscteen-icon-dim / 2
+			width: $fullscteen-icon-dim
+			height: $fullscteen-icon-dim
 
 .fotorama__fullscreen-icon
 	&:before
