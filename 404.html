@@ -1,0 +1,146 @@
+<!doctype html>
+<!--[if IE]><html lang="ru-RU" class="ie9"><![endif]-->
+<!---[if !IE]><!-->
+<html lang="ru-RU">
+<!--<![endif]-->
+	<head> 
+		<meta charset="utf-8">
+		<title>Site name</title>
+
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/chosen.css">
+
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/jquery.customselect.js"></script>
+		<script src="js/chosen.jquery.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jQAllRangeSliders-withRuler-min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/baron.min.js"></script>
+		<script src="js/svg.js"></script>
+		<script src="js/common.js"></script>
+
+		<!--[if IE]>
+			<script src="js/jquery.placeholder.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div id="svg-icons"></div><!-- svg-icons -->
+
+		<div class="page is-404">
+
+			<div class="page__in">		
+	
+				<header class="page__header">
+
+					<div class="page__header-in centered">
+	
+						<div class="columns">
+							<div class="columns__i">
+	
+								<a href="#" class="logo">
+									<svg class="svg-logo-settings">
+
+										<defs>
+
+											<filter id='inset-shadow'>
+									
+												<!-- Сдвиг тени -->
+												<feOffset dx='0' dy='1'	/>
+									
+												<!-- Размытие тени -->
+												<feGaussianBlur stdDeviation='1' result='offset-blur' />
+									
+												<!-- Инвертируем drop shadow чтобы создать внутреннюю тень -->
+												<feComposite operator='out' in='SourceGraphic' in2='offset-blur' result='inverse' />
+									
+												<!-- Цвет и Прозрачность -->
+												<feFlood flood-color='black' flood-opacity='.45' result='color'	/>
+									
+												<!-- Обрезаем цвет внутрь тени -->
+												<feComposite operator='in' in='color' in2='inverse' result='shadow' />
+									
+												<!-- Раcполагаем тень поверх элемента -->
+												<feComposite operator='over' in='shadow' in2='SourceGraphic' />
+											</filter>
+									
+											<linearGradient id="logo-gradient">
+												<stop offset="0%" stop-color="#84cb96" />
+												<stop offset="25%" stop-color="#84cb96" />
+												<stop offset="100%" stop-color="#fab66d" />
+											</linearGradient>
+									
+										</defs>
+
+									</svg>
+
+									<svg class="svg-logo">
+										<text x="0" y="100%" fill="url(#logo-gradient)" filter="url('#inset-shadow')">Пальма</text>
+									</svg>
+
+								</a>
+								
+								
+							</div><!-- columns__i -->
+							<div class="columns__i columns__i_valign_middle txt-to-right">
+								
+
+							</div><!-- columns__i -->
+						</div><!-- columns -->
+	
+					</div><!-- centered -->
+				</header><!-- page__header -->
+	
+			</div><!-- page__in -->
+
+			<div class="page__404 message-404">
+				
+				<div class="message-404__i message-404__i_404">
+
+					<svg class="message-404__svg">
+						<text x="0" y="98%" fill="url(#logo-gradient)" filter="url('#inset-shadow')">404</text>
+					</svg>
+
+				</div>
+				<div class="message-404__i message-404__i_legend">
+					
+					<h1 class="message-404__h">Страница не найдена</h1>
+
+					<p>Неправильно набран адрес, или такой страницы на&nbsp;сайте больше не&nbsp;существует</p>
+
+				</div>
+
+			</div><!-- page__404 -->
+			
+		</div><!-- page -->
+
+		
+		<footer class="page__footer">
+
+			<div class="centered">
+
+				<div class="grid grid_valign_top grid_columns_3 grid_item-space_big">
+					<div class="grid__row">
+						<div class="grid__i page__footer-i">
+							Проверьте правильность адреса страницы в строке адреса
+						</div>
+						<div class="grid__i page__footer-i">
+							Вернитесь <a href="#">назад</a>, чтобы использовать другую ссылку
+						</div>
+						<div class="grid__i page__footer-i">
+							Перейдите на <a href="#">главную страницу</a>, затем найдите там ссылки на нужные Вам данные
+						</div>
+					</div><!-- grid__row -->
+				</div>
+
+			</div><!-- centered -->
+
+		</footer><!-- page__footer -->
+		
+	</body>
+
+</html>
+

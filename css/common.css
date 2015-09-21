@@ -590,7 +590,7 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: normal;
   font-style: normal;
 }
-h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail__price, .m-teasers__h, .catalog__sub-h, .catalog__a, .user-list__name, .edit__i {
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail__price, .m-teasers__h, .catalog__sub-h, .catalog__a, .user-list__name, .edit__i, .message-404__h {
   font-family: "Roboto Medium", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -602,7 +602,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-medium, .teasers__h, .detail_
   font-family: "Roboto Thin", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
-.font-black, .footer-nav, .main-nav, .user__h, .form-legend__b, .button, .user-nav__a, .popup__h_stl_caps {
+.font-black, .footer-nav, .main-nav, .user__h, .form-legend__b, .button, .user-nav__a, .popup__h_stl_caps, .message-404__svg text {
   font-family: "Roboto black", "Roboto Light", "Times New Roman", Arial, Tahoma, Verdana, sans-serif;
 }
 
@@ -768,6 +768,11 @@ textarea {
   width: 100%;
   min-width: 1000px;
 }
+.page.is-404 {
+  margin: auto;
+  min-width: 1000px;
+  max-width: 1200px;
+}
 .page_stl_bg {
   background: #f8f8f8;
   padding-left: 15px;
@@ -783,11 +788,22 @@ textarea {
   -webkit-box-shadow: 0 1px 0 #f2f2f2;
   box-shadow: 0 1px 0 #f2f2f2;
   background: #fff;
+  position: relative;
+  z-index: 1;
+}
+.is-404 .page__header {
+  border-bottom: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .page__header-in {
   position: relative;
   height: 70px;
   max-width: 1400px;
+}
+.is-404 .page__header-in {
+  min-height: 300px;
 }
 .page__body {
   background: #fff;
@@ -828,6 +844,9 @@ textarea {
 .page__in {
   padding-bottom: 143px;
 }
+.is-404 .page__in {
+  padding-bottom: 208px;
+}
 .page__mainbar {
   padding-bottom: 15px;
 }
@@ -855,6 +874,10 @@ textarea {
 .page__content {
   margin: 0;
   min-height: 20px;
+}
+.page__vertical-center {
+  display: table-cell;
+  height: 100%;
 }
 .page_sidebars_left .page__content {
   margin-left: 280px;
@@ -929,6 +952,22 @@ textarea {
   min-width: 1000px;
   border-top: 1px solid #dadada;
 }
+.is-404 + .page__footer {
+  height: 208px;
+  margin: auto;
+  margin-top: -208px;
+  min-width: 1000px;
+  max-width: 1200px !important;
+}
+.is-404 + .page__footer .page__footer-i {
+  padding-top: 65px;
+}
+.page__404 {
+  position: absolute;
+  top: 50%;
+  margin-top: -141px !important;
+  height: 144px;
+}
 
 /* page */
 /* ---------------------------------------END--- */
@@ -943,9 +982,12 @@ textarea {
   border-bottom: none;
   float: left;
   margin-right: 39px;
-  margin-left: 30px;
+  margin-left: 101px;
 }.logo__icon {
   display: block;
+}
+.is-404 .logo {
+  margin-left: 0;
 }
 
 /* logo */
@@ -1008,12 +1050,13 @@ textarea {
 /* nav-ctrl */
 /* --------------------------------------------- */
 .nav-ctrl {
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 70px;
   height: 70px;
   border-right: 1px solid #fbfbfb;
   cursor: pointer;
-  position: relative;
 }
 .nav-ctrl:before {
   content: "";
@@ -4227,12 +4270,21 @@ input.ui-editRangeSlider-inputValue {
 .grid_bot-space_big {
   margin-bottom: 30px;
 }
+.grid_item-space_big {
+  margin-left: -35px;
+}
 .grid__row {
   display: table;
   width: 100%;
 }
 .grid_valign_top .grid__i {
   vertical-align: top;
+}
+.grid_valign_middle .grid__i {
+  vertical-align: middle;
+}
+.grid_item-space_big .grid__i {
+  padding-left: 35px;
 }
 .grid__i {
   position: relative;
@@ -5228,6 +5280,46 @@ body .fotorama__fullscreen-icon:before {
 
 /* gallery */
 /* ---------------------------------------END--- */
+/* message-404 */
+/* --------------------------------------------- */
+.message-404 {
+  display: table;
+  width: 720px;
+  left: 50%;
+  margin-left: -360px;
+  z-index: 2;
+}
+.message-404__i {
+  display: table-cell;
+  vertical-align: top;
+}
+.message-404__i_404 {
+  width: 360px;
+}
+.message-404__i_legend {
+  vertical-align: middle;
+  padding-left: 45px;
+}
+.message-404__h {
+  font-size: 20px;
+  font-size: 2rem;
+  margin: 20px 0 15px 0;
+}
+.message-404__svg {
+  display: block;
+  width: 360px;
+  height: 150px;
+}
+.message-404__svg text {
+  font-size: 200px;
+  font-size: 20rem;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+}
+
+/* message-404 */
+/* ---------------------------------------END--- */
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -5726,7 +5818,7 @@ img.mfp-img {
 
 @media screen and (max-width: 1066px) {
   .logo {
-    margin-left: 10px;
+    margin-left: 81px;
     margin-right: 20px;
   }
 }

@@ -78,16 +78,22 @@
 
 .page
 	$footer_h: 143px
+	$footer_h_big: 208px
+	$header_h: 70px
 	$left-sidebar_w: 280px
 	$right-sidebar_w: 285px
 	$right-sidebar_bordered: 28%
 	$right-sidebar2_w: 260px
-	
 	@extend %bszbb
 	position: relative
 	min-height: 100%
 	width: 100%
 	min-width: $page_w_min
+
+	&.is-404
+		margin: auto
+		min-width: $page_w_min
+		max-width: $page_w_max_sm
 
 	&_stl_bg
 		background: $dark-el-color__bg
@@ -104,15 +110,23 @@
 		border-bottom: 1px solid $dark-el-color__page-border
 		@include box-shadow(0 1px 0 #f2f2f2)
 		background: #fff
+		position: relative
+		z-index: 1
 
+		.is-404 &
+			border-bottom: none
+			@include box-shadow(none)
 
 		
 
 	&__header-in
 		position: relative
-		height: 70px
+		height: $header_h
 		@extend %clear
 		max-width: $page_w_max
+
+		.is-404 &
+			min-height: 300px
 
 	&_sidebars_left  &__body,
 	&_sidebars_right  &__body
@@ -159,6 +173,9 @@
 	&__in
 		padding-bottom: $footer_h
 
+		.is-404 &
+			padding-bottom: $footer_h_big
+
 	&__mainbar
 		padding-bottom: 15px
 		img
@@ -188,6 +205,13 @@
 		min-height: 20px
 
 		//background: #f6f866
+
+		
+	&__vertical-center
+		display: table-cell
+		height: 100%
+
+		
 
 	&_sidebars_left &__content
 		margin-left: $left-sidebar_w
@@ -266,13 +290,30 @@
 		padding-top: 13px
 		position: relative
 		//background: #f1acf2
-		margin-top: -$footer_h
+		margin-top: - $footer_h
 		height: $footer_h
 		min-width: $page_w_min
 		border-top: 1px solid $dark-el-color__sep
 
+		.is-404 + &
+			height: $footer_h_big
+			margin: auto
+			margin-top: - $footer_h_big
+			min-width: $page_w_min
+			max-width: $page_w_max_sm !important
 
-	
+	.is-404 + &__footer
+		.page__footer-i
+			padding-top: 65px
+		
+
+	&__404
+		$mess_404_h: 144px
+		position: absolute
+		top: 50%
+		margin-top: - $mess_404_h / 2 - $footer_h_big / 2 + $header_h / 2 !important
+		height: $mess_404_h
+
 
 	
 /* page
@@ -283,6 +324,7 @@
 /* --------------------------------------------- */
 
 .logo
+	$nav_ctrl_w: 71px
 	position: relative
 	top: 28px
 	display: block
@@ -291,16 +333,17 @@
 	border-bottom: none
 	float: left
 	margin-right: 39px
-	margin-left: 30px
+	margin-left: 30px + $nav_ctrl_w
 
 	+max-screen($mq-logo-w)
-		margin-left: 10px
+		margin-left: 10px + $nav_ctrl_w
 		margin-right: 20px
 
 	&__icon
 		display: block
 
-
+	.is-404 &
+		margin-left: 0
 	
 /* logo
 /* ---------------------------------------END--- */
@@ -364,13 +407,14 @@
 /* --------------------------------------------- */
 
 .nav-ctrl
-	float: left
+	position: absolute
+	top: 0
+	left: 0
 	width: 70px
 	height: 70px
 	border-right: 1px solid #fbfbfb
 	//background: #E6DEDE
 	cursor: pointer
-	position: relative
 
 
 	&:before
@@ -3672,7 +3716,8 @@ input.ui-editRangeSlider-inputValue
 	&_bot-space_big
 		margin-bottom: $content_bot_space-big
 
-	
+	&_item-space_big
+		margin-left: -35px
 
 	&__row
 		display: table
@@ -3680,6 +3725,12 @@ input.ui-editRangeSlider-inputValue
 
 	&_valign_top &__i
 		vertical-align: top
+
+	&_valign_middle &__i
+		vertical-align: middle
+
+	&_item-space_big &__i
+		padding-left: 35px
 
 	&__i
 		position: relative
@@ -4776,4 +4827,53 @@ body
 /* gallery
 /* ---------------------------------------END--- */
 
+
+/* message-404
+/* --------------------------------------------- */
+
+.message-404
+	$mess_404_w: 720px
+	display: table
+	width: $mess_404_w
+	left: 50%
+	margin-left: - $mess_404_w / 2
+	z-index: 2
+
+	&__i
+		display: table-cell
+		vertical-align: top
+
+		&_404
+			width: 360px
+			
+
+		&_legend
+			vertical-align: middle
+			padding-left: 45px
+
+
+	&__h
+		+rem(font-size, 20px)
+		@extend %font-medium
+		margin: $content_bot_space 0 15px 0
+
+
+	&__svg
+		display: block
+		width: 360px
+		height: 150px
+		//background: red
+
+	&__svg
+		text
+			//fill: url(#logo-gradient)
+			//filter: url('#inset-shadow')
+			// Firefox does not see this rules, so it plased inline in attributes for text tag
+			@extend %font-black
+			+rem(font-size, 200px)
+			+rem(letter-spacing, 2px)
+			line-height: 1
+
+/* message-404
+/* ---------------------------------------END--- */
 
