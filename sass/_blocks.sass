@@ -4167,7 +4167,20 @@ input.ui-editRangeSlider-inputValue
 		+link-color ($color: $link_color, $color_hover: $active-color, $color_visited: none)
 
 
+	&__close
+		position: absolute
+		top: 10px
+		right: 10px
+		width: 15px
+		height: 15px
+		cursor: pointer
+		color: $text-light_color
+		+transition-duration(.5s)
+		+transition-property(color)
 
+		&:hover
+			color: $active-color
+			+transition-duration(.1s)
 
 /* catalog
 /* ---------------------------------------END--- */

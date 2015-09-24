@@ -98,15 +98,25 @@
 
         // анимация подменю главного каталога
         var catalogParentItem = $(".catalog__i_parent");
+        var catalogCtrl = $(".catalog__a");
+        var catalogCloseCtrl = $(".catalog__close");
         var catalogParentItemClass = 'catalog__i_parent';
 
-        catalogParentItem.on('click', function(e) {
+        catalogCloseCtrl.on('click', function(e) {
             e.preventDefault();
 
             var self = $(this);
 
             catalogParentItem.removeClass("is-open");
-            self.addClass('is-open');
+         });
+
+        catalogCtrl.on('click', function(e) {
+            e.preventDefault();
+
+            var self = $(this);
+
+            catalogParentItem.removeClass("is-open");
+            self.parent().addClass('is-open');
         });
 
         $(document).on("click", function(e) { 
