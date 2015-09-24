@@ -2083,7 +2083,7 @@ select
 		position: absolute
 		top: 0
 		left: 0
-		z-index: 1
+		//z-index: 1
 		display: inline-block
 		+rem(font-size, 14px)
 		width: 100%
@@ -4092,7 +4092,22 @@ input.ui-editRangeSlider-inputValue
 		z-index: 1
 		color: #fff
 		
-	&__a
+	&__i_parent &__a
+		color: $text_color !important
+		cursor: pointer
+		outline: none
+
+		&:after
+			content: ''
+			display: inline-block
+			position: relative
+			margin-left: 3px
+			top: -3px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 4px 4px 0 4px
+			border-color: #000000 transparent transparent transparent
 
 
 	&__sub-h,
@@ -4106,12 +4121,6 @@ input.ui-editRangeSlider-inputValue
 		@extend %font-medium
 		+link-color ($color: $text_color, $color_hover: $link_color_hover, $color_visited: none)
 		line-height: 1.1
-
-	
-	&__i:hover &__sub
-		+opacity(1)
-		visibility: visible
-		//+transition-delay(.3s)
 
 	&__sub
 		position: absolute
@@ -4128,6 +4137,11 @@ input.ui-editRangeSlider-inputValue
 		visibility: hidden
 		+opacity(0)
 		z-index: 100
+
+		.is-open > &
+			+opacity(1)
+			visibility: visible
+			//+transition-delay(.3s)
 
 	&__sub-icon
 		top: 25px

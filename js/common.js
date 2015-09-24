@@ -88,15 +88,34 @@
         });
 
         $(document).click(function(e){
-            if (
-                $(e.target).parents().andSelf().filter('.main-nav').length != 1
-                ) {
+            if ( $(e.target).closest('.main-nav').length === 0 ) {
 
                 $('.main-nav__i_more').removeClass('is-open');
                 $('.hint-bottom').removeClass('is-open');
             }
             
         });
+
+        // анимация подменю главного каталога
+        var catalogParentItem = $(".catalog__i_parent");
+        var catalogParentItemClass = 'catalog__i_parent';
+
+        catalogParentItem.on('click', function(e) {
+            e.preventDefault();
+
+            var self = $(this);
+
+            catalogParentItem.removeClass("is-open");
+            self.addClass('is-open');
+        });
+
+        $(document).on("click", function(e) { 
+            if($(e.target).closest('.' + catalogParentItemClass).length === 0) { 
+                catalogParentItem.removeClass("is-open"); 
+            } 
+
+        });
+
 
         // кастомизация дефолтного выпадающего списка в список с возможностью поиска
         $('.js-smart-select').each(function() {

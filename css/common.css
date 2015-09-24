@@ -2745,7 +2745,6 @@ select option {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
   display: inline-block;
   font-size: 14px;
   font-size: 1.4rem;
@@ -4609,6 +4608,23 @@ input.ui-editRangeSlider-inputValue {
   z-index: 1;
   color: #fff;
 }
+.catalog__i_parent .catalog__a {
+  color: #363636 !important;
+  cursor: pointer;
+  outline: none;
+}
+.catalog__i_parent .catalog__a:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  margin-left: 3px;
+  top: -3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: #000000 transparent transparent transparent;
+}
 .catalog__sub-h, .catalog__a {
   height: 57px;
   display: table-cell;
@@ -4624,11 +4640,6 @@ input.ui-editRangeSlider-inputValue {
 }
 .catalog__sub-h:hover, .catalog__a:hover {
   color: #6699cc;
-}
-.catalog__i:hover .catalog__sub {
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
-  visibility: visible;
 }
 .catalog__sub {
   position: absolute;
@@ -4647,6 +4658,11 @@ input.ui-editRangeSlider-inputValue {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   z-index: 100;
+}
+.is-open > .catalog__sub {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  visibility: visible;
 }
 .catalog__sub-icon {
   top: 25px;
