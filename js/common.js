@@ -96,6 +96,26 @@
             
         });
 
+        // установка минимальной высоты главному выпадающему меню, если оно выше, чем сама страница
+        var wH = $(window).height();
+        var docH = $('.page').outerHeight() + $('.header').outerHeight();
+        var mainPopupNav = $('.nav');
+        var mainPopupNavMod = 'nav_scroll';
+        var mainPopupNavPosH = mainPopupNav.outerHeight();
+        var mainPopupNavPos = mainPopupNav.offset();
+        var mainPopupNavPosTop = mainPopupNav.offset().top;
+        var mainPopupNavMaxH = wH - mainPopupNavPosTop;
+
+        console.log(wH);
+
+        if ( (mainPopupNavPosTop + mainPopupNavPosH) > docH) {
+            mainPopupNav.addClass(mainPopupNavMod)
+                        .css('max-height', mainPopupNavMaxH);
+
+        }
+
+
+
         // анимация подменю главного каталога
         var catalogParentItem = $(".catalog__i_parent");
         var catalogCtrl = $(".catalog__a");

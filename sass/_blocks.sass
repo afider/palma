@@ -383,7 +383,11 @@
 	visibility: hidden
 	+opacity(0)
 	z-index: 100
+	@extend %bszbb
 
+	&_scroll
+		overflow: hidden
+		overflow-y: scroll
 
 	&.is-open
 		+opacity(1)
