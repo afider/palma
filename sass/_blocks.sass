@@ -89,6 +89,10 @@
 	min-height: 100%
 	width: 100%
 	min-width: $page_w_min
+	overflow: hidden
+
+	&_show-main-nav
+		overflow: visible
 
 	&.is-404
 		margin: auto
@@ -111,7 +115,6 @@
 		@include box-shadow(0 1px 0 #f2f2f2)
 		background: #fff
 		position: relative
-		z-index: 2
 
 		.is-404 &
 			border-bottom: none
@@ -379,6 +382,7 @@
 	background: #fff
 	padding: 34px 10px
 	+transition-duration(.5s)
+	@include transition-property(visibility, opacity)
 	+box-shadow(0px 15px 15px rgba(#000, .2))
 	visibility: hidden
 	+opacity(0)
@@ -629,10 +633,12 @@
 	&_lt_left
 		float: left
 
+
 	&__lst
 		margin: 0
 		padding: 0
 		list-style-type: none
+		position: relative
 		
 	&__i
 		float: left
