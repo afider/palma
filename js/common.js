@@ -85,7 +85,6 @@
 
             self.toggleClass('is-open');
             target.toggleClass('is-open');
-            $('.page').toggleClass('page_show-main-nav');
         });
 
         $(document).click(function(e){
@@ -95,6 +94,11 @@
                 $('.hint-bottom').removeClass('is-open');
             }
             
+        });
+
+
+        $(".nav-ctrl").on('click', function(e) {
+            $('.page').toggleClass('page_show-main-nav');
         });
 
 
