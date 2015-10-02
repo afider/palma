@@ -4987,3 +4987,27 @@ body
 /* message-404
 /* ---------------------------------------END--- */
 
+
+/* inline-grid
+/* --------------------------------------------- */
+
+.inline-grid
+	font-size: 0
+	margin-left: -15px
+
+	& &__i
+		+rem(font-size, 14px)
+		display: inline-block
+		margin-bottom: 15px
+		@extend %bszbb
+		padding-left: 15px
+
+
+	& .input,
+	& .select,
+	& .interval
+		width: 100%
+
+/* inline-grid
+/* ---------------------------------------END--- */
+
