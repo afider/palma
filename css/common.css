@@ -686,7 +686,7 @@ textarea {
   resize: vertical;
 }
 
-.centered, .page, .page__sidebar, .page__footer, .nav, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .cancel-button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .hint-bottom, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub, .cabinet-columns .cabinet-columns__i, .inf-props__i, .edit__column {
+.centered, .page, .page__sidebar, .page__footer, .nav, .nav-teasers__i, .teasers__h, .teasers_lt_list .teasers__i, .nav-quantity__i, .tab-nav__a, .input, .cr, .cr:before, .select, .select__bg, .button, .cancel-button, .main-search, .detail__legend, .properties__h, .act-buttons__i, .m-teasers__h, .right-sidebar, .location-question__popup, .hint-bottom, .interval, .interval__i, .hint, .popup, .grid__i, .multiselect-search__label, .city-list__column, .catalog__i, .catalog__sub, .cabinet-columns .cabinet-columns__i, .inf-props__i, .edit__column, .inline-grid .inline-grid__i {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -5441,6 +5441,25 @@ body .fotorama__fullscreen-icon:before {
 }
 
 /* message-404 */
+/* ---------------------------------------END--- */
+/* inline-grid */
+/* --------------------------------------------- */
+.inline-grid {
+  font-size: 0;
+  margin-left: -15px;
+}
+.inline-grid .inline-grid__i {
+  font-size: 14px;
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+.inline-grid .input, .inline-grid .select, .inline-grid .interval {
+  width: 100%;
+}
+
+/* inline-grid */
 /* ---------------------------------------END--- */
 /* Magnific Popup CSS */
 .mfp-bg {
